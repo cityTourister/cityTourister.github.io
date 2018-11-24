@@ -23477,7 +23477,7 @@ module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-flu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  cursor: pointer;\n  color: purple; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRGVza3RvcFxcdGVtcGxhdGVzXFxhbmd0ZW1wbGF0ZXNcXG1hdGVyaWFsLWRhc2hib2FyZC1hbmd1bGFyMi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGFkbWluXFxhZG1pbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsY0FBYSxFQUVoQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2FkbWluL2FkbWluLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgY29sb3I6IHB1cnBsZTtcbiAgICBcbn0iXX0= */"
+module.exports = "i {\n  cursor: pointer;\n  color: purple; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFxhZG1pblxcYWRtaW4uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBZTtFQUNmLGNBQWEsRUFFaEIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy9hZG1pbi9hZG1pbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIml7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGNvbG9yOiBwdXJwbGU7XG4gICAgXG59Il19 */"
 
 /***/ }),
 
@@ -23861,7 +23861,7 @@ var CompanyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"main-content\">\n      <div class=\"container-fluid\">\n          <div class=\"row\">\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 1 de 3. Agregar una nueva fecha</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      \n                      <div class=\"card-body\">\n                          <form [formGroup]=\"angForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                          <input matInput [matDatepicker]=\"picker\" placeholder=\"Elige una fecha de inicio\" formControlName=\"start_date\" #start_date>\n                                          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                                          <mat-datepicker #picker></mat-datepicker>\n                                          \n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"angForm.controls['start_date'].hasError('required')\">\n                                        La fecha de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n\n                                  <div class=\"row\">\n                                  \n                                      <div class=\"col-md-12\">\n                                          <mat-form-field>\n                                              <input matInput [matDatepicker]=\"picker2\" placeholder=\"Elige una fecha de final\" formControlName=\"end_date\" #end_date>\n                                              <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n                                              <mat-datepicker #picker2></mat-datepicker>\n                                          </mat-form-field>\n                                          <label class=\"text-danger\" *ngIf=\"angForm.controls['end_date'].hasError('required')\">\n                                            La fecha de final es requerida\n                                           </label>\n                                           <br>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                       <div class=\"col-md-12\">\n                                            <mat-radio-group formControlName=\"servicio\" >\n                                                    <mat-radio-button [value]=\"true\" #servicio>Servicio</mat-radio-button>\n                                                    <mat-radio-button [value]=\"false\" >No hay servicio</mat-radio-button>\n                                            </mat-radio-group>\n                                        <!-- <mat-checkbox class=\"example-margin\" value=\"true\" formControlName=\"servicio\" #servicio>Servicio</mat-checkbox> -->\n                                        <div class=\"row\">\n                                            <div class=\"col-md-12\">\n                                                <label class=\"text-danger\" *ngIf=\"angForm.controls['servicio'].hasError('required')\">\n                                                    Es necesario añadir si el servicio está disponible \n                                                </label>\n                                            </div>\n                                        </div>\n                                       </div>\n                                   </div>\n\n\n                                 \n\n                                   <button mat-raised-button  type=\"submit\" [disabled]=\"angForm.pristine || angForm.invalid\"   class=\"btn btn-danger pull-left\" (click)=\"addDate(start_date.value, end_date.value,servicio.value) \" >Agregar nueva fecha</button>\n                                  \n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n          <!-- formulario de horario -->\n          <div class=\"row\" *ngIf=show>\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 2 de 3. Agregar un nuevo horario</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      <div class=\"card-body\">\n                          <form [formGroup]=\"myForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                            <input matInput placeholder=\"Escribe la hora inicial\" formControlName=start_time #start_time>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"myForm.controls['start_time'].hasError('required')\">\n                                        La hora de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n\n                                  <div class=\"row\">\n                                  \n                                      <div class=\"col-md-12\">\n                                                <mat-form-field>\n                                                        <input matInput placeholder=\"Escribe la hora final\" formControlName=end_time #end_time>\n                                                </mat-form-field>\n                                                <label class=\"text-danger\" *ngIf=\"myForm.controls['end_time'].hasError('required')\">\n                                                    La hora final es requerida\n                                                </label>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                     <div class=\"col-md-12\">\n                                        <mat-form-field>\n                                            <input matInput  placeholder=\"Anota una perido de frecuencia\" formControlName=frequency #frequency>\n                                         </mat-form-field>\n                                         <label class=\"text-danger\" *ngIf=\"myForm.controls['frequency'].hasError('required')\">\n                                            La frecuencia es requerida\n                                        </label>\n                                     </div>\n                                   </div>\n\n                                   <button mat-raised-button  type=\"submit\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-left\" (click)=\"addHour(start_time.value, end_time.value,frequency.value)\" >Agregar nuevo horario</button>\n                                   \n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n\n\n            \n      </div>\n    </div>\n  \n\n  \n"
+module.exports = "  <div class=\"main-content\">\n      <div class=\"container-fluid\">\n          <div class=\"row\">\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 1 de 3. Agregar una nueva fecha</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      \n                      <div class=\"card-body\">\n                          <form [formGroup]=\"angForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                          <input matInput [matDatepicker]=\"picker\" placeholder=\"Elige una fecha de inicio\" formControlName=\"start_date\" #start_date>\n                                          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                                          <mat-datepicker #picker></mat-datepicker>\n                                          \n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"angForm.controls['start_date'].hasError('required')\">\n                                        La fecha de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                          <mat-form-field>\n                                              <input matInput [matDatepicker]=\"picker2\" placeholder=\"Elige una fecha de final\" formControlName=\"end_date\" #end_date>\n                                              <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n                                              <mat-datepicker #picker2></mat-datepicker>\n                                          </mat-form-field>\n                                          <label class=\"text-danger\" *ngIf=\"angForm.controls['end_date'].hasError('required')\">\n                                            La fecha de final es requerida\n                                           </label>\n                                           <br>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                       <div class=\"col-md-12\">\n                                            <mat-radio-group formControlName=\"servicio\" >\n                                                    <mat-radio-button [value]=\"true\" #servicio>Servicio</mat-radio-button>\n                                                    <mat-radio-button [value]=\"false\" >No hay servicio</mat-radio-button>\n                                            </mat-radio-group>\n                                        <!-- <mat-checkbox class=\"example-margin\" value=\"true\" formControlName=\"servicio\" #servicio>Servicio</mat-checkbox> -->\n                                        <div class=\"row\">\n                                            <div class=\"col-md-12\">\n                                                <label class=\"text-danger\" *ngIf=\"angForm.controls['servicio'].hasError('required')\">\n                                                    Es necesario añadir si el servicio está disponible \n                                                </label>\n                                            </div>\n                                        </div>\n                                       </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\" [disabled]=\"angForm.pristine || angForm.invalid\"   class=\"btn btn-danger pull-left\" (click)=\"addDate(start_date.value, end_date.value,servicio.value) \" >Agregar nueva fecha</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n          <!-- formulario de horario -->\n          <div class=\"row\" *ngIf=show>\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 2 de 3. Agregar un nuevo horario</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      <div class=\"card-body\">\n                          <form [formGroup]=\"myForm\" novalidate >\n                              <div class=\"row\">\n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                            <input matInput placeholder=\"Escribe la hora inicial\" formControlName=start_time #start_time>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"myForm.controls['start_time'].hasError('required')\">\n                                        La hora de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                                <mat-form-field>\n                                                        <input matInput placeholder=\"Escribe la hora final\" formControlName=end_time #end_time>\n                                                </mat-form-field>\n                                                <label class=\"text-danger\" *ngIf=\"myForm.controls['end_time'].hasError('required')\">\n                                                    La hora final es requerida\n                                                </label>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                     <div class=\"col-md-12\">\n                                        <mat-form-field>\n                                            <input matInput  placeholder=\"Anota una perido de frecuencia\" formControlName=frequency #frequency>\n                                         </mat-form-field>\n                                         <label class=\"text-danger\" *ngIf=\"myForm.controls['frequency'].hasError('required')\">\n                                            La frecuencia es requerida\n                                        </label>\n                                     </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-left\" (click)=\"addHour(start_time.value, end_time.value,frequency.value)\" >Agregar nuevo horario</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n\n\n            \n      </div>\n    </div>\n  \n\n  \n"
 
 /***/ }),
 
@@ -23872,7 +23872,7 @@ module.exports = "  <div class=\"main-content\">\n      <div class=\"container-f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-radio-button {\n  margin-right: 2%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEZXNrdG9wXFx0ZW1wbGF0ZXNcXGFuZ3RlbXBsYXRlc1xcbWF0ZXJpYWwtZGFzaGJvYXJkLWFuZ3VsYXIyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcZGF0ZWluZm9ybWF0aW9uXFxjcmVhdGVcXGNyZWF0ZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2RhdGVpbmZvcm1hdGlvbi9jcmVhdGUvY3JlYXRlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXJhZGlvLWJ1dHRvbntcclxuICAgIG1hcmdpbi1yaWdodDogMiU7XHJcbn0iXX0= */"
+module.exports = "mat-radio-button {\n  margin-right: 2%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGRhdGVpbmZvcm1hdGlvblxcY3JlYXRlXFxjcmVhdGUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBZ0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy9kYXRlaW5mb3JtYXRpb24vY3JlYXRlL2NyZWF0ZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1yYWRpby1idXR0b257XG4gICAgbWFyZ2luLXJpZ2h0OiAyJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -23996,7 +23996,10 @@ var CreateComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./create.component.html */ "./src/app/controllers/dateinformation/create/create.component.html"),
             styles: [__webpack_require__(/*! ./create.component.scss */ "./src/app/controllers/dateinformation/create/create.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__["DateinformationService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
+        __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__["DateinformationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
     ], CreateComponent);
     return CreateComponent;
 }());
@@ -24012,7 +24015,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Horarios ({{dates.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/create']\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Fecha de inicio\n                                  </th>\n                                  <th>\n                                      Fecha final\n                                  </th>\n                                  <th>\n                                        Servicio\n                                  </th>\n                                  <th>\n                                      Horario inicial\n                                  </th>\n                                  <th>\n                                      Horario final\n                                  </th>\n                                  <th>\n                                      Frecuencia\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let date of dates\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{date.date_id?(date.date_id.start_date):\"N/A\"}}</td>\n                                      <td>{{date.date_id?(date.date_id.end_date):\"N/A\"}}</td>\n                                      <td>\n                                          <h4 class=\"float-left\">\n                                            <i class=\"fa fa-check text-success\"\n                                            *ngIf=\"date.date_id.service\"\n                                            ></i>\n                                            <i class=\"fa fa-times text-danger\"\n                                            *ngIf=\"!date.date_id.service\"\n                                            ></i>\n                                          </h4>\n                                      </td>\n                                      <td>{{date.hour_id?(date.hour_id.start_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.end_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.frequency):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteDate(date.id)\"  >\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"getByIDDATE()\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
+module.exports = "\n\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Horarios ({{dates.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/create']\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Fecha de inicio\n                                  </th>\n                                  <th>\n                                      Fecha final\n                                  </th>\n                                  <th>\n                                      Servicio\n                                  </th>\n                                  <th>\n                                      Horario inicial\n                                  </th>\n                                  <th>\n                                      Horario final\n                                  </th>\n                                  <th>\n                                      Frecuencia\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let date of dates\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{date.date_id?(1541030400 | date: 'shortDate' : '+0600'):\"N/A\" }}</td>\n                                      <td>{{date.date_id?(date.date_id.end_date | date: 'shortDate' : '+0600'):\"N/A\"}}</td>\n                                      <td>\n                                          <h4 class=\"float-left\">\n                                            <i class=\"fa fa-check text-success\"\n                                            *ngIf=\"date.date_id.service\"\n                                            ></i>\n                                            <i class=\"fa fa-times text-danger\"\n                                            *ngIf=\"!date.date_id.service\"\n                                            ></i>\n                                          </h4>\n                                      </td>\n                                      <td>{{date.hour_id?(date.hour_id.start_time | date: 'shortTime'):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.end_time | date: 'shortTime'):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.frequency):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteDate(date.id)\"  >\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(date.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
 
 /***/ }),
 
@@ -24041,6 +24044,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24054,33 +24059,39 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var DateinformationComponent = /** @class */ (function () {
-    function DateinformationComponent(service, route, router, fb) {
-        this.service = service;
+    function DateinformationComponent(_dateInfoService, route, router, fb, _modalService) {
+        this._dateInfoService = _dateInfoService;
         this.route = route;
         this.router = router;
         this.fb = fb;
+        this._modalService = _modalService;
         this.dates = [];
         // public hours = [];
         this.dateInformation = [];
     }
     DateinformationComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.service.getInformation()
+        this._dateInfoService.getInformation()
             .subscribe(function (data) {
             _this.dates = data;
-            console.log(data);
         });
     };
     DateinformationComponent.prototype.ngOnChanges = function () {
         var _this = this;
-        this.service.getInformation()
+        this._dateInfoService.getInformation()
             .subscribe(function (data) { return _this.dates = data; });
+    };
+    DateinformationComponent.prototype.openEditModal = function (id) {
+        var modalRef = this._modalService.open(_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_5__["DateInfoEditModalComponent"], { size: 'lg' });
+        modalRef.componentInstance.id = id;
     };
     DateinformationComponent.prototype.deleteDate = function (id) {
         var _this = this;
-        if (confirm("Desea eliminar el horario?")) {
-            this.service.deleteDate(id).subscribe(function (data) {
+        if (confirm('Desea eliminar el horario?')) {
+            this._dateInfoService.deleteDate(id).subscribe(function (data) {
                 _this.ngOnChanges();
             });
         }
@@ -24088,9 +24099,9 @@ var DateinformationComponent = /** @class */ (function () {
     DateinformationComponent.prototype.getByIDDate = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
-            _this.date = _this.service.getByIDDate(params['id']).subscribe(function (res) {
+            _this.date = _this._dateInfoService.getDateById(params['id'])
+                .subscribe(function (res) {
                 _this.date = res;
-                console.log(res);
             });
         });
     };
@@ -24100,82 +24111,13 @@ var DateinformationComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dateinformation.component.html */ "./src/app/controllers/dateinformation/dateinformation.component.html"),
             styles: [__webpack_require__(/*! ./dateinformation.component.scss */ "./src/app/controllers/dateinformation/dateinformation.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__["DateinformationService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+        __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__["DateinformationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]])
     ], DateinformationComponent);
     return DateinformationComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/controllers/dateinformation/edit/edit.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/controllers/dateinformation/edit/edit.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  edit works!\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/controllers/dateinformation/edit/edit.component.scss":
-/*!**********************************************************************!*\
-  !*** ./src/app/controllers/dateinformation/edit/edit.component.scss ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2RhdGVpbmZvcm1hdGlvbi9lZGl0L2VkaXQuY29tcG9uZW50LnNjc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/controllers/dateinformation/edit/edit.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/controllers/dateinformation/edit/edit.component.ts ***!
-  \********************************************************************/
-/*! exports provided: EditComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditComponent", function() { return EditComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var EditComponent = /** @class */ (function () {
-    function EditComponent(service, route, router, fb) {
-        this.service = service;
-        this.route = route;
-        this.router = router;
-        this.fb = fb;
-    }
-    EditComponent.prototype.ngOnInit = function () {
-    };
-    EditComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-edit',
-            template: __webpack_require__(/*! ./edit.component.html */ "./src/app/controllers/dateinformation/edit/edit.component.html"),
-            styles: [__webpack_require__(/*! ./edit.component.scss */ "./src/app/controllers/dateinformation/edit/edit.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__["DateinformationService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
-    ], EditComponent);
-    return EditComponent;
 }());
 
 
@@ -24637,6 +24579,81 @@ var PriceComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/controllers/ticket/ticket.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/controllers/ticket/ticket.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-danger\">\n                      <h4 class=\"card-title\">Boletos ({{arrayOfTickets.length}})</h4>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table table-hover\">\n                              <thead class=\"\">\n                                <th>\n                                    Nombre\n                                </th>\n                                <th>\n                                    Fecha de compra\n                                </th>\n                                <th>\n                                    No. de compra\n                                </th>\n                                <th>\n                                    Precio\n                                </th>\n                                <th>\n                                    Categoría\n                                </th>\n                              </thead>\n                              <tbody>\n                                <tr *ngFor=\"let ticket of arrayOfTickets\" class=\"list-group-item-action\">\n                                    <td> {{ ticket.name | titlecase }} </td>\n                                    <td> {{ ticket.createdAt | date: 'short' }} </td>\n                                    <td> {{ ticket.purchase_id.id }} </td>\n                                    <td> $ {{ ticket.price_id.priceAmount }} </td>\n                                    <td> {{ ticket.price_id.ticket_type_id }} </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>  \n      </div>\n  </div>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/controllers/ticket/ticket.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/controllers/ticket/ticket.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL3RpY2tldC90aWNrZXQuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/controllers/ticket/ticket.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/controllers/ticket/ticket.component.ts ***!
+  \********************************************************/
+/*! exports provided: TicketComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketComponent", function() { return TicketComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/ticket.service */ "./src/app/services/ticket.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TicketComponent = /** @class */ (function () {
+    function TicketComponent(_ticketService) {
+        this._ticketService = _ticketService;
+        this.arrayOfTickets = [];
+    }
+    TicketComponent.prototype.ngOnInit = function () {
+        this.getTickets();
+    };
+    TicketComponent.prototype.getTickets = function () {
+        var _this = this;
+        this._ticketService.getTickets()
+            .subscribe(function (res) {
+            _this.arrayOfTickets = res;
+        });
+    };
+    TicketComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-ticket',
+            template: __webpack_require__(/*! ./ticket.component.html */ "./src/app/controllers/ticket/ticket.component.html"),
+            styles: [__webpack_require__(/*! ./ticket.component.scss */ "./src/app/controllers/ticket/ticket.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_ticket_service__WEBPACK_IMPORTED_MODULE_1__["TicketService"]])
+    ], TicketComponent);
+    return TicketComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/controllers/tour/tour.component.html":
 /*!******************************************************!*\
   !*** ./src/app/controllers/tour/tour.component.html ***!
@@ -24655,7 +24672,7 @@ module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-flu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdG91ci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEZXNrdG9wXFx0ZW1wbGF0ZXNcXGFuZ3RlbXBsYXRlc1xcbWF0ZXJpYWwtZGFzaGJvYXJkLWFuZ3VsYXIyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcdG91clxcdG91ci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJCQUEwQixFQUM3Qjs7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvdG91ci90b3VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cbmE6aG92ZXJ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSJdfQ== */"
+module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdG91ci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXHRvdXJcXHRvdXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwyQkFBMEIsRUFDN0I7O0FBQ0Q7RUFDSSxnQkFBZSxFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL3RvdXIvdG91ci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImF7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5hOmhvdmVye1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn0iXX0= */"
 
 /***/ }),
 
@@ -24758,7 +24775,7 @@ module.exports = "\n<div class=\"main-content\">\n  <div class=\"container-fluid
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  cursor: pointer;\n  color: purple;\n  margin-right: 10%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdXNlci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEZXNrdG9wXFx0ZW1wbGF0ZXNcXGFuZ3RlbXBsYXRlc1xcbWF0ZXJpYWwtZGFzaGJvYXJkLWFuZ3VsYXIyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcdXNlclxcdXNlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsY0FBYTtFQUNiLGtCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL3VzZXIvdXNlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIml7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGNvbG9yOiBwdXJwbGU7XG4gICAgbWFyZ2luLXJpZ2h0OjEwJTtcbn0iXX0= */"
+module.exports = "i {\n  cursor: pointer;\n  color: purple;\n  margin-right: 10%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdXNlci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXHVzZXJcXHVzZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBZTtFQUNmLGNBQWE7RUFDYixrQkFBZ0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy91c2VyL3VzZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpe1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBjb2xvcjogcHVycGxlO1xuICAgIG1hcmdpbi1yaWdodDoxMCU7XG59Il19 */"
 
 /***/ }),
 
@@ -25054,9 +25071,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _controllers_tour_tour_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../controllers/tour/tour.component */ "./src/app/controllers/tour/tour.component.ts");
 /* harmony import */ var _controllers_price_price_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../controllers/price/price.component */ "./src/app/controllers/price/price.component.ts");
 /* harmony import */ var _controllers_dateinformation_create_create_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../controllers/dateinformation/create/create.component */ "./src/app/controllers/dateinformation/create/create.component.ts");
-/* harmony import */ var _controllers_dateinformation_edit_edit_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../controllers/dateinformation/edit/edit.component */ "./src/app/controllers/dateinformation/edit/edit.component.ts");
-/* harmony import */ var _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../controllers/dateinformation/selectdate/selectdate.component */ "./src/app/controllers/dateinformation/selectdate/selectdate.component.ts");
-/* harmony import */ var _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../controllers/place/create-place/create-place.component */ "./src/app/controllers/place/create-place/create-place.component.ts");
+/* harmony import */ var _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../controllers/dateinformation/selectdate/selectdate.component */ "./src/app/controllers/dateinformation/selectdate/selectdate.component.ts");
+/* harmony import */ var _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../controllers/place/create-place/create-place.component */ "./src/app/controllers/place/create-place/create-place.component.ts");
+/* harmony import */ var _controllers_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../controllers/ticket/ticket.component */ "./src/app/controllers/ticket/ticket.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
 /* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
@@ -25081,7 +25098,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-//controllers:
+// controllers:
 
 
 
@@ -25147,9 +25164,9 @@ var AdminLayoutModule = /** @class */ (function () {
                 _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_18__["PurchaseComponent"],
                 _controllers_tour_tour_component__WEBPACK_IMPORTED_MODULE_19__["TourComponent"],
                 _controllers_dateinformation_create_create_component__WEBPACK_IMPORTED_MODULE_21__["CreateComponent"],
-                _controllers_dateinformation_edit_edit_component__WEBPACK_IMPORTED_MODULE_22__["EditComponent"],
-                _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_23__["SelectdateComponent"],
-                _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_24__["CreatePlaceComponent"]
+                _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_22__["SelectdateComponent"],
+                _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_23__["CreatePlaceComponent"],
+                _controllers_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_24__["TicketComponent"]
             ]
         })
     ], AdminLayoutModule);
@@ -25187,9 +25204,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _controllers_tour_tour_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../controllers/tour/tour.component */ "./src/app/controllers/tour/tour.component.ts");
 /* harmony import */ var _controllers_price_price_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../controllers/price/price.component */ "./src/app/controllers/price/price.component.ts");
 /* harmony import */ var _controllers_dateinformation_create_create_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../controllers/dateinformation/create/create.component */ "./src/app/controllers/dateinformation/create/create.component.ts");
-/* harmony import */ var _controllers_dateinformation_edit_edit_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../controllers/dateinformation/edit/edit.component */ "./src/app/controllers/dateinformation/edit/edit.component.ts");
-/* harmony import */ var _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../controllers/dateinformation/selectdate/selectdate.component */ "./src/app/controllers/dateinformation/selectdate/selectdate.component.ts");
-/* harmony import */ var _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../controllers/place/create-place/create-place.component */ "./src/app/controllers/place/create-place/create-place.component.ts");
+/* harmony import */ var _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../controllers/dateinformation/selectdate/selectdate.component */ "./src/app/controllers/dateinformation/selectdate/selectdate.component.ts");
+/* harmony import */ var _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../controllers/place/create-place/create-place.component */ "./src/app/controllers/place/create-place/create-place.component.ts");
+/* harmony import */ var _controllers_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../controllers/ticket/ticket.component */ "./src/app/controllers/ticket/ticket.component.ts");
 
 
 
@@ -25270,9 +25287,9 @@ var AdminLayoutRoutes = [
     { path: 'purchase', component: _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_13__["PurchaseComponent"] },
     { path: 'tour', component: _controllers_tour_tour_component__WEBPACK_IMPORTED_MODULE_14__["TourComponent"] },
     { path: 'create', component: _controllers_dateinformation_create_create_component__WEBPACK_IMPORTED_MODULE_16__["CreateComponent"] },
-    { path: 'edit', component: _controllers_dateinformation_edit_edit_component__WEBPACK_IMPORTED_MODULE_17__["EditComponent"] },
-    { path: 'selectdate', component: _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_18__["SelectdateComponent"] },
-    { path: 'createplace', component: _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_19__["CreatePlaceComponent"] },
+    { path: 'selectdate', component: _controllers_dateinformation_selectdate_selectdate_component__WEBPACK_IMPORTED_MODULE_17__["SelectdateComponent"] },
+    { path: 'createplace', component: _controllers_place_create_place_create_place_component__WEBPACK_IMPORTED_MODULE_18__["CreatePlaceComponent"] },
+    { path: 'ticket', component: _controllers_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_19__["TicketComponent"] },
 ];
 
 

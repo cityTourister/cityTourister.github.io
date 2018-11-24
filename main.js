@@ -177,29 +177,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _controllers_login_login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./controllers/login/login.component */ "./src/app/controllers/login/login.component.ts");
 /* harmony import */ var _NeedAuthGuard_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./NeedAuthGuard.component */ "./src/app/NeedAuthGuard.component.ts");
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
-/* harmony import */ var _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modals/modal/modal.component */ "./src/app/modals/modal/modal.component.ts");
-/* harmony import */ var _modals_about_about_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modals/about/about.component */ "./src/app/modals/about/about.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./controllers/admin/modals/AdminAddModal.component */ "./src/app/controllers/admin/modals/AdminAddModal.component.ts");
-/* harmony import */ var _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./controllers/admin/modals/AdminEditModal.component */ "./src/app/controllers/admin/modals/AdminEditModal.component.ts");
-/* harmony import */ var _services_company_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/company.service */ "./src/app/services/company.service.ts");
-/* harmony import */ var _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./controllers/company/modals/CompanyEditModal.component */ "./src/app/controllers/company/modals/CompanyEditModal.component.ts");
-/* harmony import */ var _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./controllers/company/modals/CompanyAddModal.component */ "./src/app/controllers/company/modals/CompanyAddModal.component.ts");
-/* harmony import */ var _services_price_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/price.service */ "./src/app/services/price.service.ts");
-/* harmony import */ var _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./controllers/price/modals/PriceEditModal.component */ "./src/app/controllers/price/modals/PriceEditModal.component.ts");
-/* harmony import */ var _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./controllers/price/modals/PriceAddModal.component */ "./src/app/controllers/price/modals/PriceAddModal.component.ts");
-/* harmony import */ var _services_tickettype_service__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./services/tickettype.service */ "./src/app/services/tickettype.service.ts");
-/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./services/tour.service */ "./src/app/services/tour.service.ts");
-/* harmony import */ var _services_purchase_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./services/purchase.service */ "./src/app/services/purchase.service.ts");
-/* harmony import */ var _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./controllers/purchase/purchase.component */ "./src/app/controllers/purchase/purchase.component.ts");
-/* harmony import */ var _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./controllers/bus/modals/BusAddModal.component */ "./src/app/controllers/bus/modals/BusAddModal.component.ts");
-/* harmony import */ var _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./controllers/bus/modals/BusEditModal.component */ "./src/app/controllers/bus/modals/BusEditModal.component.ts");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
-/* harmony import */ var _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./controllers/tour/showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
-/* harmony import */ var _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./controllers/tour/showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
-/* harmony import */ var _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./controllers/tour/showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
-/* harmony import */ var _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./controllers/tour/showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
-/* harmony import */ var _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./controllers/map/map.component */ "./src/app/controllers/map/map.component.ts");
+/* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/datepicker */ "./node_modules/@angular/material/esm5/datepicker.es5.js");
+/* harmony import */ var _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modals/modal/modal.component */ "./src/app/modals/modal/modal.component.ts");
+/* harmony import */ var _modals_about_about_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./modals/about/about.component */ "./src/app/modals/about/about.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./controllers/admin/modals/AdminAddModal.component */ "./src/app/controllers/admin/modals/AdminAddModal.component.ts");
+/* harmony import */ var _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./controllers/admin/modals/AdminEditModal.component */ "./src/app/controllers/admin/modals/AdminEditModal.component.ts");
+/* harmony import */ var _services_company_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/company.service */ "./src/app/services/company.service.ts");
+/* harmony import */ var _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./controllers/company/modals/CompanyEditModal.component */ "./src/app/controllers/company/modals/CompanyEditModal.component.ts");
+/* harmony import */ var _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./controllers/company/modals/CompanyAddModal.component */ "./src/app/controllers/company/modals/CompanyAddModal.component.ts");
+/* harmony import */ var _services_price_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/price.service */ "./src/app/services/price.service.ts");
+/* harmony import */ var _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./controllers/price/modals/PriceEditModal.component */ "./src/app/controllers/price/modals/PriceEditModal.component.ts");
+/* harmony import */ var _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./controllers/price/modals/PriceAddModal.component */ "./src/app/controllers/price/modals/PriceAddModal.component.ts");
+/* harmony import */ var _services_tickettype_service__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./services/tickettype.service */ "./src/app/services/tickettype.service.ts");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./services/tour.service */ "./src/app/services/tour.service.ts");
+/* harmony import */ var _services_purchase_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./services/purchase.service */ "./src/app/services/purchase.service.ts");
+/* harmony import */ var _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./controllers/purchase/purchase.component */ "./src/app/controllers/purchase/purchase.component.ts");
+/* harmony import */ var _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./controllers/bus/modals/BusAddModal.component */ "./src/app/controllers/bus/modals/BusAddModal.component.ts");
+/* harmony import */ var _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./controllers/bus/modals/BusEditModal.component */ "./src/app/controllers/bus/modals/BusEditModal.component.ts");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./controllers/tour/showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
+/* harmony import */ var _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./controllers/tour/showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
+/* harmony import */ var _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./controllers/tour/showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
+/* harmony import */ var _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./controllers/tour/showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
+/* harmony import */ var _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./controllers/map/map.component */ "./src/app/controllers/map/map.component.ts");
+/* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
+/* harmony import */ var _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./controllers/dateinformation/edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -208,6 +211,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 // Import: Modules whose classes are needed by the components of this modules, which means
 // that are needed by the declarations
+
+
+
 
 
 
@@ -269,66 +275,70 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormFieldModule"],
-                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_39__["MatCheckboxModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_40__["MatCheckboxModule"],
                 _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
+                _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_22__["MatDatepickerModule"],
                 _agm_core__WEBPACK_IMPORTED_MODULE_12__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyA4rm9L8UDG_OdmRFzLSlzz-lCUfz_zxpQ'
                 }),
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__["NgbModule"].forRoot()
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"].forRoot()
             ],
             declarations: [
                 //  classes that belong to this module and are related to views.
                 _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__["AdminLayoutComponent"],
                 _controllers_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"],
-                _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_25__["NgbdModalAddAdmin"],
-                _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_26__["NgbdModalEditAdmin"],
-                _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalAddCompany"],
-                _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_28__["NgbdModalEditCompany"],
-                _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalAddPrice"],
-                _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_31__["NgbdModalEditPrice"],
-                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddBus"],
-                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_38__["NgbdModalEditBus"],
-                _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_44__["MapComponent"],
-                _modals_about_about_component__WEBPACK_IMPORTED_MODULE_23__["AboutComponent"],
-                _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_22__["ModalComponent"],
-                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_40__["TourInfoComponent"],
-                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_41__["BusInfoComponent"],
-                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_42__["TimeInfoComponent"],
-                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_43__["PlaceInfoComponent"],
-                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_36__["PurchaseInfoComponent"]
+                _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_26__["NgbdModalAddAdmin"],
+                _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_27__["NgbdModalEditAdmin"],
+                _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_30__["NgbdModalAddCompany"],
+                _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalEditCompany"],
+                _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__["NgbdModalAddPrice"],
+                _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalEditPrice"],
+                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_38__["NgbdModalAddBus"],
+                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_39__["NgbdModalEditBus"],
+                _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_45__["MapComponent"],
+                _modals_about_about_component__WEBPACK_IMPORTED_MODULE_24__["AboutComponent"],
+                _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_23__["ModalComponent"],
+                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_41__["TourInfoComponent"],
+                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_42__["BusInfoComponent"],
+                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__["TimeInfoComponent"],
+                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__["PlaceInfoComponent"],
+                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__["PurchaseInfoComponent"],
+                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__["DateInfoEditModalComponent"]
             ],
             // services
             providers: [_services_user_service__WEBPACK_IMPORTED_MODULE_15__["UserService"],
                 _services_admin_service__WEBPACK_IMPORTED_MODULE_14__["AdminService"],
                 _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_18__["DateinformationService"],
                 _services_bus_service__WEBPACK_IMPORTED_MODULE_16__["BusService"],
-                _services_company_service__WEBPACK_IMPORTED_MODULE_27__["CompanyService"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__["NgbActiveModal"],
+                _services_company_service__WEBPACK_IMPORTED_MODULE_28__["CompanyService"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbActiveModal"],
                 _services_place_service__WEBPACK_IMPORTED_MODULE_17__["PlaceService"],
-                _services_price_service__WEBPACK_IMPORTED_MODULE_30__["PriceService"],
-                _services_tickettype_service__WEBPACK_IMPORTED_MODULE_33__["TicketTypeService"],
-                _services_tour_service__WEBPACK_IMPORTED_MODULE_34__["TourService"],
+                _services_price_service__WEBPACK_IMPORTED_MODULE_31__["PriceService"],
+                _services_tickettype_service__WEBPACK_IMPORTED_MODULE_34__["TicketTypeService"],
+                _services_tour_service__WEBPACK_IMPORTED_MODULE_35__["TourService"],
                 _NeedAuthGuard_component__WEBPACK_IMPORTED_MODULE_20__["NeedAuthGuard"],
-                _services_purchase_service__WEBPACK_IMPORTED_MODULE_35__["PurchaseService"],],
+                _services_purchase_service__WEBPACK_IMPORTED_MODULE_36__["PurchaseService"],
+                _services_ticket_service__WEBPACK_IMPORTED_MODULE_46__["TicketService"]],
             // The root component which is the main view of the application
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
             entryComponents: [
-                _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_25__["NgbdModalAddAdmin"],
-                _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_26__["NgbdModalEditAdmin"],
-                _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalAddCompany"],
-                _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_28__["NgbdModalEditCompany"],
-                _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalAddPrice"],
-                _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_31__["NgbdModalEditPrice"],
-                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddBus"],
-                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_38__["NgbdModalEditBus"],
-                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_36__["PurchaseInfoComponent"],
-                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_40__["TourInfoComponent"],
-                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_41__["BusInfoComponent"],
-                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_42__["TimeInfoComponent"],
-                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_43__["PlaceInfoComponent"],
+                _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_26__["NgbdModalAddAdmin"],
+                _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_27__["NgbdModalEditAdmin"],
+                _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_30__["NgbdModalAddCompany"],
+                _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalEditCompany"],
+                _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__["NgbdModalAddPrice"],
+                _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalEditPrice"],
+                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_38__["NgbdModalAddBus"],
+                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_39__["NgbdModalEditBus"],
+                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__["PurchaseInfoComponent"],
+                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_41__["TourInfoComponent"],
+                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_42__["BusInfoComponent"],
+                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__["TimeInfoComponent"],
+                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__["PlaceInfoComponent"],
+                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__["DateInfoEditModalComponent"]
             ]
         })
     ], AppModule);
@@ -747,17 +757,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 var ROUTES = [
-    { path: '/maps', title: 'Rutas', icon: 'map', class: '' },
     { path: '/user', title: 'Usuarios', icon: 'person', class: '' },
+    { path: '/purchase', title: 'Compras', icon: 'shopping_cart', class: '' },
+    { path: '/ticket', title: 'Boletos', icon: 'confirmation_number', class: '' },
+    { path: '/tour', title: 'Gestor de Tours', icon: 'map', class: '' },
+    { path: '/price', title: 'Gestor de Precios', icon: 'attach_money', class: '' },
+    { path: '/maps', title: 'Rutas', icon: 'map', class: '' },
     { path: '/place', title: 'Lugares', icon: 'location_on', class: '' },
     { path: '/bus', title: 'Autobuses', icon: 'directions_bus', class: '' },
-    { path: '/icons', title: 'Boletos', icon: 'confirmation_number', class: '' },
-    { path: '/purchase', title: 'Compras', icon: 'shopping_cart', class: '' },
     { path: '/dateinformation', title: 'Horarios', icon: 'access_time', class: '' },
-    { path: '/price', title: 'Gestor de Precios', icon: 'attach_money', class: '' },
     { path: '/company', title: 'Compañias', icon: 'business', class: '' },
     { path: '/admin', title: 'Admin', icon: 'supervised_user_circle', class: '' },
-    { path: '/tour', title: 'Gestor de Tours', icon: 'map', class: '' },
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent() {
@@ -1568,6 +1578,114 @@ var NgbdModalEditCompany = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.html":
+/*!***********************************************************************************!*\
+  !*** ./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.html ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" placeholder=\"Fecha de inicio\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\" placeholder=\"Fecha final\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n        <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <ngb-timepicker [(ngModel)]=\"time\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\"></div>\n    <div class=\"col-md-4\"></div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" (click)=\"updateDateInterval()\">Guardar</button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: DateInfoEditModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateInfoEditModalComponent", function() { return DateInfoEditModalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DateInfoEditModalComponent = /** @class */ (function () {
+    function DateInfoEditModalComponent(service, route, router, fb, activeModal) {
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.fb = fb;
+        this.activeModal = activeModal;
+    }
+    DateInfoEditModalComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.service.getDateInfoById(this.id)
+            .subscribe(function (res) {
+            _this.dateInterval = res.date_id;
+            _this.start_date = new Date(_this.dateInterval.start_date * 1000.0);
+            _this.end_date = new Date(_this.dateInterval.end_date * 1000.0);
+            _this.hourInterval = res.hour_id;
+        });
+    };
+    DateInfoEditModalComponent.prototype.updateDateInterval = function () {
+        var _this = this;
+        this.service.updateDate(this.dateInterval.id, this.dateInterval.start_date, this.dateInterval.end_date, this.dateInterval.service)
+            .subscribe(function (res) {
+            console.log(res);
+            _this.activeModal.close();
+        });
+    };
+    DateInfoEditModalComponent.prototype.updateStartDate = function (event) {
+        this.start_date = new Date(event.value);
+        this.dateInterval.start_date = this.start_date.getTime() / 1000.0;
+    };
+    DateInfoEditModalComponent.prototype.updateEndDate = function (event) {
+        this.end_date = new Date(event.value);
+        this.dateInterval.end_date = this.end_date.getTime() / 1000.0;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], DateInfoEditModalComponent.prototype, "id", void 0);
+    DateInfoEditModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-edit',
+            template: __webpack_require__(/*! ./DateInfoEditModal.component.html */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.html"),
+            styles: [__webpack_require__(/*! ./edit.component.scss */ "./src/app/controllers/dateinformation/edit/edit.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__["DateinformationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbActiveModal"]])
+    ], DateInfoEditModalComponent);
+    return DateInfoEditModalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/controllers/dateinformation/edit/edit.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/controllers/dateinformation/edit/edit.component.scss ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".cdk-overlay-container {\n  z-index: 100000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2VkaXQvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFxkYXRlaW5mb3JtYXRpb25cXGVkaXRcXGVkaXQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBZSxFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2RhdGVpbmZvcm1hdGlvbi9lZGl0L2VkaXQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2RrLW92ZXJsYXktY29udGFpbmVyeyAgICBcbiAgICB6LWluZGV4OiAxMDAwMDA7XG59Il19 */"
+
+/***/ }),
+
 /***/ "./src/app/controllers/login/login.component.html":
 /*!********************************************************!*\
   !*** ./src/app/controllers/login/login.component.html ***!
@@ -1586,7 +1704,7 @@ module.exports = "<div class=\"cotainer\">\n\t<div class=\"d-flex justify-conten
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-body {\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n.card {\n  width: 600px;\n  background: #fff; }\n\n.img_logo span img {\n  width: 10em;\n  margin-top: 0em; }\n\n.input-group-prepend span {\n  background: #BDBDBD; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvbG9naW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRGVza3RvcFxcdGVtcGxhdGVzXFxhbmd0ZW1wbGF0ZXNcXG1hdGVyaWFsLWRhc2hib2FyZC1hbmd1bGFyMi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGxvZ2luXFxsb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDRTtFQUNJLDZCQUE0QjtFQUM1Qix1QkFBc0IsRUFDekI7O0FBRUQ7RUFDRSxhQUFZO0VBQ1osaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0ksWUFBVztFQUNYLGdCQUFlLEVBQ2xCOztBQUVEO0VBQ0Usb0JBQW1CLEVBQ3BCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvbG9naW4vbG9naW4uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgLmNhcmQtYm9keXtcbiAgICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB9XG4gIFxuICAuY2FyZCB7XG4gICAgd2lkdGg6IDYwMHB4O1xuICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gIH1cbiAgXG4gIC5pbWdfbG9nbyBzcGFuIGltZ3tcbiAgICAgIHdpZHRoOiAxMGVtO1xuICAgICAgbWFyZ2luLXRvcDogMGVtO1xuICB9XG4gIFxuICAuaW5wdXQtZ3JvdXAtcHJlcGVuZCBzcGFue1xuICAgIGJhY2tncm91bmQ6ICNCREJEQkQ7XG4gIH1cbiAgIl19 */"
+module.exports = ".card-body {\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n.card {\n  width: 600px;\n  background: #fff; }\n\n.img_logo span img {\n  width: 10em;\n  margin-top: 0em; }\n\n.input-group-prepend span {\n  background: #BDBDBD; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvbG9naW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFxsb2dpblxcbG9naW4uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDSSw2QkFBNEI7RUFDNUIsdUJBQXNCLEVBQ3pCOztBQUVEO0VBQ0UsYUFBWTtFQUNaLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNJLFlBQVc7RUFDWCxnQkFBZSxFQUNsQjs7QUFFRDtFQUNFLG9CQUFtQixFQUNwQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4gIC5jYXJkLWJvZHl7XG4gICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgfVxuICBcbiAgLmNhcmQge1xuICAgIHdpZHRoOiA2MDBweDtcbiAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICB9XG4gIFxuICAuaW1nX2xvZ28gc3BhbiBpbWd7XG4gICAgICB3aWR0aDogMTBlbTtcbiAgICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgfVxuICBcbiAgLmlucHV0LWdyb3VwLXByZXBlbmQgc3BhbntcbiAgICBiYWNrZ3JvdW5kOiAjQkRCREJEO1xuICB9XG4gICJdfQ== */"
 
 /***/ }),
 
@@ -1638,7 +1756,7 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.loginAdmin = function (email, password) {
         var _this = this;
         this._loginService.login(email, password).subscribe(function (res) {
-            _this._loginService.setLoggedIn('' + res.id);
+            _this._loginService.setToken(res.token);
             _this.showNotification(res, 'top', 'right');
             _this.router.navigateByUrl('/dashboard');
         }, function (err) {
@@ -1655,9 +1773,7 @@ var LoginComponent = /** @class */ (function () {
                 from: from,
                 align: align
             },
-            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                      <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                      <span data-notify=\"icon\"></span>\n                      <span data-notify=\"message\">{2}</span>\n                      <div class=\"progress\" data-notify=\"progressbar\">\n                          <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                      </div>\n                  </div>",
-            onClose: function () {
-            }
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                      <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                      <span data-notify=\"icon\"></span>\n                      <span data-notify=\"message\">{2}</span>\n                      <div class=\"progress\" data-notify=\"progressbar\">\n                          <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">\n                          </div>\n                      </div>\n                  </div>"
         });
     };
     LoginComponent = __decorate([
@@ -2034,7 +2150,7 @@ module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvcHVyY2hhc2UvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRGVza3RvcFxcdGVtcGxhdGVzXFxhbmd0ZW1wbGF0ZXNcXG1hdGVyaWFsLWRhc2hib2FyZC1hbmd1bGFyMi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXHB1cmNoYXNlXFxwdXJjaGFzZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJCQUEwQixFQUM3Qjs7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvcHVyY2hhc2UvcHVyY2hhc2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhe1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuYTpob3ZlcntcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */"
+module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvcHVyY2hhc2UvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFxwdXJjaGFzZVxccHVyY2hhc2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwyQkFBMEIsRUFDN0I7O0FBQ0Q7RUFDSSxnQkFBZSxFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL3B1cmNoYXNlL3B1cmNoYXNlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cbmE6aG92ZXJ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -2327,7 +2443,7 @@ var TimeInfoComponent = /** @class */ (function () {
         var _this = this;
         for (var _i = 0, dateinformations_1 = dateinformations; _i < dateinformations_1.length; _i++) {
             var dateinf = dateinformations_1[_i];
-            this._dateinfoService.getByIdDateInfo(dateinf.id)
+            this._dateinfoService.getDateInfoById(dateinf.id)
                 .subscribe(function (res) {
                 _this.hourIntervals.push(res.hour_id);
                 _this.dateIntervals.push(res.date_id);
@@ -2761,16 +2877,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var AdminService = /** @class */ (function () {
     function AdminService(http) {
         this.http = http;
     }
     AdminService.prototype.getAdmins = function () {
-        return this.http.get(API_URL + '/admin');
+        return this.http.get(API_URL + '/admin', AUTH);
     };
     AdminService.prototype.deleteAdmin = function (id) {
-        if (confirm("¿Eliminar admin?")) {
-            return this.http.delete(API_URL + '/admin' + '/' + id);
+        if (confirm('¿Eliminar admin?')) {
+            return this.http.delete(API_URL + '/admin/' + id, AUTH);
         }
     };
     AdminService.prototype.addAdmin = function (username, email, password) {
@@ -2779,10 +2896,10 @@ var AdminService = /** @class */ (function () {
             email: email,
             password: password
         };
-        return this.http.post(API_URL + '/admin/create', obj);
+        return this.http.post(API_URL + '/admin/create', obj, AUTH);
     };
     AdminService.prototype.getByIDAdmin = function (id) {
-        return this.http.get(API_URL + '/admin' + "/" + id);
+        return this.http.get(API_URL + '/admin/' + id, AUTH);
     };
     AdminService.prototype.updateAdmin = function (username, email, password, id) {
         var obj = {
@@ -2790,7 +2907,7 @@ var AdminService = /** @class */ (function () {
             email: email,
             password: password,
         };
-        return this.http.put(API_URL + '/admin/edit/' + id, obj);
+        return this.http.put(API_URL + '/admin/edit/' + id, obj, AUTH);
     };
     AdminService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -2829,19 +2946,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var BusService = /** @class */ (function () {
     function BusService(http) {
         this.http = http;
     }
     BusService.prototype.getBuses = function () {
-        return this.http.get(API_URL + '/bus');
+        return this.http.get(API_URL + '/bus', AUTH);
     };
     BusService.prototype.deleteBus = function (id) {
-        return this.http.delete(API_URL + '/bus' + "/" + id);
+        return this.http.delete(API_URL + '/bus/' + id, AUTH);
     };
     //returns a user searched by an id. this is used when you try to edit a user
     BusService.prototype.getByIDBus = function (id) {
-        return this.http.get(API_URL + '/bus' + "/" + id);
+        return this.http.get(API_URL + '/bus/' + id, AUTH);
     };
     BusService.prototype.addBus = function (numBus, availability, tour_id) {
         var obj = {
@@ -2849,7 +2967,7 @@ var BusService = /** @class */ (function () {
             availability: availability,
             tour_id: tour_id
         };
-        return this.http.post(API_URL + '/bus/add', obj);
+        return this.http.post(API_URL + '/bus/add', obj, AUTH);
     };
     BusService.prototype.updateBus = function (numBus, availability, tour_id, id) {
         var obj = {
@@ -2857,7 +2975,7 @@ var BusService = /** @class */ (function () {
             availability: availability,
             tour_id: tour_id
         };
-        return this.http.put(API_URL + '/bus/edit/' + id, obj);
+        return this.http.put(API_URL + '/bus/edit/' + id, obj, AUTH);
     };
     BusService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -2896,16 +3014,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var CompanyService = /** @class */ (function () {
     function CompanyService(http) {
         this.http = http;
     }
     CompanyService.prototype.getCompanies = function () {
-        return this.http.get(API_URL + '/company');
+        return this.http.get(API_URL + '/company', AUTH);
     };
     CompanyService.prototype.deleteCompany = function (id) {
-        if (confirm("¿Eliminar compañia?")) {
-            return this.http.delete(API_URL + '/company' + '/' + id);
+        if (confirm('¿Eliminar compañia?')) {
+            return this.http.delete(API_URL + '/company/' + id, AUTH);
         }
     };
     CompanyService.prototype.addCompany = function (name, full_name, phone_number, address, postal_code, rfc, ieps, iva) {
@@ -2919,10 +3038,10 @@ var CompanyService = /** @class */ (function () {
             ieps: ieps,
             iva: iva
         };
-        return this.http.post(API_URL + '/company/add', obj);
+        return this.http.post(API_URL + '/company/add', obj, AUTH);
     };
     CompanyService.prototype.getByIdCompany = function (id) {
-        return this.http.get(API_URL + '/company/' + id);
+        return this.http.get(API_URL + '/company/' + id, AUTH);
     };
     CompanyService.prototype.updateCompany = function (name, full_name, phone_number, address, postal_code, rfc, ieps, iva, id) {
         var obj = {
@@ -2935,7 +3054,7 @@ var CompanyService = /** @class */ (function () {
             ieps: ieps,
             iva: iva
         };
-        return this.http.put(API_URL + '/company/edit/' + id, obj);
+        return this.http.put(API_URL + '/company/edit/' + id, obj, AUTH);
     };
     CompanyService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -2974,56 +3093,70 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var DateinformationService = /** @class */ (function () {
     function DateinformationService(http) {
         this.http = http;
     }
     DateinformationService.prototype.getInformation = function () {
-        return this.http.get(API_URL + '/dateinformation');
+        return this.http.get(API_URL + '/dateinformation', AUTH);
     };
     DateinformationService.prototype.getDates = function () {
-        return this.http.get(API_URL + '/dateinterval');
+        return this.http.get(API_URL + '/dateinterval', AUTH);
     };
     DateinformationService.prototype.getHours = function () {
-        return this.http.get(API_URL + '/hourinterval');
+        return this.http.get(API_URL + '/hourinterval', AUTH);
     };
     DateinformationService.prototype.deleteDate = function (id) {
-        return this.http.delete(API_URL + '/dateinformation' + "/" + id);
+        return this.http.delete(API_URL + '/dateinformation/' + id, AUTH);
     };
-    // //returns a user searched by an id. this is used when you try to edit a user
-    // getIDDate(id): Observable<IDate> {
-    //   return this.http.get<IDate>(API_URL + '/dateinformation'+"/"+id);
-    // }
-    // Funcion para agregar a la tabla de dateInterval
     DateinformationService.prototype.addDate = function (start_date, end_date, service) {
         var obj = {
             start_date: start_date,
             end_date: end_date,
             service: service
         };
-        return this.http.post(API_URL + '/dateinterval' + "/add", obj);
+        return this.http.post(API_URL + '/dateinterval/add', obj, AUTH);
     };
-    // Funcion para agregar a la tabla de hourInterval
     DateinformationService.prototype.addHour = function (start_time, end_time, frequency) {
         var obj = {
             start_time: start_time,
             end_time: end_time,
             frequency: frequency
         };
-        return this.http.post(API_URL + '/hourinterval' + "/add", obj);
+        return this.http.post(API_URL + '/hourinterval/add', obj, AUTH);
     };
     DateinformationService.prototype.addInformationDate = function (date_id, hour_id) {
         var obj = {
             date_id: date_id,
             hour_id: hour_id
         };
-        return this.http.post(API_URL + '/dateinformation' + "/add", obj);
+        return this.http.post(API_URL + '/dateinformation/add', obj, AUTH);
     };
-    DateinformationService.prototype.getByIdDateInfo = function (id) {
-        return this.http.get(API_URL + '/dateinformation' + "/" + id);
+    DateinformationService.prototype.getDateInfoById = function (id) {
+        return this.http.get(API_URL + '/dateinformation/' + id, AUTH);
     };
-    DateinformationService.prototype.getByIDDate = function (id) {
-        return this.http.get(API_URL + '/dateinterval' + "/" + id);
+    DateinformationService.prototype.getDateById = function (id) {
+        return this.http.get(API_URL + '/dateinterval/' + id, AUTH);
+    };
+    DateinformationService.prototype.getHourById = function (id) {
+        return this.http.get(API_URL + '/hourinterval/' + id, AUTH);
+    };
+    DateinformationService.prototype.updateHour = function (id, startTime, endTime, frequency) {
+        var obj = {
+            start_time: startTime,
+            end_time: endTime,
+            frequency: frequency
+        };
+        return this.http.put(API_URL + '/hourinterval/edit/' + id, obj, AUTH);
+    };
+    DateinformationService.prototype.updateDate = function (id, startDate, endDate, service) {
+        var obj = {
+            start_date: startDate,
+            end_date: endDate,
+            service: service
+        };
+        return this.http.put(API_URL + '/dateinterval/edit/' + id, obj, AUTH);
     };
     DateinformationService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -3070,18 +3203,16 @@ var LoginService = /** @class */ (function () {
     function LoginService(http, router) {
         this.http = http;
         this.router = router;
-        this.email = "";
-        this.password = "";
     }
-    LoginService.prototype.setLoggedIn = function (option) {
-        localStorage.setItem('adminID', option);
+    LoginService.prototype.setToken = function (token) {
+        localStorage.setItem('TOKEN', token);
     };
     LoginService.prototype.isLoggedIn = function () {
-        return localStorage.getItem('adminID') != null;
+        return localStorage.getItem('TOKEN') != null;
     };
     LoginService.prototype.logout = function () {
         this.router.navigate(['/login']);
-        localStorage.removeItem('adminID');
+        localStorage.removeItem('TOKEN');
     };
     LoginService.prototype.login = function (email, password) {
         return this.http.post(API_URL + '/admin' + '/login', { email: email, password: password });
@@ -3125,15 +3256,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var PlaceService = /** @class */ (function () {
     function PlaceService(http) {
         this.http = http;
     }
     PlaceService.prototype.getPlaces = function () {
-        return this.http.get(API_URL + '/place');
+        return this.http.get(API_URL + '/place', AUTH);
     };
     PlaceService.prototype.getPlaceType = function () {
-        return this.http.get(API_URL + '/placetype');
+        return this.http.get(API_URL + '/placetype', AUTH);
     };
     PlaceService.prototype.addPlace = function (name, description, longitude, latitude, place_type_id, narrative) {
         var obj = {
@@ -3144,26 +3276,26 @@ var PlaceService = /** @class */ (function () {
             place_type_id: place_type_id,
             narrative: narrative
         };
-        return this.http.post(API_URL + '/place' + "/add", obj);
+        return this.http.post(API_URL + '/place/add', obj, AUTH);
     };
     PlaceService.prototype.addPlaceType = function (name) {
         var obj = {
             name: name
         };
-        return this.http.post(API_URL + '/placetype' + "/add", obj);
+        return this.http.post(API_URL + '/placetype/add', obj, AUTH);
     };
     PlaceService.prototype.addImage = function (url) {
         var obj = {
             url: url
         };
-        return this.http.post(API_URL + '/imageofplace' + "/add", obj);
+        return this.http.post(API_URL + '/imageofplace/add', obj, AUTH);
     };
     PlaceService.prototype.deletePlace = function (id) {
-        return this.http.delete(API_URL + '/place' + "/" + id);
+        return this.http.delete(API_URL + '/place/' + id, AUTH);
     };
     //returns a user searched by an id. this is used when you try to edit a user
     PlaceService.prototype.getIDPlace = function (id) {
-        return this.http.get(API_URL + '/place' + "/" + id);
+        return this.http.get(API_URL + '/place/' + id, AUTH);
     };
     PlaceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -3204,16 +3336,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var PriceService = /** @class */ (function () {
     function PriceService(http) {
         this.http = http;
     }
     PriceService.prototype.getPrices = function () {
-        return this.http.get(API_URL + '/price');
+        return this.http.get(API_URL + '/price', AUTH);
     };
     PriceService.prototype.deletePrice = function (id) {
-        if (confirm("¿Eliminar precio?")) {
-            return this.http.delete(API_URL + '/price' + '/' + id);
+        if (confirm('¿Eliminar precio?')) {
+            return this.http.delete(API_URL + '/price/' + id, AUTH);
         }
     };
     PriceService.prototype.addPrice = function (priceAmount, tour_id, ticket_type_id) {
@@ -3222,10 +3355,10 @@ var PriceService = /** @class */ (function () {
             tour_id: tour_id,
             ticket_type_id: ticket_type_id
         };
-        return this.http.post(API_URL + '/price/add', obj);
+        return this.http.post(API_URL + '/price/add', obj, AUTH);
     };
     PriceService.prototype.getByIdPrice = function (id) {
-        return this.http.get(API_URL + '/price/' + id);
+        return this.http.get(API_URL + '/price/' + id, AUTH);
     };
     PriceService.prototype.updatePrice = function (priceAmount, tour_id, ticket_type_id, id) {
         var obj = {
@@ -3233,7 +3366,7 @@ var PriceService = /** @class */ (function () {
             tour_id: tour_id,
             ticket_type_id: ticket_type_id
         };
-        return this.http.put(API_URL + '/price/edit/' + id, obj);
+        return this.http.put(API_URL + '/price/edit/' + id, obj, AUTH);
     };
     PriceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -3272,21 +3405,69 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var PurchaseService = /** @class */ (function () {
     function PurchaseService(http) {
         this.http = http;
     }
     PurchaseService.prototype.getPurchases = function () {
-        return this.http.get(API_URL + '/purchase');
+        return this.http.get(API_URL + '/purchase', AUTH);
     };
     PurchaseService.prototype.getPurchaseById = function (id) {
-        return this.http.get(API_URL + '/purchase' + '/' + id);
+        return this.http.get(API_URL + '/purchase/' + id, AUTH);
     };
     PurchaseService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], PurchaseService);
     return PurchaseService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/ticket.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/ticket.service.ts ***!
+  \********************************************/
+/*! exports provided: TicketService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketService", function() { return TicketService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! environments/environment */ "./src/environments/environment.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
+var TicketService = /** @class */ (function () {
+    function TicketService(http) {
+        this.http = http;
+    }
+    TicketService.prototype.getTickets = function () {
+        return this.http.get(API_URL + '/ticket', AUTH);
+    };
+    TicketService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], TicketService);
+    return TicketService;
 }());
 
 
@@ -3319,12 +3500,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var TicketTypeService = /** @class */ (function () {
     function TicketTypeService(http) {
         this.http = http;
     }
     TicketTypeService.prototype.getTicketTypes = function () {
-        return this.http.get(API_URL + '/tickettype');
+        return this.http.get(API_URL + '/tickettype', AUTH);
     };
     TicketTypeService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -3363,16 +3545,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var TourService = /** @class */ (function () {
     function TourService(http) {
         this.http = http;
     }
     TourService.prototype.getTours = function () {
-        return this.http.get(API_URL + '/tour');
+        return this.http.get(API_URL + '/tour', AUTH);
     };
     TourService.prototype.deleteTour = function (id) {
-        if (confirm("¿Eliminar tour type?")) {
-            return this.http.delete(API_URL + '/tour' + '/' + id);
+        if (confirm('¿Eliminar tour type?')) {
+            return this.http.delete(API_URL + '/tour/' + id, AUTH);
         }
     };
     TourService.prototype.addTour = function (name, image, description, tickets, buses, dateinformations, places) {
@@ -3385,10 +3568,10 @@ var TourService = /** @class */ (function () {
             dateinformations: dateinformations,
             places: places
         };
-        return this.http.post(API_URL + '/tour/add', obj);
+        return this.http.post(API_URL + '/tour/add', obj, AUTH);
     };
     TourService.prototype.getByIdTour = function (id) {
-        return this.http.get(API_URL + '/tour/' + id);
+        return this.http.get(API_URL + '/tour/' + id, AUTH);
     };
     TourService.prototype.updateTour = function (name, image, description, tickets, buses, dateinformations, places, id) {
         var obj = {
@@ -3400,7 +3583,7 @@ var TourService = /** @class */ (function () {
             dateinformations: dateinformations,
             places: places
         };
-        return this.http.put(API_URL + '/tour/edit/' + id, obj);
+        return this.http.put(API_URL + '/tour/edit/' + id, obj, AUTH);
     };
     TourService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -3441,18 +3624,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var API_URL = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
+var AUTH = environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].token;
 var UserService = /** @class */ (function () {
     function UserService(http) {
         this.http = http;
     }
     UserService.prototype.getUsuarios = function () {
-        return this.http.get(API_URL + '/user');
+        console.log(AUTH);
+        return this.http.get(API_URL + '/user', AUTH);
     };
     UserService.prototype.deleteUsuarios = function (id) {
-        return this.http.delete(API_URL + '/user' + '/' + id);
+        return this.http.delete(API_URL + '/user/' + id, AUTH);
     };
     UserService.prototype.getIDUsuarios = function (id) {
-        return this.http.get(API_URL + '/user' + '/' + id);
+        return this.http.get(API_URL + '/user/' + id, AUTH);
     };
     UserService.prototype.addUsuarios = function (name, email, phone_number, password) {
         var obj = {
@@ -3461,7 +3646,7 @@ var UserService = /** @class */ (function () {
             phone_number: phone_number,
             password: password
         };
-        return this.http.post(API_URL + '/user' + "/add", obj);
+        return this.http.post(API_URL + '/user/add', obj, AUTH);
     };
     UserService.prototype.updateUsuarios = function (name, email, phone_number, id) {
         var obj = {
@@ -3469,7 +3654,7 @@ var UserService = /** @class */ (function () {
             email: email,
             phone_number: phone_number,
         };
-        return this.http.put(API_URL + '/user' + "/" + id, obj);
+        return this.http.put(API_URL + '/user/' + id, obj, AUTH);
     };
     UserService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -3492,13 +3677,20 @@ var UserService = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
+
 var environment = {
     production: false,
-    apiUrl: 'https://er-citytourister.appspot.com'
+    apiUrl: 'https://er-citytourister.appspot.com',
+    token: {
+        headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
+            'auth': localStorage.getItem('TOKEN'),
+        })
+    }
 };
 
 
@@ -3539,7 +3731,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Bego Montes\Desktop\templates\angtemplates\material-dashboard-angular2\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Bego Montes\Documents\front2\src\main.ts */"./src/main.ts");
 
 
 /***/ })
