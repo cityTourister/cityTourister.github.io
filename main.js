@@ -70,12 +70,14 @@ var NeedAuthGuard = /** @class */ (function () {
         if (this.service.isLoggedIn()) {
             return true;
         }
-        this.router.navigateByUrl(this.router.createUrlTree(['/login'], {
-            queryParams: {
-                redirectUrl: redirectUrl
-            }
-        }));
-        return false;
+        else {
+            this.router.navigate(['/login'], {
+                queryParams: {
+                    return: state.url
+                }
+            });
+            return false;
+        }
     };
     NeedAuthGuard = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -289,7 +291,6 @@ var AppModule = /** @class */ (function () {
                 //  classes that belong to this module and are related to views.
                 _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__["AdminLayoutComponent"],
-                _controllers_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"],
                 _controllers_admin_modals_AdminAddModal_component__WEBPACK_IMPORTED_MODULE_26__["NgbdModalAddAdmin"],
                 _controllers_admin_modals_AdminEditModal_component__WEBPACK_IMPORTED_MODULE_27__["NgbdModalEditAdmin"],
                 _controllers_company_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_30__["NgbdModalAddCompany"],
@@ -306,7 +307,8 @@ var AppModule = /** @class */ (function () {
                 _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__["TimeInfoComponent"],
                 _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__["PlaceInfoComponent"],
                 _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__["PurchaseInfoComponent"],
-                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__["DateInfoEditModalComponent"]
+                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__["DateInfoEditModalComponent"],
+                _controllers_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"]
             ],
             // services
             providers: [_services_user_service__WEBPACK_IMPORTED_MODULE_15__["UserService"],
@@ -1585,7 +1587,7 @@ var NgbdModalEditCompany = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" placeholder=\"Fecha de inicio\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\" placeholder=\"Fecha final\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n        <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <ngb-timepicker [(ngModel)]=\"time\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\"></div>\n    <div class=\"col-md-4\"></div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" (click)=\"updateDateInterval()\">Guardar</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Fecha de inicio</h5>\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Fecha de término</h5>\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Hora de inicio</h5>\n      <ngb-timepicker [(ngModel)]=\"start_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n        <h5>Hora de término</h5>\n        <ngb-timepicker [(ngModel)]=\"end_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\"></div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" (click)=\"updateDateInterval()\">Guardar</button>\n</div>"
 
 /***/ }),
 
@@ -1634,7 +1636,18 @@ var DateInfoEditModalComponent = /** @class */ (function () {
             _this.start_date = new Date(_this.dateInterval.start_date * 1000.0);
             _this.end_date = new Date(_this.dateInterval.end_date * 1000.0);
             _this.hourInterval = res.hour_id;
+            _this.getHoursAndMinutes(new Date(_this.hourInterval.start_time * 1000.0), new Date(_this.hourInterval.end_time * 1000.0));
         });
+    };
+    DateInfoEditModalComponent.prototype.getHoursAndMinutes = function (start_time, end_time) {
+        this.start_hour = {
+            hour: start_time.getHours(),
+            minute: start_time.getMinutes()
+        };
+        this.end_hour = {
+            hour: end_time.getHours(),
+            minute: end_time.getMinutes()
+        };
     };
     DateInfoEditModalComponent.prototype.updateDateInterval = function () {
         var _this = this;
