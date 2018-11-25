@@ -191,20 +191,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_price_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/price.service */ "./src/app/services/price.service.ts");
 /* harmony import */ var _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./controllers/price/modals/PriceEditModal.component */ "./src/app/controllers/price/modals/PriceEditModal.component.ts");
 /* harmony import */ var _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./controllers/price/modals/PriceAddModal.component */ "./src/app/controllers/price/modals/PriceAddModal.component.ts");
-/* harmony import */ var _services_tickettype_service__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./services/tickettype.service */ "./src/app/services/tickettype.service.ts");
-/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./services/tour.service */ "./src/app/services/tour.service.ts");
-/* harmony import */ var _services_purchase_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./services/purchase.service */ "./src/app/services/purchase.service.ts");
-/* harmony import */ var _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./controllers/purchase/purchase.component */ "./src/app/controllers/purchase/purchase.component.ts");
-/* harmony import */ var _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./controllers/bus/modals/BusAddModal.component */ "./src/app/controllers/bus/modals/BusAddModal.component.ts");
-/* harmony import */ var _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./controllers/bus/modals/BusEditModal.component */ "./src/app/controllers/bus/modals/BusEditModal.component.ts");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
-/* harmony import */ var _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./controllers/tour/showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
-/* harmony import */ var _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./controllers/tour/showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
-/* harmony import */ var _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./controllers/tour/showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
-/* harmony import */ var _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./controllers/tour/showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
-/* harmony import */ var _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./controllers/map/map.component */ "./src/app/controllers/map/map.component.ts");
-/* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
-/* harmony import */ var _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./controllers/dateinformation/edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
+/* harmony import */ var _controllers_place_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./controllers/place/modals/PlaceEditModal.component */ "./src/app/controllers/place/modals/PlaceEditModal.component.ts");
+/* harmony import */ var _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./controllers/place/modals/PlaceAddModal.component */ "./src/app/controllers/place/modals/PlaceAddModal.component.ts");
+/* harmony import */ var _controllers_tour_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./controllers/tour/modals/TourEditModal.component */ "./src/app/controllers/tour/modals/TourEditModal.component.ts");
+/* harmony import */ var _controllers_tour_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./controllers/tour/modals/TourAddModal.component */ "./src/app/controllers/tour/modals/TourAddModal.component.ts");
+/* harmony import */ var _services_tickettype_service__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./services/tickettype.service */ "./src/app/services/tickettype.service.ts");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./services/tour.service */ "./src/app/services/tour.service.ts");
+/* harmony import */ var _services_purchase_service__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./services/purchase.service */ "./src/app/services/purchase.service.ts");
+/* harmony import */ var _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./controllers/purchase/purchase.component */ "./src/app/controllers/purchase/purchase.component.ts");
+/* harmony import */ var _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./controllers/bus/modals/BusAddModal.component */ "./src/app/controllers/bus/modals/BusAddModal.component.ts");
+/* harmony import */ var _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./controllers/bus/modals/BusEditModal.component */ "./src/app/controllers/bus/modals/BusEditModal.component.ts");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./controllers/tour/showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
+/* harmony import */ var _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./controllers/tour/showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
+/* harmony import */ var _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./controllers/tour/showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
+/* harmony import */ var _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./controllers/tour/showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
+/* harmony import */ var _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./controllers/map/map.component */ "./src/app/controllers/map/map.component.ts");
+/* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
+/* harmony import */ var _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./controllers/dateinformation/edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
+/* harmony import */ var ngx_material_file_input__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ngx-material-file-input */ "./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -213,6 +218,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 // Import: Modules whose classes are needed by the components of this modules, which means
 // that are needed by the declarations
+
+
+
+
+
 
 
 
@@ -277,7 +287,8 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormFieldModule"],
-                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_40__["MatCheckboxModule"],
+                ngx_material_file_input__WEBPACK_IMPORTED_MODULE_52__["MaterialFileInputModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_44__["MatCheckboxModule"],
                 _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
@@ -297,17 +308,21 @@ var AppModule = /** @class */ (function () {
                 _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalEditCompany"],
                 _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__["NgbdModalAddPrice"],
                 _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalEditPrice"],
-                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_38__["NgbdModalAddBus"],
-                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_39__["NgbdModalEditBus"],
-                _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_45__["MapComponent"],
+                _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__["NgbdModalAddPlace"],
+                _controllers_place_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_34__["NgbdModalEditPlace"],
+                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_42__["NgbdModalAddBus"],
+                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_43__["NgbdModalEditBus"],
+                _controllers_tour_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddTour"],
+                _controllers_tour_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_36__["NgbdModalEditTour"],
+                _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_49__["MapComponent"],
                 _modals_about_about_component__WEBPACK_IMPORTED_MODULE_24__["AboutComponent"],
                 _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_23__["ModalComponent"],
-                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_41__["TourInfoComponent"],
-                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_42__["BusInfoComponent"],
-                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__["TimeInfoComponent"],
-                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__["PlaceInfoComponent"],
-                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__["PurchaseInfoComponent"],
-                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__["DateInfoEditModalComponent"],
+                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_45__["TourInfoComponent"],
+                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_46__["BusInfoComponent"],
+                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_47__["TimeInfoComponent"],
+                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_48__["PlaceInfoComponent"],
+                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_41__["PurchaseInfoComponent"],
+                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__["DateInfoEditModalComponent"],
                 _controllers_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"]
             ],
             // services
@@ -319,11 +334,11 @@ var AppModule = /** @class */ (function () {
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbActiveModal"],
                 _services_place_service__WEBPACK_IMPORTED_MODULE_17__["PlaceService"],
                 _services_price_service__WEBPACK_IMPORTED_MODULE_31__["PriceService"],
-                _services_tickettype_service__WEBPACK_IMPORTED_MODULE_34__["TicketTypeService"],
-                _services_tour_service__WEBPACK_IMPORTED_MODULE_35__["TourService"],
+                _services_tickettype_service__WEBPACK_IMPORTED_MODULE_38__["TicketTypeService"],
+                _services_tour_service__WEBPACK_IMPORTED_MODULE_39__["TourService"],
                 _NeedAuthGuard_component__WEBPACK_IMPORTED_MODULE_20__["NeedAuthGuard"],
-                _services_purchase_service__WEBPACK_IMPORTED_MODULE_36__["PurchaseService"],
-                _services_ticket_service__WEBPACK_IMPORTED_MODULE_46__["TicketService"]],
+                _services_purchase_service__WEBPACK_IMPORTED_MODULE_40__["PurchaseService"],
+                _services_ticket_service__WEBPACK_IMPORTED_MODULE_50__["TicketService"]],
             // The root component which is the main view of the application
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
             entryComponents: [
@@ -333,14 +348,18 @@ var AppModule = /** @class */ (function () {
                 _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalEditCompany"],
                 _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__["NgbdModalAddPrice"],
                 _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalEditPrice"],
-                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_38__["NgbdModalAddBus"],
-                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_39__["NgbdModalEditBus"],
-                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_37__["PurchaseInfoComponent"],
-                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_41__["TourInfoComponent"],
-                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_42__["BusInfoComponent"],
-                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_43__["TimeInfoComponent"],
-                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_44__["PlaceInfoComponent"],
-                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_47__["DateInfoEditModalComponent"]
+                _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__["NgbdModalAddPlace"],
+                _controllers_place_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_34__["NgbdModalEditPlace"],
+                _controllers_tour_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddTour"],
+                _controllers_tour_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_36__["NgbdModalEditTour"],
+                _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_42__["NgbdModalAddBus"],
+                _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_43__["NgbdModalEditBus"],
+                _controllers_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_41__["PurchaseInfoComponent"],
+                _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_45__["TourInfoComponent"],
+                _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_46__["BusInfoComponent"],
+                _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_47__["TimeInfoComponent"],
+                _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_48__["PlaceInfoComponent"],
+                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__["DateInfoEditModalComponent"]
             ]
         })
     ], AppModule);
@@ -562,7 +581,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n          <a class=\"navbar-brand\" href=\"#\">{{getTitle()}}</a>\n        </div>\n        <button mat-raised-button class=\"navbar-toggler\" type=\"button\" (click)=\"sidebarToggle()\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"navigation\">\n            <form class=\"navbar-form\">\n                <div class=\"input-group no-border\">\n                    <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Buscar...\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                        <i class=\"material-icons\">search</i>\n                        <div class=\"ripple-container\"></div>\n                    </button>\n                </div>\n            </form>\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#pablo\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Stats</span>\n                        </p>\n                    </a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link\" href=\"#pablo\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                        </p>\n                    </a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                        <a class=\"dropdown-item\" href=\"#\">Mike John responded to your email</a>\n                        <a class=\"dropdown-item\" href=\"#\">You have 5 new tasks</a>\n                        <a class=\"dropdown-item\" href=\"#\">You're now friend with Andrew</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another Notification</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another One</a>\n                    </div>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\" (click)=\"logoutAdmin()\">\n                        <i class=\"material-icons\">person</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Account</span>\n                        </p>\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!--\n\n<nav class=\"navbar navbar-transparent navbar-absolute\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button mat-raised-button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" (click)=\"sidebarToggle()\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"#\">{{getTitle()}}</a>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li>\n                    <a href=\"#pablo\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p class=\"hidden-lg hidden-md\">Dashboard</p>\n                    </a>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p class=\"hidden-lg hidden-md\">Notifications</p>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"#\">Mike John responded to your email</a></li>\n                        <li><a href=\"#\">You have 5 new tasks</a></li>\n                        <li><a href=\"#\">You're now friend with Andrew</a></li>\n                        <li><a href=\"#\">Another Notification</a></li>\n                        <li><a href=\"#\">Another One</a></li>\n                    </ul>\n                </li>\n                <li>\n                    <a href=\"#pablo\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                       <i class=\"material-icons\">person</i>\n                       <p class=\"hidden-lg hidden-md\">Profile</p>\n                    </a>\n                </li>\n            </ul>\n\n            <form class=\"navbar-form navbar-right\" role=\"search\">\n                <div class=\"form-group form-black is-empty\">\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n                    <span class=\"material-input\"></span>\n                </div>\n                <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                    <i class=\"material-icons\">search</i><div class=\"ripple-container\"></div>\n                </button>\n            </form>\n        </div>\n    </div>\n</nav> -->\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n          <a class=\"navbar-brand\" href=\"#\">{{getTitle()}}</a>\n        </div>\n        <button mat-raised-button class=\"navbar-toggler\" type=\"button\" (click)=\"sidebarToggle()\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"navigation\">\n            <form class=\"navbar-form\">\n                <div class=\"input-group no-border\">\n                    <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Buscar...\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                        <i class=\"material-icons\">search</i>\n                        <div class=\"ripple-container\"></div>\n                    </button>\n                </div>\n            </form>\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#pablo\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Stats</span>\n                        </p>\n                    </a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link\" href=\"#pablo\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                        </p>\n                    </a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                        <a class=\"dropdown-item\" href=\"#\">El indice de compra ha aumentado...</a>\n                        <a class=\"dropdown-item\" href=\"#\">La BD necesita más espacio</a>\n                        <a class=\"dropdown-item\" href=\"#\">Se necesita verificar la seguridad</a>\n                        <a class=\"dropdown-item\" href=\"#\">Otra Notificación</a>\n                        <a class=\"dropdown-item\" href=\"#\">Otra más</a>\n                    </div>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\" (click)=\"logoutAdmin()\">\n                        <i class=\"material-icons\">person</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Account</span>\n                        </p>\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!--\n\n<nav class=\"navbar navbar-transparent navbar-absolute\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button mat-raised-button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" (click)=\"sidebarToggle()\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"#\">{{getTitle()}}</a>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li>\n                    <a href=\"#pablo\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p class=\"hidden-lg hidden-md\">Dashboard</p>\n                    </a>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p class=\"hidden-lg hidden-md\">Notifications</p>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"#\">Mike John responded to your email</a></li>\n                        <li><a href=\"#\">You have 5 new tasks</a></li>\n                        <li><a href=\"#\">You're now friend with Andrew</a></li>\n                        <li><a href=\"#\">Another Notification</a></li>\n                        <li><a href=\"#\">Another One</a></li>\n                    </ul>\n                </li>\n                <li>\n                    <a href=\"#pablo\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                       <i class=\"material-icons\">person</i>\n                       <p class=\"hidden-lg hidden-md\">Profile</p>\n                    </a>\n                </li>\n            </ul>\n\n            <form class=\"navbar-form navbar-right\" role=\"search\">\n                <div class=\"form-group form-black is-empty\">\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n                    <span class=\"material-input\"></span>\n                </div>\n                <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                    <i class=\"material-icons\">search</i><div class=\"ripple-container\"></div>\n                </button>\n            </form>\n        </div>\n    </div>\n</nav> -->\n"
 
 /***/ }),
 
@@ -735,7 +754,7 @@ module.exports = "#logo {\n    width: 50%;\n    height:auto;\n    margin-left:20
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"logo\">\n    <!-- <a href=\"#\" class=\"simple-text\"> -->\n        <!-- <div class=\"logo-img\"> -->\n            <img  id =\"logo\" src=\"/assets/img/logo.png\"/>\n        <!-- </div> -->\n        <!-- City-Tourister -->\n    <!-- </a> -->\n</div>\n<div class=\"sidebar-wrapper\">\n  <div *ngIf=\"isMobileMenu()\">\n    <form class=\"navbar-form\">\n      <span class=\"bmd-form-group\">\n        <div class=\"input-group no-border\">\n          <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n          <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n            <i class=\"material-icons\">search</i>\n            <div class=\"ripple-container\"></div>\n          </button>\n        </div>\n      </span>\n    </form>\n    <ul class=\"nav navbar-nav nav-mobile-menu\">\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#pablo\">\n                <i class=\"material-icons\">dashboard</i>\n                <p>\n                    <span class=\"d-lg-none d-md-block\">Stats</span>\n                </p>\n            </a>\n        </li>\n        <li class=\"nav-item dropdown\">\n            <a class=\"nav-link\" href=\"#pablo\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                <i class=\"material-icons\">notifications</i>\n                <span class=\"notification\">5</span>\n                <p>\n                    <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                </p>\n            </a>\n            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                <a class=\"dropdown-item\" href=\"#\">Mike John responded to your email</a>\n                <a class=\"dropdown-item\" href=\"#\">You have 5 new tasks</a>\n                <a class=\"dropdown-item\" href=\"#\">You're now friend with Andrew</a>\n                <a class=\"dropdown-item\" href=\"#\">Another Notification</a>\n                <a class=\"dropdown-item\" href=\"#\">Another One</a>\n            </div>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#pablo\">\n                <i class=\"material-icons\">person</i>\n                <p>\n                    <span class=\"d-lg-none d-md-block\">Account</span>\n                </p>\n            </a>\n        </li>\n    </ul>\n  </div>\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"[menuItem.path]\">\n                <i class=\"material-icons\">{{menuItem.icon}}</i>\n                <p>{{menuItem.title}}</p>\n            </a>\n        </li>\n    </ul>\n</div>\n"
+module.exports = "<div class=\"logo\">\n    <!-- <a href=\"#\" class=\"simple-text\"> -->\n        <!-- <div class=\"logo-img\"> -->\n             <a [routerLink]=\"['/dashboard']\"><img  id =\"logo\" src=\"/assets/img/logo.png\"/></a>\n        <!-- </div> -->\n        <!-- City-Tourister -->\n    <!-- </a> -->\n</div>\n<div class=\"sidebar-wrapper\">\n  <div *ngIf=\"isMobileMenu()\">\n    <form class=\"navbar-form\">\n      <span class=\"bmd-form-group\">\n        <div class=\"input-group no-border\">\n          <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n          <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n            <i class=\"material-icons\">search</i>\n            <div class=\"ripple-container\"></div>\n          </button>\n        </div>\n      </span>\n    </form>\n    <ul class=\"nav navbar-nav nav-mobile-menu\">\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#pablo\">\n                <i class=\"material-icons\">dashboard</i>\n                <p>\n                    <span class=\"d-lg-none d-md-block\">Stats</span>\n                </p>\n            </a>\n        </li>\n        <li class=\"nav-item dropdown\">\n            <a class=\"nav-link\" href=\"#pablo\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                <i class=\"material-icons\">notifications</i>\n                <span class=\"notification\">5</span>\n                <p>\n                    <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                </p>\n            </a>\n            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                <a class=\"dropdown-item\" href=\"#\">El indice de compra ha aumentado...</a>\n                <a class=\"dropdown-item\" href=\"#\">La BD necesita más espacio</a>\n                <a class=\"dropdown-item\" href=\"#\">Se necesita verificar la seguridad</a>\n                <a class=\"dropdown-item\" href=\"#\">Otra Notificación</a>\n                <a class=\"dropdown-item\" href=\"#\">Otra más</a>\n            </div>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#pablo\">\n                <i class=\"material-icons\">person</i>\n                <p>\n                    <span class=\"d-lg-none d-md-block\">Account</span>\n                </p>\n            </a>\n        </li>\n    </ul>\n  </div>\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"[menuItem.path]\">\n                <i class=\"material-icons\">{{menuItem.icon}}</i>\n                <p>{{menuItem.title}}</p>\n            </a>\n        </li>\n    </ul>\n</div>\n"
 
 /***/ }),
 
@@ -915,7 +934,7 @@ var NgbdModalAddAdmin = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Agregar Admin</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n</div>\n<form [formGroup]=\"myForm\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            \n            <div class=\"form-group\">\n                <label for=\"username\" [ngClass]=\"myForm.controls['username'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Nombre de usuario:</label>\n                <input id=\"username\" [(ngModel)]='currentAdmin[0]' formControlName=\"username\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['username'].invalid ? 'is-invalid' : ''\" #username>\n                <small class=\"form-text text-danger\" *ngIf=\"myForm.controls['username'].hasError('required')\">\n                    nombre de usuario es requerido\n                </small>\n                \n            </div>\n            \n            <div class=\"form-group\">\n                <label for=\"email\" [ngClass]=\"myForm.controls['email'].invalid ? 'text-danger' : 'text-success'\">Correo electronico:</label>\n                <input id=\"email\" [(ngModel)]='currentAdmin[1]' formControlName=\"email\" type=\"email\" class=\"form-control\" [ngClass]=\"myForm.controls['email'].invalid ? 'is-invalid' : ''\" #email>\n                <small class=\"form-text text-danger\" *ngIf=\"myForm.controls['email'].hasError('required')\">\n                    email es requerido\n                </small>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['email'].hasError('email')\">\n                    ingresa un correo electronico valido\n                </label>\n            </div>\n            \n            <div class=\"form-group\">\n                <label for=\"password\" [ngClass]=\"myForm.controls['password'].invalid ? 'text-danger' : 'text-success'\">Contraseña:</label>\n                <input id=\"password\" [(ngModel)]='currentAdmin[2]' formControlName=\"password\" type=\"password\" class=\"form-control\" [ngClass]=\"myForm.controls['password'].invalid ? 'is-invalid' : ''\" #password>\n                <label class=\"col\" [ngClass]=\"myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('hasNumber')  ? 'text-danger' : 'text-success'\">\n                    <i class=\"material-icons\">{{ myForm.controls['password'].hasError('required') ||\n                      myForm.controls['password'].hasError('hasNumber') ? 'cancel' :\n                      'check_circle' }}</i>\n                    La contraseña tiene que contener al menos un número.\n                  </label>\n\n                <label class=\"col\" [ngClass]=\"myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'\">\n                    <i class=\"material-icons\">{{ myForm.controls['password'].hasError('required') ||\n                        myForm.controls['password'].hasError('minlength') ? 'cancel' :\n                        'check_circle' }}</i>\n                        La contraseña debe tener al menos 6 caracteres.\n                    </label>\n\n                    <label class=\"col\" [ngClass]=\"myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('hasSmallCase')  ? 'text-danger' : 'text-success'\">\n                        <i class=\"material-icons\">\n                            {{ myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('hasCase') ? 'cancel' : 'check_circle' }}\n                        </i> \n                        La contraseña tiene que contener al menos una letra\n                    </label>\n                </div>\n                \n                <div class=\"form-group\">\n                    <label for=\"confirmPassword\" [ngClass]=\"myForm.controls['confirmPassword'].invalid ? 'text-danger' : 'text-success'\">Confirmar contraseña:</label>\n                    <input id=\"confirmPassword\" formControlName=\"confirmPassword\" type=\"password\" class=\"form-control\" [ngClass]=\"myForm.controls['confirmPassword'].invalid ? 'is-invalid' : ''\" #confirmPassword>\n                    <label class=\"text-danger\" *ngIf=\"myForm.controls['confirmPassword'].hasError('required')\">\n                        contraseña requerida\n                    </label>\n                    <small class=\"form-text text-danger\" *ngIf=\"myForm.controls['confirmPassword'].hasError('NoPassswordMatch')\">\n                        ontraseñas no coinciden.\n                    </small>\n                </div>\n                \n            </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\"  (click)=\"addAdmin(currentAdmin)\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-success pull-right\">Agregar</button> \n        </div>\n    </form>"
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Agregar Admin</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n</div>\n<form [formGroup]=\"myForm\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            \n            <div class=\"form-group\">\n                <label for=\"username\" [ngClass]=\"myForm.controls['username'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Nombre de usuario:</label>\n                <input id=\"username\" [(ngModel)]='currentAdmin[0]' formControlName=\"username\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['username'].invalid ? 'is-invalid' : ''\" #username>\n                <small class=\"form-text text-danger\" *ngIf=\"myForm.controls['username'].hasError('required')\">\n                    nombre de usuario es requerido\n                </small>\n                \n            </div>\n            \n            <div class=\"form-group\">\n                <label for=\"email\" [ngClass]=\"myForm.controls['email'].invalid ? 'text-danger' : 'text-success'\">Correo electronico:</label>\n                <input id=\"email\" [(ngModel)]='currentAdmin[1]' formControlName=\"email\" type=\"email\" class=\"form-control\" [ngClass]=\"myForm.controls['email'].invalid ? 'is-invalid' : ''\" #email>\n                <small class=\"form-text text-danger\" *ngIf=\"myForm.controls['email'].hasError('required')\">\n                    email es requerido\n                </small>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['email'].hasError('email')\">\n                    ingresa un correo electronico valido\n                </label>\n            </div>\n            \n            <div class=\"form-group\">\n                <label for=\"password\" [ngClass]=\"myForm.controls['password'].invalid ? 'text-danger' : 'text-success'\">Contraseña:</label>\n                <input id=\"password\" [(ngModel)]='currentAdmin[2]' formControlName=\"password\" type=\"password\" class=\"form-control\" [ngClass]=\"myForm.controls['password'].invalid ? 'is-invalid' : ''\" #password>\n                <label class=\"col\" [ngClass]=\"myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('hasNumber')  ? 'text-danger' : 'text-success'\">\n                    <i class=\"material-icons\">{{ myForm.controls['password'].hasError('required') ||\n                      myForm.controls['password'].hasError('hasNumber') ? 'cancel' :\n                      'check_circle' }}</i>\n                    La contraseña tiene que contener al menos un número.\n                  </label>\n\n                <label class=\"col\" [ngClass]=\"myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'\">\n                    <i class=\"material-icons\">{{ myForm.controls['password'].hasError('required') ||\n                        myForm.controls['password'].hasError('minlength') ? 'cancel' :\n                        'check_circle' }}</i>\n                        La contraseña debe tener al menos 6 caracteres.\n                    </label>\n\n                    <label class=\"col\" [ngClass]=\"myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('hasSmallCase')  ? 'text-danger' : 'text-success'\">\n                        <i class=\"material-icons\">\n                            {{ myForm.controls['password'].hasError('required') || myForm.controls['password'].hasError('hasCase') ? 'cancel' : 'check_circle' }}\n                        </i> \n                        La contraseña tiene que contener al menos una letra\n                    </label>\n                </div>\n                \n                <div class=\"form-group\">\n                    <label for=\"confirmPassword\" [ngClass]=\"myForm.controls['confirmPassword'].invalid ? 'text-danger' : 'text-success'\">Confirmar contraseña:</label>\n                    <input id=\"confirmPassword\" formControlName=\"confirmPassword\" type=\"password\" class=\"form-control\" [ngClass]=\"myForm.controls['confirmPassword'].invalid ? 'is-invalid' : ''\" #confirmPassword>\n                    <label class=\"text-danger\" *ngIf=\"myForm.controls['confirmPassword'].hasError('required')\">\n                        contraseña requerida\n                    </label>\n                    <small class=\"form-text text-danger\" *ngIf=\"myForm.controls['confirmPassword'].hasError('NoPassswordMatch')\">\n                        contraseñas no coinciden.\n                    </small>\n                </div>\n                \n            </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\"  (click)=\"addAdmin(currentAdmin)\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-success pull-right\">Agregar</button> \n        </div>\n    </form>"
 
 /***/ }),
 
@@ -926,7 +945,7 @@ module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Ag
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Editar Admin</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n    (click)=\"activeModal.dismiss('Cross click')\">\n</button>\n</div>\n<form [formGroup]=\"myForm\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            <div class=\"form-group\">\n                <label for=\"username\" [ngClass]=\"myForm.controls['username'].invalid ? 'text-danger' : 'text-success'\">Nombre de usuario</label>\n                <input id=\"username\" [(ngModel)]='currentAdmin[0]' formControlName=\"username\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['username'].invalid ? 'is-invalid' : ''\" #usernmame>             \n                <label class=\"text-danger\" *ngIf=\"myForm.controls['username'].hasError('required')\">\n                    nombre de usuario es requerido\n                </label>\n            </div>\n            \n            <div class=\"form-group\">\n                <label for=\"email\" [ngClass]=\"myForm.controls['email'].invalid ? 'text-danger' : 'text-success'\">Correo electronico</label>\n                <input id=\"email\" [(ngModel)]='currentAdmin[1]' formControlName=\"email\" type=\"email\" class=\"form-control\" [ngClass]=\"myForm.controls['email'].invalid ? 'is-invalid' : ''\" #email>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['email'].hasError('email')\">\n                    email no valido\n                </label>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['email'].hasError('required')\">\n                    email es requerido\n                </label>\n            </div>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\"  (click)=\"updateAdmin()\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-success pull-right\">Editar</button> \n    </div>\n</form>"
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Editar Admin</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n    (click)=\"activeModal.dismiss('Cross click')\">\n</button>\n</div>\n<form [formGroup]=\"myForm\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            <div class=\"form-group\">\n                <label for=\"username\" [ngClass]=\"myForm.controls['username'].invalid ? 'text-danger' : 'text-success'\">Nombre de usuario</label>\n                <input id=\"username\" [(ngModel)]='currentAdmin[0]' formControlName=\"username\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['username'].invalid ? 'is-invalid' : ''\" #usernmame>             \n                <label class=\"text-danger\" *ngIf=\"myForm.controls['username'].hasError('required')\">\n                    Nombre de usuario es requerido\n                </label>\n            </div>\n            \n            <div class=\"form-group\">\n                <label for=\"email\" [ngClass]=\"myForm.controls['email'].invalid ? 'text-danger' : 'text-success'\">Correo electronico</label>\n                <input id=\"email\" [(ngModel)]='currentAdmin[1]' formControlName=\"email\" type=\"email\" class=\"form-control\" [ngClass]=\"myForm.controls['email'].invalid ? 'is-invalid' : ''\" #email>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['email'].hasError('email')\">\n                    Email no valido\n                </label>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['email'].hasError('required')\">\n                    Email es requerido\n                </label>\n            </div>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\"  (click)=\"updateAdmin()\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-success pull-right\">Editar</button> \n    </div>\n</form>"
 
 /***/ }),
 
@@ -1002,12 +1021,12 @@ var NgbdModalEditAdmin = /** @class */ (function () {
     };
     NgbdModalEditAdmin.prototype.createForm = function () {
         this.myForm = this.formBuilder.group({
-            username: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+            username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(30),
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(3)
                 ])],
-            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email
                 ])],
@@ -1101,7 +1120,7 @@ var NgbdModalAddBus = /** @class */ (function () {
                 _this.closeModal();
             },
             onClose: function () {
-                window.location.reload();
+                // window.location.reload();
             }
         });
     };
@@ -1214,7 +1233,7 @@ var NgbdModalEditBus = /** @class */ (function () {
                 _this.closeModal();
             },
             onClose: function () {
-                window.location.reload();
+                // window.location.reload();
             }
         });
     };
@@ -1341,7 +1360,7 @@ var NgbdModalAddCompany = /** @class */ (function () {
                 _this.closeModal();
             },
             onClose: function () {
-                window.location.reload();
+                // window.location.reload();
             }
         });
     };
@@ -1483,7 +1502,7 @@ var NgbdModalEditCompany = /** @class */ (function () {
                 _this.closeModal();
             },
             onClose: function () {
-                window.location.reload();
+                // window.location.reload();
             }
         });
     };
@@ -1584,7 +1603,7 @@ var NgbdModalEditCompany = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Fecha de inicio</h5>\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Fecha de término</h5>\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Hora de inicio</h5>\n      <ngb-timepicker [(ngModel)]=\"start_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n        <h5>Hora de término</h5>\n        <ngb-timepicker [(ngModel)]=\"end_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\"></div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" (click)=\"updateDateInterval()\">Guardar</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\">Editar horario: {{id}} </h3>\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Fecha de inicio</h5>\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Fecha de término</h5>\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <br>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Hora de inicio</h5>\n      <ngb-timepicker [(ngModel)]=\"start_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n        <h5>Hora de término</h5>\n        <ngb-timepicker [(ngModel)]=\"end_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Frecuencia</h5>\n      <input type=\"number\" class=\"form-control\" [(ngModel)]=\"hourInterval.frequency\">\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" (click)=\"updateDateInfo()\">Guardar</button>\n</div>"
 
 /***/ }),
 
@@ -1636,6 +1655,28 @@ var DateInfoEditModalComponent = /** @class */ (function () {
             _this.getHoursAndMinutes(new Date(_this.hourInterval.start_time * 1000.0), new Date(_this.hourInterval.end_time * 1000.0));
         });
     };
+    DateInfoEditModalComponent.prototype.updateDateInfo = function () {
+        this.updateDateInterval();
+        this.updateHourInterval();
+        this.activeModal.close();
+    };
+    DateInfoEditModalComponent.prototype.updateHourInterval = function () {
+        var temp = {
+            start: new Date(),
+            end: new Date()
+        };
+        temp.start.setHours(this.start_hour.hour);
+        temp.start.setMinutes(this.start_hour.minute);
+        temp.start.setSeconds(0);
+        this.hourInterval.start_time = Math.trunc(temp.start.getTime() / 1000);
+        temp.end.setHours(this.end_hour.hour);
+        temp.end.setMinutes(this.end_hour.minute);
+        temp.end.setSeconds(0);
+        this.hourInterval.end_time = Math.trunc(temp.end.getTime() / 1000);
+        this.service.updateHour(this.hourInterval.id, this.hourInterval.start_time, this.hourInterval.end_time, this.hourInterval.frequency).subscribe(function (res) {
+            console.log(res);
+        });
+    };
     DateInfoEditModalComponent.prototype.getHoursAndMinutes = function (start_time, end_time) {
         this.start_hour = {
             hour: start_time.getHours(),
@@ -1647,11 +1688,9 @@ var DateInfoEditModalComponent = /** @class */ (function () {
         };
     };
     DateInfoEditModalComponent.prototype.updateDateInterval = function () {
-        var _this = this;
         this.service.updateDate(this.dateInterval.id, this.dateInterval.start_date, this.dateInterval.end_date, this.dateInterval.service)
             .subscribe(function (res) {
             console.log(res);
-            _this.activeModal.close();
         });
     };
     DateInfoEditModalComponent.prototype.updateStartDate = function (event) {
@@ -1867,6 +1906,257 @@ var MapComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/controllers/place/modals/PlaceAddModal.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/controllers/place/modals/PlaceAddModal.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar Lugar</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\"\n        (click)=\"activeModal.dismiss('Cross click')\">\n    </button>\n</div>\n<form [formGroup]=\"placeForm\" novalidate >\n        <div class=\"modal-boy\">\n                <div class=\"container\" novalidate>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"name\" [ngClass]=\"placeForm.controls['name'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Nombre del lugar:</label>\n                                <input id=\"name\" [(ngModel)]='currentPlace[0]' formControlName=\"name\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['name'].invalid ? 'is-invalid' : ''\" #name>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['name'].hasError('required')\">\n                                        El nombre del lugar es requerido\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"description\" [ngClass]=\"placeForm.controls['description'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Descripcion del lugar:</label>\n                                <textarea id=\"description\" outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentPlace[1]' formControlName=\"description\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['description'].invalid ? 'is-invalid' : ''\" #description></textarea>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['description'].hasError('required')\">\n                                        La descripcion del lugar es requerido\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"latitude\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Latitud del lugar:</label>\n                                <input id=\"latitude\" [(ngModel)]='currentPlace[2]' formControlName=\"latitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'is-invalid' : ''\" #latitude>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['latitude'].hasError('required')\">\n                                        La latitud del lugar es requerida\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"longitude\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Longitud del lugar:</label>\n                                <input id=\"longitude\" [(ngModel)]='currentPlace[3]' formControlName=\"longitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'is-invalid' : ''\" #longitude>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['longitude'].hasError('required')\">\n                                        La longitud del lugar es requerida\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                                <input id=\"narrative_url\" [(ngModel)]='currentPlace[4]' formControlName=\"narrative_url\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['narrative_url'].invalid ? 'is-invalid' : ''\" #narrative_url>\n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'text-danger' : ''\">Tipo de Lugar:</label>\n                                <div class=\"radio\" *ngFor=\"let type of allTypeOfPlaces\">\n                                        <label>\n                                                <input id=\"place_type_id\" type=\"radio\" [value]=\"type.id\" [(ngModel)]='currentPlace[5]' formControlName=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'is-invalid' : ''\" #place_type_id>\n                                                {{type.name}}\n                                        </label>\n                                </div>\n                                <label class=\"text-danger\" *ngIf=\"placeForm.controls['place_type_id'].hasError('required')\">\n                                        El Tipo de Lugar es requerido.\n                                </label> \n                        </div>   \n                        \n                </div>\n        </div>\n        <div class=\"modal-footer\">\n                <button type=\"button\"  (click)=\"addPlace(currentPlace)\"  [disabled]=\"placeForm.pristine || placeForm.invalid\"  class=\"btn btn-danger pull-right\">Agregar</button> \n        </div>\n</form>\n\n\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/controllers/place/modals/PlaceAddModal.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/controllers/place/modals/PlaceAddModal.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: NgbdModalAddPlace */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdModalAddPlace", function() { return NgbdModalAddPlace; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NgbdModalAddPlace = /** @class */ (function () {
+    function NgbdModalAddPlace(_PlaceService, activeModal, formBuilder) {
+        this._PlaceService = _PlaceService;
+        this.activeModal = activeModal;
+        this.formBuilder = formBuilder;
+        this.currentPlace = [undefined];
+    }
+    NgbdModalAddPlace.prototype.ngOnInit = function () {
+        this.getPlaces();
+        this.createForm();
+        this.getPlaceType();
+    };
+    NgbdModalAddPlace.prototype.showNotification = function (data, from, align) {
+        var _this = this;
+        $.notify({
+            message: "Lugar agregado."
+        }, {
+            type: data.color,
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                <span data-notify=\"icon\"></span>\n                <span data-notify=\"message\">{2}</span>\n                <div class=\"progress\" data-notify=\"progressbar\">\n                <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                </div>\n                </div>",
+            onShow: function () {
+                _this.closeModal();
+            },
+            onClose: function () {
+                // window.location.reload();
+            }
+        });
+    };
+    NgbdModalAddPlace.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    NgbdModalAddPlace.prototype.addPlace = function (newPlace) {
+        var _this = this;
+        console.log(newPlace);
+        this._PlaceService.addPlace(newPlace[0], newPlace[1], newPlace[2], newPlace[3], newPlace[4], newPlace[5])
+            .subscribe(function (res) {
+            _this.showNotification(res, 'top', 'right');
+        });
+    };
+    NgbdModalAddPlace.prototype.getPlaces = function () {
+        var _this = this;
+        this._PlaceService.getPlaces().subscribe(function (res) { _this.allPlaces = res; });
+    };
+    NgbdModalAddPlace.prototype.getPlaceType = function () {
+        var _this = this;
+        this._PlaceService.getPlaceType().subscribe(function (res) { _this.allTypeOfPlaces = res; console.log(res); });
+    };
+    NgbdModalAddPlace.prototype.createForm = function () {
+        this.placeForm = this.formBuilder.group({
+            name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
+                ])],
+            description: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            latitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            longitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            narrative_url: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([])],
+            place_type_id: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+        });
+    };
+    NgbdModalAddPlace = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./PlaceAddModal.component.html */ "./src/app/controllers/place/modals/PlaceAddModal.component.html"),
+        }),
+        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], NgbdModalAddPlace);
+    return NgbdModalAddPlace;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/controllers/place/modals/PlaceEditModal.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/controllers/place/modals/PlaceEditModal.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Editar Lugar</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n    (click)=\"activeModal.dismiss('Cross click')\">\n</button>\n</div>\n<form [formGroup]=\"placeForm\" novalidate >\n    <div class=\"modal-boy\">\n            <div class=\"container\" novalidate>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"name\" [ngClass]=\"placeForm.controls['name'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Nombre del lugar:</label>\n                            <input id=\"name\" [(ngModel)]='currentPlace[0]' formControlName=\"name\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['name'].invalid ? 'is-invalid' : ''\" #name>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['name'].hasError('required')\">\n                                    El nombre del lugar es requerido\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"description\" [ngClass]=\"placeForm.controls['description'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Descripcion del lugar:</label>\n                            <textarea id=\"description\" outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentPlace[1]' formControlName=\"description\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['description'].invalid ? 'is-invalid' : ''\" #description></textarea>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['description'].hasError('required')\">\n                                    La descripcion del lugar es requerido\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"latitude\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Latitud del lugar:</label>\n                            <input id=\"latitude\" [(ngModel)]='currentPlace[2]' formControlName=\"latitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'is-invalid' : ''\" #latitude>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['latitude'].hasError('required')\">\n                                    La latitud del lugar es requerida\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"longitude\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Longitud del lugar:</label>\n                            <input id=\"longitude\" [(ngModel)]='currentPlace[3]' formControlName=\"longitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'is-invalid' : ''\" #longitude>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['longitude'].hasError('required')\">\n                                    La longitud del lugar es requerida\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                            <input id=\"narrative_url\" [(ngModel)]='currentPlace[4]' formControlName=\"narrative_url\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['narrative_url'].invalid ? 'is-invalid' : ''\" #narrative_url>\n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'text-danger' : ''\">Tipo de Lugar:</label>\n                            <div class=\"radio\" *ngFor=\"let type of allTypeOfPlaces\">\n                                    <label>\n                                            <input id=\"place_type_id\" type=\"radio\" [value]=\"type.id\" [(ngModel)]='currentPlace[5]' formControlName=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'is-invalid' : ''\" #place_type_id>\n                                            {{type.name}}\n                                    </label>\n                            </div>\n                            <label class=\"text-danger\" *ngIf=\"placeForm.controls['place_type_id'].hasError('required')\">\n                                    El Tipo de Lugar es requerido.\n                            </label> \n                    </div>   \n                    \n            </div>\n    </div>\n    <div class=\"modal-footer\">\n            <button type=\"button\"  (click)=\"updatePlace(currentPlace)\"  [disabled]=\"placeForm.pristine || placeForm.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n    </div>\n</form>\n\n\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/controllers/place/modals/PlaceEditModal.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/controllers/place/modals/PlaceEditModal.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: NgbdModalEditPlace */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdModalEditPlace", function() { return NgbdModalEditPlace; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NgbdModalEditPlace = /** @class */ (function () {
+    function NgbdModalEditPlace(_PlaceService, activeModal, formBuilder) {
+        this._PlaceService = _PlaceService;
+        this.activeModal = activeModal;
+        this.formBuilder = formBuilder;
+        this.currentPlace = [undefined];
+    }
+    NgbdModalEditPlace.prototype.ngOnInit = function () {
+        this.getByIdPlace();
+        this.createForm();
+        this.getPlaceType();
+    };
+    NgbdModalEditPlace.prototype.getByIdPlace = function () {
+        var _this = this;
+        this._PlaceService.getIDPlace(this.id).subscribe(function (res) { _this.currentPlace[0] = res.name; _this.currentPlace[1] = res.description; _this.currentPlace[2] = res.latitude; _this.currentPlace[3] = res.longitude; _this.currentPlace[4] = res.narrative; });
+    };
+    NgbdModalEditPlace.prototype.showNotification = function (data, from, align) {
+        var _this = this;
+        $.notify({
+            message: "Lugar editado"
+        }, {
+            type: data.color,
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                <span data-notify=\"icon\"></span>\n                <span data-notify=\"message\">{2}</span>\n                <div class=\"progress\" data-notify=\"progressbar\">\n                <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                </div>\n                </div>",
+            onShow: function () {
+                _this.closeModal();
+            },
+            onClose: function () {
+                // window.location.reload();
+            }
+        });
+    };
+    NgbdModalEditPlace.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    NgbdModalEditPlace.prototype.updatePlace = function (newPlace) {
+        var _this = this;
+        this._PlaceService.updatePlace(newPlace[0], newPlace[1], newPlace[2], newPlace[3], newPlace[4], newPlace[5], this.id)
+            .subscribe(function (res) {
+            _this.showNotification(res, 'top', 'right');
+        });
+    };
+    NgbdModalEditPlace.prototype.getPlaceType = function () {
+        var _this = this;
+        this._PlaceService.getPlaceType().subscribe(function (res) { _this.allTypeOfPlaces = res; });
+    };
+    NgbdModalEditPlace.prototype.createForm = function () {
+        this.placeForm = this.formBuilder.group({
+            name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
+                ])],
+            description: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            latitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            longitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            narrative_url: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([])],
+            place_type_id: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], NgbdModalEditPlace.prototype, "id", void 0);
+    NgbdModalEditPlace = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./PlaceEditModal.component.html */ "./src/app/controllers/place/modals/PlaceEditModal.component.html"),
+        }),
+        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], NgbdModalEditPlace);
+    return NgbdModalEditPlace;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/controllers/price/modals/PriceAddModal.component.html":
 /*!***********************************************************************!*\
   !*** ./src/app/controllers/price/modals/PriceAddModal.component.html ***!
@@ -1939,7 +2229,7 @@ var NgbdModalAddPrice = /** @class */ (function () {
                 _this.closeModal();
             },
             onClose: function () {
-                window.location.reload();
+                // window.location.reload();
             }
         });
     };
@@ -2072,7 +2362,7 @@ var NgbdModalEditPrice = /** @class */ (function () {
                 _this.closeModal();
             },
             onClose: function () {
-                window.location.reload();
+                // window.location.reload();
             }
         });
     };
@@ -2274,6 +2564,234 @@ var PurchaseInfoComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/controllers/tour/modals/TourAddModal.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/controllers/tour/modals/TourAddModal.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Agregar Tour</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n    (click)=\"activeModal.dismiss('Cross click')\">\n</button>\n</div>\n<form [formGroup]=\"myForm\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            \n            <div class=\"form-group\">\n                <label for=\"name\" [ngClass]=\"myForm.controls['name'].invalid ? 'text-danger' : ''\">Nombre del Tour:</label>\n                <input id=\"name\" [(ngModel)]='currentTour[0]' formControlName=\"name\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['name'].invalid ? 'is-invalid' : ''\" #name>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['name'].hasError('required')\">\n                   El nombre es requerido.\n                </label> \n            </div>\n\n            <div class=\"form-group\">\n                <label for=\"image\" [ngClass]=\"myForm.controls['image'].invalid ? 'text-danger' : ''\">URL de la Imagen del Tour:</label>\n                <input id=\"image\" [(ngModel)]='currentTour[1]' size=\"500\" formControlName=\"image\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['image'].invalid ? 'is-invalid' : ''\" #image>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['image'].hasError('required')\">\n                   La imagen es requerida.\n                </label> \n            </div>\n   \n            <div class=\"form-group\">\n                <label for=\"description\" [ngClass]=\"myForm.controls['description'].invalid ? 'text-danger' : ''\">Descripción del Tour:</label>\n                <textarea id=\"description\" outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentTour[2]' formControlName=\"description\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['description'].invalid ? 'is-invalid' : ''\" #description></textarea>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['description'].hasError('required')\">\n                   La descripción es requerida.\n                </label> \n            </div>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\"  (click)=\"addTour(currentTour)\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-right\">Agregar</button> \n    </div>\n</form>"
+
+/***/ }),
+
+/***/ "./src/app/controllers/tour/modals/TourAddModal.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/controllers/tour/modals/TourAddModal.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: NgbdModalAddTour */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdModalAddTour", function() { return NgbdModalAddTour; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NgbdModalAddTour = /** @class */ (function () {
+    function NgbdModalAddTour(_TourService, activeModal, formBuilder) {
+        this._TourService = _TourService;
+        this.activeModal = activeModal;
+        this.formBuilder = formBuilder;
+        this.currentTour = [undefined];
+    }
+    NgbdModalAddTour.prototype.ngOnInit = function () {
+        this.createForm();
+    };
+    NgbdModalAddTour.prototype.showNotification = function (data, from, align) {
+        var _this = this;
+        $.notify({
+            message: "Tour agregado."
+        }, {
+            type: data.color,
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                <span data-notify=\"icon\"></span>\n                <span data-notify=\"message\">{2}</span>\n                <div class=\"progress\" data-notify=\"progressbar\">\n                <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                </div>\n                </div>",
+            onShow: function () {
+                _this.closeModal();
+            },
+            onClose: function () {
+                //    window.location.reload();
+            }
+        });
+    };
+    NgbdModalAddTour.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    NgbdModalAddTour.prototype.addTour = function (newTour) {
+        var _this = this;
+        console.log(newTour);
+        this._TourService.addTour(newTour[0], newTour[1], newTour[2])
+            .subscribe(function (res) {
+            _this.showNotification(res, 'top', 'right');
+        });
+    };
+    NgbdModalAddTour.prototype.createForm = function () {
+        this.myForm = this.formBuilder.group({
+            name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
+                ])],
+            image: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            description: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+        });
+    };
+    NgbdModalAddTour = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./TourAddModal.component.html */ "./src/app/controllers/tour/modals/TourAddModal.component.html"),
+        }),
+        __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], NgbdModalAddTour);
+    return NgbdModalAddTour;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/controllers/tour/modals/TourEditModal.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/controllers/tour/modals/TourEditModal.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Editar Tour</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n    (click)=\"activeModal.dismiss('Cross click')\">\n</button>\n</div>\n<form [formGroup]=\"myForm\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            \n            <div class=\"form-group\">\n                <label for=\"name\" [ngClass]=\"myForm.controls['name'].invalid ? 'text-danger' : ''\">Nombre del Tour:</label>\n                <input id=\"name\" [(ngModel)]='currentTour[0]' formControlName=\"name\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['name'].invalid ? 'is-invalid' : ''\" #name>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['name'].hasError('required')\">\n                   El nombre es requerido.\n                </label> \n            </div>\n\n            <div class=\"form-group\">\n                <label for=\"image\" [ngClass]=\"myForm.controls['image'].invalid ? 'text-danger' : ''\">URL de la Imagen del Tour:</label>\n                <input id=\"image\" [(ngModel)]='currentTour[1]' size=\"500\" formControlName=\"image\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['image'].invalid ? 'is-invalid' : ''\" #image>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['image'].hasError('required')\">\n                   La imagen es requerida.\n                </label> \n            </div>\n   \n            <div class=\"form-group\">\n                <label for=\"description\" [ngClass]=\"myForm.controls['description'].invalid ? 'text-danger' : ''\">Descripción del Tour:</label>\n                <textarea id=\"description\" outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentTour[2]' formControlName=\"description\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['description'].invalid ? 'is-invalid' : ''\" #description></textarea>\n                <label class=\"text-danger\" *ngIf=\"myForm.controls['description'].hasError('required')\">\n                   La descripción es requerida.\n                </label> \n            </div>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\"  (click)=\"updateTour(currentTour)\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n    </div>\n</form>"
+
+/***/ }),
+
+/***/ "./src/app/controllers/tour/modals/TourEditModal.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/controllers/tour/modals/TourEditModal.component.ts ***!
+  \********************************************************************/
+/*! exports provided: NgbdModalEditTour */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdModalEditTour", function() { return NgbdModalEditTour; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NgbdModalEditTour = /** @class */ (function () {
+    function NgbdModalEditTour(_TourService, activeModal, formBuilder) {
+        this._TourService = _TourService;
+        this.activeModal = activeModal;
+        this.formBuilder = formBuilder;
+        this.currentTour = [undefined];
+    }
+    NgbdModalEditTour.prototype.ngOnInit = function () {
+        this.createForm();
+        this.getByIdTour();
+    };
+    NgbdModalEditTour.prototype.getByIdTour = function () {
+        var _this = this;
+        this._TourService.getByIdTour(this.id)
+            .subscribe(function (data) {
+            _this.currentTour[0] = data.name;
+            _this.currentTour[1] = data.image;
+            _this.currentTour[2] = data.description;
+        });
+    };
+    NgbdModalEditTour.prototype.showNotification = function (data, from, align) {
+        var _this = this;
+        $.notify({
+            message: "Tour editado."
+        }, {
+            type: data.color,
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                <span data-notify=\"icon\"></span>\n                <span data-notify=\"message\">{2}</span>\n                <div class=\"progress\" data-notify=\"progressbar\">\n                <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                </div>\n                </div>",
+            onShow: function () {
+                _this.closeModal();
+            },
+            onClose: function () {
+                //    window.location.reload();
+            }
+        });
+    };
+    NgbdModalEditTour.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    NgbdModalEditTour.prototype.updateTour = function () {
+        var _this = this;
+        this._TourService.updateTour(this.currentTour[0], this.currentTour[1], this.currentTour[2], this.id)
+            .subscribe(function (res) {
+            _this.showNotification(res, 'top', 'right');
+        });
+        //this.closeModal();
+    };
+    NgbdModalEditTour.prototype.createForm = function () {
+        this.myForm = this.formBuilder.group({
+            name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
+                ])],
+            image: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+            description: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                ])],
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], NgbdModalEditTour.prototype, "id", void 0);
+    NgbdModalEditTour = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./TourEditModal.component.html */ "./src/app/controllers/tour/modals/TourEditModal.component.html"),
+        }),
+        __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], NgbdModalEditTour);
+    return NgbdModalEditTour;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/controllers/tour/showModals/busInfo.component.html":
 /*!********************************************************************!*\
   !*** ./src/app/controllers/tour/showModals/busInfo.component.html ***!
@@ -2281,7 +2799,7 @@ var PurchaseInfoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> Camiones </h3>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-weight-bold\">Camiones Asignados:</p>\n                <ul class=\"list-group\" *ngFor=\"let bus of arrayOfBuses\" class=\"list-group-item-action\">\n                  <li class=\"list-group-item\">Codigo del camion: {{ bus.numBus }}</li>\n                  <li class=\"list-group-item\">Se encuentra activo: {{ (bus.availability)?\"Afirmativo\":\"Negativo\" }}</li>\n                </ul>\n            </div>\n        </div>\n        \n       \n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\">Editar autobuses: {{actualTour.name | titlecase}} </h3>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-boy\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <table class=\"table\">\n                    <thead>\n                        <th>\n                            Nombre\n                        </th>\n                        <th>\n                            Agregar/Quitar\n                        </th>\n                    </thead>\n                    <tbody>\n                        <tr class=\"list-group-item-action\"\n                        *ngFor=\"let bus of arrayOfAllBuses\">\n                            <td>\n                                {{ bus.numBus | titlecase }}\n                            </td>\n                            <td>\n                                <mat-checkbox \n                                    [(ngModel)]=\"bus.busAtTour\"\n                                    [disabled]=\"bus.availability\"\n                                    color=\"primary\">\n                                </mat-checkbox>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n<br>\nSi quieres agregar mas Camiones, haz click aqui.\n<div class=\"modal-footer\">\n    <button type=\"button\"  (click)=\"updateTour()\" class=\"btn btn-success\">Editar</button> \n</div>"
 
 /***/ }),
 
@@ -2296,7 +2814,7 @@ module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" clas
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusInfoComponent", function() { return BusInfoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_bus_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/bus.service */ "./src/app/services/bus.service.ts");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2311,24 +2829,74 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var BusInfoComponent = /** @class */ (function () {
-    function BusInfoComponent(_busService, activeModal) {
-        this._busService = _busService;
+    function BusInfoComponent(activeModal, _tourService) {
         this.activeModal = activeModal;
+        this._tourService = _tourService;
+        this.arrayOfAllBuses = [];
+        this.arrayOfTourIndex = [];
     }
     BusInfoComponent.prototype.ngOnInit = function () {
-        //this.getByIdTimes();
+        this.arrayOfAllBuses = this.buses;
+        this.mapBusFromTourIndex(this.actualTour.buses);
+    };
+    BusInfoComponent.prototype.mapBusFromTourIndex = function (tourBuses) {
+        var _this = this;
+        tourBuses.map(function (bus) {
+            _this.arrayOfTourIndex.push(bus.id);
+        });
+        this.arrayOfAllBuses.map(function (value) {
+            value.busAtTour = false;
+            if (_this.arrayOfTourIndex.includes(value.id)) {
+                value.busAtTour = true;
+            }
+        });
+    };
+    BusInfoComponent.prototype.updateTour = function () {
+        for (var _i = 0, _a = this.arrayOfAllBuses; _i < _a.length; _i++) {
+            var bus = _a[_i];
+            if (bus.busAtTour) {
+                this._tourService.addBus(bus.id, this.actualTour.id).subscribe();
+            }
+            else {
+                this._tourService.removeBus(bus.id, this.actualTour.id).subscribe();
+            }
+        }
+        this.showNotification('top', 'right');
+    };
+    BusInfoComponent.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    BusInfoComponent.prototype.showNotification = function (from, align) {
+        var _this = this;
+        $.notify({
+            message: "Tour editado."
+        }, {
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n        <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n        <span data-notify=\"icon\"></span>\n        <span data-notify=\"message\">{2}</span>\n        <div class=\"progress\" data-notify=\"progressbar\">\n        <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n        </div>\n        </div>",
+            onShow: function () {
+                _this.closeModal();
+            }
+        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
-    ], BusInfoComponent.prototype, "arrayOfBuses", void 0);
+    ], BusInfoComponent.prototype, "actualTour", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], BusInfoComponent.prototype, "buses", void 0);
     BusInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-aboutbus',
             template: __webpack_require__(/*! ./busInfo.component.html */ "./src/app/controllers/tour/showModals/busInfo.component.html")
         }),
-        __metadata("design:paramtypes", [_services_bus_service__WEBPACK_IMPORTED_MODULE_1__["BusService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
+            _services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"]])
     ], BusInfoComponent);
     return BusInfoComponent;
 }());
@@ -2344,7 +2912,7 @@ var BusInfoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> Tiempos </h3>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-weight-bold\">Nombres de los lugares:</p>\n                \n                <ul class=\"list-group\" *ngFor=\"let place of arrayOfPlaces\"  class=\"list-group-item-action\">\n                  <li class=\"list\">{{ place.name | titlecase}} </li>\n                </ul>\n                \n            </div>\n        </div>\n        \n       \n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n\n\n<form [formGroup]=\"form\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <br>\n                    <p class=\"font-weight-bold\">Lugares Asignados:</p>\n                    <div class=\"checkbox\" *ngFor=\"let place of form.controls.arrayOfAllPlaces.controls; let i = index\">\n                        <label formArrayName=\"arrayOfAllPlaces\">\n                            <input type=\"checkbox\" [formControlName]=\"i\">\n                            {{arrayOfAllPlaces[i].name}}<br>\n                        </label> \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <br>\n    Si quieres agregar mas Places, haz click aqui.\n    <div class=\"modal-footer\">\n        <button type=\"button\"  (click)=\"updateTour()\"  [disabled]=\"form.pristine || form.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n    </div>\n</form>\n"
 
 /***/ }),
 
@@ -2360,7 +2928,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlaceInfoComponent", function() { return PlaceInfoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2373,25 +2943,89 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var PlaceInfoComponent = /** @class */ (function () {
-    function PlaceInfoComponent(_placeService, activeModal) {
+    function PlaceInfoComponent(formBuilder, _placeService, activeModal, _tourService) {
+        this.formBuilder = formBuilder;
         this._placeService = _placeService;
         this.activeModal = activeModal;
+        this._tourService = _tourService;
+        this.arrayOfPlaces = [];
+        this.arrayOfAllPlaces = [undefined];
     }
     PlaceInfoComponent.prototype.ngOnInit = function () {
-        //this.getByIdTimes();
+        this.arrayOfPlaces = this.actualTour.places;
+        this.getPlaces();
+    };
+    PlaceInfoComponent.prototype.getPlaces = function () {
+        var _this = this;
+        this._placeService.getPlaces().subscribe(function (res) { _this.arrayOfAllPlaces = res; _this.createForm(); });
+    };
+    PlaceInfoComponent.prototype.showNotification = function (from, align) {
+        var _this = this;
+        $.notify({
+            message: "Tour editado."
+        }, {
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n        <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n        <span data-notify=\"icon\"></span>\n        <span data-notify=\"message\">{2}</span>\n        <div class=\"progress\" data-notify=\"progressbar\">\n        <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n        </div>\n        </div>",
+            onShow: function () {
+                _this.closeModal();
+            },
+            onClose: function () {
+                window.location.reload();
+            }
+        });
+    };
+    PlaceInfoComponent.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    PlaceInfoComponent.prototype.updateTour = function () {
+        for (var i = 0; i < this.arrayOfAllPlaces.length; i++) {
+            if (this.controls[i].value == true) {
+                //add bus
+                this._tourService.addPlace(this.arrayOfAllPlaces[i].id, this.actualTour.id).subscribe();
+            }
+            else {
+                //remove bus
+                this._tourService.removePlace(this.arrayOfAllPlaces[i].id, this.actualTour.id).subscribe();
+            }
+        }
+        this.showNotification('top', 'right');
+    };
+    PlaceInfoComponent.prototype.createForm = function () {
+        this.controls = this.arrayOfAllPlaces.map(function (c) { return new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](false); });
+        //esto se podria hacer mil veces mas eficiente (primera idea... un sort)... 
+        for (var _i = 0, _a = this.arrayOfPlaces; _i < _a.length; _i++) {
+            var myplace = _a[_i];
+            for (var i = 0; i < this.arrayOfAllPlaces.length; i++) {
+                if (myplace.id == this.arrayOfAllPlaces[i].id) {
+                    this.controls[i].setValue(true);
+                    break;
+                }
+            }
+        }
+        this.form = this.formBuilder.group({
+            arrayOfAllPlaces: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormArray"](this.controls)
+        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
-    ], PlaceInfoComponent.prototype, "arrayOfPlaces", void 0);
+    ], PlaceInfoComponent.prototype, "actualTour", void 0);
     PlaceInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-aboutplace',
             template: __webpack_require__(/*! ./placeInfo.component.html */ "./src/app/controllers/tour/showModals/placeInfo.component.html")
         }),
-        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"],
+            _services_tour_service__WEBPACK_IMPORTED_MODULE_2__["TourService"]])
     ], PlaceInfoComponent);
     return PlaceInfoComponent;
 }());
@@ -2407,7 +3041,7 @@ var PlaceInfoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> Tiempos </h3>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-weight-bold\">Intervalos de Fechas y Horas:</p>\n                \n                <ul class=\"list-group\" *ngFor=\"let info of dateIntervals; let i=index\"  class=\"list-group-item-action\">\n                  <li class=\"list-group-item\">Intervalo de Fecha: {{ info.start_date }} - {{ info.end_date }} </li>\n                  <li class=\"list-group-item\">Intervalo de Hora: {{ hourIntervals[i].start_time }} -  {{ hourIntervals[i].end_time }} </li>\n                </ul>\n                \n            </div>\n        </div>\n        \n       \n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-boy\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <table class=\"table\">\n                    <thead class=\"text-center\">\n                        <th>\n                            Fechas\n                        </th>\n                        <th>\n                            Horarios\n                        </th>\n                        <th>\n\n                        </th>\n                    </thead>\n                    <tbody>\n                        <tr class=\"list-group-item-action\"\n                        *ngFor=\"let date of arrayOfAllDateInfos\">\n                            <td class=\"text-center\">\n                                <p> {{ date.date_id.start_date }} </p>\n                                <h6>a</h6>\n                                <p> {{ date.date_id.end_date }} </p>\n                                <h6>Servicio: \n                                    <span>\n                                        <i class=\"fa fa-check text-success\"\n                                        *ngIf=\"date.date_id.service\"\n                                        ></i>\n                                        <i class=\"fa fa-times text-danger\"\n                                        *ngIf=\"!date.date_id.service\"\n                                        ></i>\n                                    </span>\n                                </h6>\n                            </td>\n                            <td class=\"text-center\">\n                                <p> {{ date.hour_id.start_time }} </p>\n                                <h6>a</h6>\n                                <p> {{ date.hour_id.end_time }} </p>\n                                <h6>Frecuencia: {{date.hour_id.frequency}} min</h6>\n                            </td>\n                            <td class=\"align-middle\">\n                                <mat-checkbox [(ngModel)]=\"date.dateAtTour\" color=\"primary\"></mat-checkbox>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n<br>\nSi quieres agregar mas Intervalos de Fechas, haz click aqui.\n<div class=\"modal-footer\">\n    <button type=\"button\"  (click)=\"updateTour()\"  class=\"btn btn-success\">Editar</button> \n</div>\n\n"
 
 /***/ }),
 
@@ -2423,8 +3057,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeInfoComponent", function() { return TimeInfoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
-/* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2437,49 +3070,106 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var TimeInfoComponent = /** @class */ (function () {
-    function TimeInfoComponent(_tourService, activeModal, _dateinfoService) {
+    function TimeInfoComponent(_tourService, activeModal) {
         this._tourService = _tourService;
         this.activeModal = activeModal;
-        this._dateinfoService = _dateinfoService;
-        this.dateIntervals = [];
-        this.hourIntervals = [];
-        this.dateInfo = [];
+        this.arrayOfAllDateInfos = [];
+        this.arrayOfTourIndex = [];
     }
     TimeInfoComponent.prototype.ngOnInit = function () {
+        this.arrayOfAllDateInfos = this.dateInfo;
+        this.mapDateInfoFromTourIndex(this.actualTour.dateinformations);
+        this.convertToDates(this.arrayOfAllDateInfos);
+        this.convertToHours(this.arrayOfAllDateInfos);
+    };
+    TimeInfoComponent.prototype.mapDateInfoFromTourIndex = function (tourDateInfos) {
         var _this = this;
-        this._tourService.getByIdTour(this.idTour)
-            .subscribe(function (res) {
-            _this.tour = res;
-            _this.getGeneralDateInfo(_this.tour.dateinformations);
+        for (var _i = 0, tourDateInfos_1 = tourDateInfos; _i < tourDateInfos_1.length; _i++) {
+            var date = tourDateInfos_1[_i];
+            this.arrayOfTourIndex.push(date.id);
+        }
+        this.arrayOfAllDateInfos.map(function (value) {
+            if (_this.arrayOfTourIndex.includes(value.id)) {
+                value.dateAtTour = true;
+            }
+            else {
+                value.dateAtTour = false;
+            }
         });
     };
-    TimeInfoComponent.prototype.getGeneralDateInfo = function (dateinformations) {
-        var _this = this;
-        for (var _i = 0, dateinformations_1 = dateinformations; _i < dateinformations_1.length; _i++) {
-            var dateinf = dateinformations_1[_i];
-            this._dateinfoService.getDateInfoById(dateinf.id)
-                .subscribe(function (res) {
-                _this.hourIntervals.push(res.hour_id);
-                _this.dateIntervals.push(res.date_id);
+    TimeInfoComponent.prototype.convertToHours = function (arrayOfDates) {
+        var temp_start, temp_end;
+        for (var i = 0; i < arrayOfDates.length; i++) {
+            temp_start = new Date(this.arrayOfAllDateInfos[i].hour_id.start_time * 1000.0);
+            this.arrayOfAllDateInfos[i].hour_id.start_time = temp_start.toLocaleTimeString();
+            temp_end = new Date(this.arrayOfAllDateInfos[i].hour_id.end_time * 1000.0);
+            this.arrayOfAllDateInfos[i].hour_id.end_time = temp_end.toLocaleTimeString();
+        }
+    };
+    TimeInfoComponent.prototype.convertToDates = function (arrayOfDates) {
+        var temp_start, temp_end;
+        for (var i = 0; i < arrayOfDates.length; i++) {
+            temp_start = new Date(this.arrayOfAllDateInfos[i].date_id.start_date * 1000.0);
+            this.arrayOfAllDateInfos[i].date_id.start_date = temp_start.toLocaleDateString('es-MX', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+            temp_end = new Date(this.arrayOfAllDateInfos[i].date_id.end_date * 1000.0);
+            this.arrayOfAllDateInfos[i].date_id.end_date = temp_end.toLocaleDateString('es-MX', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
             });
         }
-        console.log(this.hourIntervals);
-        console.log(this.dateIntervals);
+    };
+    TimeInfoComponent.prototype.updateTour = function () {
+        for (var _i = 0, _a = this.arrayOfAllDateInfos; _i < _a.length; _i++) {
+            var date = _a[_i];
+            if (date.dateAtTour) {
+                this._tourService.addTime(date.id, this.actualTour.id).subscribe();
+            }
+            else {
+                this._tourService.removeTime(date.id, this.actualTour.id).subscribe();
+            }
+        }
+        this.showNotification('top', 'right');
+    };
+    TimeInfoComponent.prototype.closeModal = function () {
+        this.activeModal.close('Modal Closed');
+    };
+    TimeInfoComponent.prototype.showNotification = function (from, align) {
+        var _this = this;
+        $.notify({
+            message: "Tour editado."
+        }, {
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n            <span data-notify=\"icon\"></span>\n            <span data-notify=\"message\">{2}</span>\n            <div class=\"progress\" data-notify=\"progressbar\">\n            <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n            </div>\n            </div>",
+            onShow: function () {
+                _this.closeModal();
+            }
+        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Array)
-    ], TimeInfoComponent.prototype, "idTour", void 0);
+        __metadata("design:type", Object)
+    ], TimeInfoComponent.prototype, "actualTour", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], TimeInfoComponent.prototype, "dateInfo", void 0);
     TimeInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-abouttime',
             template: __webpack_require__(/*! ./timeInfo.component.html */ "./src/app/controllers/tour/showModals/timeInfo.component.html")
         }),
         __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"],
-            _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_2__["DateinformationService"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
     ], TimeInfoComponent);
     return TimeInfoComponent;
 }());
@@ -3283,14 +3973,14 @@ var PlaceService = /** @class */ (function () {
     PlaceService.prototype.getPlaceType = function () {
         return this.http.get(API_URL + '/placetype', AUTH);
     };
-    PlaceService.prototype.addPlace = function (name, description, longitude, latitude, place_type_id, narrative) {
+    PlaceService.prototype.addPlace = function (name, description, longitude, latitude, narrative_url, place_type_id) {
         var obj = {
             name: name,
             description: description,
             longitude: longitude,
             latitude: latitude,
             place_type_id: place_type_id,
-            narrative: narrative
+            narrative_url: narrative_url
         };
         return this.http.post(API_URL + '/place/add', obj, AUTH);
     };
@@ -3312,6 +4002,17 @@ var PlaceService = /** @class */ (function () {
     //returns a user searched by an id. this is used when you try to edit a user
     PlaceService.prototype.getIDPlace = function (id) {
         return this.http.get(API_URL + '/place/' + id, AUTH);
+    };
+    PlaceService.prototype.updatePlace = function (name, description, latitude, longitude, narrative_url, place_type_id, id) {
+        var obj = {
+            name: name,
+            description: description,
+            latitude: latitude,
+            longitude: longitude,
+            narrative_url: narrative_url,
+            place_type_id: place_type_id
+        };
+        return this.http.put(API_URL + '/place/edit/' + id, obj, AUTH);
     };
     PlaceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -3570,36 +4271,64 @@ var TourService = /** @class */ (function () {
         return this.http.get(API_URL + '/tour', AUTH);
     };
     TourService.prototype.deleteTour = function (id) {
-        if (confirm('¿Eliminar tour type?')) {
+        if (confirm('¿Eliminar tour?')) {
             return this.http.delete(API_URL + '/tour/' + id, AUTH);
         }
     };
-    TourService.prototype.addTour = function (name, image, description, tickets, buses, dateinformations, places) {
+    TourService.prototype.addTour = function (name, image, description) {
         var obj = {
             name: name,
             image: image,
             description: description,
-            tickets: tickets,
-            buses: buses,
-            dateinformations: dateinformations,
-            places: places
         };
         return this.http.post(API_URL + '/tour/add', obj, AUTH);
     };
     TourService.prototype.getByIdTour = function (id) {
         return this.http.get(API_URL + '/tour/' + id, AUTH);
     };
-    TourService.prototype.updateTour = function (name, image, description, tickets, buses, dateinformations, places, id) {
+    TourService.prototype.updateTour = function (name, image, description, id) {
         var obj = {
             name: name,
             image: image,
             description: description,
-            tickets: tickets,
-            buses: buses,
-            dateinformations: dateinformations,
-            places: places
         };
         return this.http.put(API_URL + '/tour/edit/' + id, obj, AUTH);
+    };
+    TourService.prototype.addBus = function (bus, id) {
+        var obj = {
+            buses: bus
+        };
+        return this.http.put(API_URL + '/tour/edit/' + id, obj, AUTH);
+    };
+    TourService.prototype.removeBus = function (bus, id) {
+        var obj = {
+            buses: bus
+        };
+        return this.http.put(API_URL + '/tour/' + id + '/remove', obj, AUTH);
+    };
+    TourService.prototype.addPlace = function (place, id) {
+        var obj = {
+            places: place
+        };
+        return this.http.put(API_URL + '/tour/edit/' + id, obj, AUTH);
+    };
+    TourService.prototype.removePlace = function (place, id) {
+        var obj = {
+            places: place
+        };
+        return this.http.put(API_URL + '/tour/' + id + '/remove', obj, AUTH);
+    };
+    TourService.prototype.addTime = function (time, id) {
+        var obj = {
+            dateinformations: time
+        };
+        return this.http.put(API_URL + '/tour/edit/' + id, obj, AUTH);
+    };
+    TourService.prototype.removeTime = function (time, id) {
+        var obj = {
+            dateinformations: time
+        };
+        return this.http.put(API_URL + '/tour/' + id + '/remove', obj, AUTH);
     };
     TourService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
