@@ -22934,7 +22934,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-danger\">\n                      <h4 class=\"card-title\">Administradores ({{arrayOfAdmins.length}})</h4>\n                      <button class=\"btn btn-success\" (click)=\"openFormModal()\">Agregar</button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table table-hover\">\n                              <thead class=\"\">\n                                <th>\n                                    Nombre\n                                </th>\n                                <th>\n                                    Correo\n                                </th>\n                                <th>\n                                    Última Conexión\n                                </th>\n                                <th>\n\n                                </th>\n                              </thead>\n                              <tbody>\n                                <tr *ngFor=\"let admin of arrayOfAdmins\" class=\"list-group-item-action\">\n                                    <td> {{ admin.username | titlecase }} </td>\n                                    <td> {{ admin.email }} </td>\n                                    <td> {{ admin.connection_time?(admin.connection_time):\"N/A\"}} </td>\n                                    <td>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteAdmin(admin.id)\">\n                                                <i class=\"fa fa-trash text-white\"></i>\n                                            </button>\n                                        </div>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(admin.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>  \n      </div>\n  </div>\n  </div>"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-danger\">\n                      <h4 class=\"card-title\">Administradores ({{arrayOfAdmins.length}})</h4>\n                      <button class=\"btn btn-success\" (click)=\"openFormModal()\">Agregar</button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table table-hover\">\n                              <thead class=\"\">\n                                <th>\n                                    Nombre\n                                </th>\n                                <th>\n                                    Correo\n                                </th>\n                                <th>\n                                    Última Conexión\n                                </th>\n                                <th>\n\n                                </th>\n                              </thead>\n                              <tbody>\n                                <tr *ngFor=\"let admin of arrayOfAdmins\" class=\"list-group-item-action\">\n                                    <td> {{ admin.username | titlecase }} </td>\n                                    <td> {{ admin.email }} </td>\n                                    <td> {{ admin.connection_time?(admin.connection_time):\"N/A\"}} </td>\n                                    <td>\n                                        <div class=\"btn-group\"\n                                            *ngIf=\"admin.id!=currentAdminId\">\n                                            <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteAdmin(admin.id)\">\n                                                <i class=\"fa fa-trash text-white\"></i>\n                                            </button>\n                                        </div>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(admin.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>  \n      </div>\n  </div>\n  </div>"
 
 /***/ }),
 
@@ -22945,7 +22945,7 @@ module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-flu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  cursor: pointer;\n  color: purple; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXFdFQlxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcYWRtaW5cXGFkbWluLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWU7RUFDZixjQUFhLEVBRWhCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vYWRtaW4uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpe1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBjb2xvcjogcHVycGxlO1xuICAgIFxufSJdfQ== */"
+module.exports = "i {\n  cursor: pointer;\n  color: purple; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGFkbWluXFxhZG1pbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsY0FBYSxFQUVoQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2FkbWluL2FkbWluLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgY29sb3I6IHB1cnBsZTtcbiAgICBcbn0iXX0= */"
 
 /***/ }),
 
@@ -22987,6 +22987,7 @@ var AdminComponent = /** @class */ (function () {
         this._modalService = _modalService;
         this.router = router;
         this.arrayOfAdmins = [];
+        this.currentAdminId = localStorage.getItem('ID');
         this.navigationSubscription = this.router.events
             .subscribe(function (e) {
             if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationEnd"]) {
@@ -23118,7 +23119,7 @@ var BraceletComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Autobuses ({{arrayOfBuses.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" (click)=\"openFormModal()\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Numero de autobús\n                                  </th>\n                                  <th>\n                                      Disponibilidad\n                                  </th>\n                                  <th>\n                                      Tour asociado\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let bus of arrayOfBuses\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{bus.numBus}}</td>\n                                      <td>{{bus.availability == true?\"Disponible\":\"No Disponible\"}}</td>\n                                      <td>{{bus.tour_id?(bus.tour_id.name):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteBus(bus.id)\">\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(bus.id)\">\n                                                 <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
+module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Autobuses ({{arrayOfBuses.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" (click)=\"openFormModal()\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Numero de autobús\n                                  </th>\n                                  <th>\n                                      Disponibilidad\n                                  </th>\n                                  <th>\n                                      Tour asociado\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let bus of arrayOfBuses\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{bus.numBus}}</td>\n                                      <td>\n                                          <span class=\"text-success\" *ngIf=\"bus.availability\">Disponible</span>\n                                          <span class=\"text-danger\" *ngIf=\"!bus.availability\">No disponible</span>\n                                      </td>\n                                      <td>{{bus.tour_id?(bus.tour_id.name):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteBus(bus.id)\">\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(bus.id)\">\n                                                 <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
 
 /***/ }),
 
@@ -23184,7 +23185,6 @@ var BusComponent = /** @class */ (function () {
         modalRef.componentInstance.id = id;
         modalRef.result.then(function (result) {
             _this.getBuses();
-            console.log(result);
         }).catch(function (error) {
             console.log(error);
         });
@@ -23318,7 +23318,7 @@ var CompanyComponent = /** @class */ (function () {
             _this.arrayOfCompanies = res;
         });
     };
-    CompanyComponent.prototype.deleteAdmin = function (id) {
+    CompanyComponent.prototype.deleteCompany = function (id) {
         var _this = this;
         this._companyService.deleteCompany(id)
             .subscribe(function (res) {
@@ -23348,7 +23348,7 @@ var CompanyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"main-content\">\n      <div class=\"container-fluid\">\n          <div class=\"row\">\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 1 de 3. Agregar una nueva fecha</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      \n                      <div class=\"card-body\">\n                          <form [formGroup]=\"angForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                          <input matInput [matDatepicker]=\"picker\" placeholder=\"Elige una fecha de inicio\" formControlName=\"start_date\" #start_date>\n                                          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                                          <mat-datepicker #picker></mat-datepicker>\n                                          \n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"angForm.controls['start_date'].hasError('required')\">\n                                        La fecha de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                          <mat-form-field>\n                                              <input matInput [matDatepicker]=\"picker2\" placeholder=\"Elige una fecha de final\" formControlName=\"end_date\" #end_date>\n                                              <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n                                              <mat-datepicker #picker2></mat-datepicker>\n                                          </mat-form-field>\n                                          <label class=\"text-danger\" *ngIf=\"angForm.controls['end_date'].hasError('required')\">\n                                            La fecha de final es requerida\n                                           </label>\n                                           <br>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                       <div class=\"col-md-12\">\n                                            <mat-radio-group formControlName=\"servicio\" >\n                                                    <mat-radio-button [value]=\"true\" #servicio>Servicio</mat-radio-button>\n                                                    <mat-radio-button [value]=\"false\" >No hay servicio</mat-radio-button>\n                                            </mat-radio-group>\n                                        <!-- <mat-checkbox class=\"example-margin\" value=\"true\" formControlName=\"servicio\" #servicio>Servicio</mat-checkbox> -->\n                                        <div class=\"row\">\n                                            <div class=\"col-md-12\">\n                                                <label class=\"text-danger\" *ngIf=\"angForm.controls['servicio'].hasError('required')\">\n                                                    Es necesario añadir si el servicio está disponible \n                                                </label>\n                                            </div>\n                                        </div>\n                                       </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\" [disabled]=\"angForm.pristine || angForm.invalid\"   class=\"btn btn-danger pull-left\" (click)=\"addDate(start_date.value, end_date.value,servicio.value) \" >Agregar nueva fecha</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n          <!-- formulario de horario -->\n          <div class=\"row\" *ngIf=show>\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 2 de 3. Agregar un nuevo horario</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      <div class=\"card-body\">\n                          <form [formGroup]=\"myForm\" novalidate >\n                              <div class=\"row\">\n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                            <input matInput placeholder=\"Escribe la hora inicial\" formControlName=start_time #start_time>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"myForm.controls['start_time'].hasError('required')\">\n                                        La hora de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                                <mat-form-field>\n                                                        <input matInput placeholder=\"Escribe la hora final\" formControlName=end_time #end_time>\n                                                </mat-form-field>\n                                                <label class=\"text-danger\" *ngIf=\"myForm.controls['end_time'].hasError('required')\">\n                                                    La hora final es requerida\n                                                </label>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                     <div class=\"col-md-12\">\n                                        <mat-form-field>\n                                            <input matInput  placeholder=\"Anota una perido de frecuencia\" formControlName=frequency #frequency>\n                                         </mat-form-field>\n                                         <label class=\"text-danger\" *ngIf=\"myForm.controls['frequency'].hasError('required')\">\n                                            La frecuencia es requerida\n                                        </label>\n                                     </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-left\" (click)=\"addHour(start_time.value, end_time.value,frequency.value)\" >Agregar nuevo horario</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n\n\n            \n      </div>\n    </div>\n  \n\n  \n"
+module.exports = "  <div class=\"main-content\">\n      <div class=\"container-fluid\">\n          <div class=\"row\">\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 1 de 3. Agregar una nueva fecha</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      \n                      <div class=\"card-body\">\n                          <form [formGroup]=\"angForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                          <input matInput [matDatepicker]=\"startDate\" placeholder=\"Elige una fecha de inicio\" formControlName=\"fecha\" #fecha (dateInput)=\"addStartDate($event)\" (dateChange)=\"addStartDate($event)\"   >\n                                          <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n                                          <mat-datepicker #startDate></mat-datepicker>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"angForm.controls['fecha'].hasError('required')\">\n                                        La fecha de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                          <mat-form-field>\n                                              <input matInput [matDatepicker]=\"endDate\" placeholder=\"Elige una fecha de final\" formControlName=\"end_date\" #end_date (dateInput)=\"addEndDate($event)\">\n                                              <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n                                              <mat-datepicker #endDate></mat-datepicker>\n                                          </mat-form-field>\n                                          <label class=\"text-danger\" *ngIf=\"angForm.controls['end_date'].hasError('required')\">\n                                            La fecha de final es requerida\n                                           </label>\n                                           <br>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                       <div class=\"col-md-12\">\n                                            <mat-radio-group formControlName=\"servicio\" >\n                                                    <mat-radio-button [value]=\"true\" #servicio>Servicio</mat-radio-button>\n                                                    <mat-radio-button [value]=\"false\" >No hay servicio</mat-radio-button>\n                                            </mat-radio-group>\n                                        <!-- <mat-checkbox class=\"example-margin\" value=\"true\" formControlName=\"servicio\" #servicio>Servicio</mat-checkbox> -->\n                                        <div class=\"row\">\n                                            <div class=\"col-md-12\">\n                                                <label class=\"text-danger\" *ngIf=\"angForm.controls['servicio'].hasError('required')\">\n                                                    Es necesario añadir si el servicio está disponible \n                                                </label>\n                                            </div>\n                                        </div>\n                                       </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\" [disabled]=\"angForm.pristine || angForm.invalid\"   class=\"btn btn-danger pull-left\" (click)=\"addDate(fecha.value, end_date.value,servicio.value) \" >Agregar nueva fecha</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n          <!-- formulario de horario -->\n          <div class=\"row\" *ngIf=show>\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 2 de 3. Agregar un nuevo horario</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      <div class=\"card-body\">\n                          <form [formGroup]=\"myForm\" novalidate >\n                              <div class=\"row\">\n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                            <input matInput placeholder=\"Escribe la hora inicial\" formControlName=start_time #start_time>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"myForm.controls['start_time'].hasError('required')\">\n                                        La hora de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                                <mat-form-field>\n                                                        <input matInput placeholder=\"Escribe la hora final\" formControlName=end_time #end_time>\n                                                </mat-form-field>\n                                                <label class=\"text-danger\" *ngIf=\"myForm.controls['end_time'].hasError('required')\">\n                                                    La hora final es requerida\n                                                </label>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                     <div class=\"col-md-12\">\n                                        <mat-form-field>\n                                            <input matInput  placeholder=\"Anota una perido de frecuencia\" formControlName=frequency #frequency>\n                                         </mat-form-field>\n                                         <label class=\"text-danger\" *ngIf=\"myForm.controls['frequency'].hasError('required')\">\n                                            La frecuencia es requerida\n                                        </label>\n                                     </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-left\" (click)=\"addHour(start_time.value, end_time.value,frequency.value)\" >Agregar nuevo horario</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n\n\n            \n      </div>\n    </div>\n  \n\n  \n"
 
 /***/ }),
 
@@ -23359,7 +23359,7 @@ module.exports = "  <div class=\"main-content\">\n      <div class=\"container-f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-radio-button {\n  margin-right: 2%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcV0VCXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFxkYXRlaW5mb3JtYXRpb25cXGNyZWF0ZVxcY3JlYXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9jcmVhdGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtcmFkaW8tYnV0dG9ue1xuICAgIG1hcmdpbi1yaWdodDogMiU7XG59Il19 */"
+module.exports = "mat-radio-button {\n  margin-right: 2%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcZGF0ZWluZm9ybWF0aW9uXFxjcmVhdGVcXGNyZWF0ZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2RhdGVpbmZvcm1hdGlvbi9jcmVhdGUvY3JlYXRlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXJhZGlvLWJ1dHRvbntcbiAgICBtYXJnaW4tcmlnaHQ6IDIlO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -23450,7 +23450,7 @@ var CreateComponent = /** @class */ (function () {
     };
     CreateComponent.prototype.createForm = function () {
         this.angForm = this.fb.group({
-            start_date: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            fecha: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             end_date: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             servicio: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
@@ -23462,10 +23462,25 @@ var CreateComponent = /** @class */ (function () {
             frequency: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     };
-    CreateComponent.prototype.addDate = function (start_date, end_date, service) {
+    CreateComponent.prototype.addDate = function (fecha, end_date, service) {
         var _this = this;
-        this.service.addDate(start_date, end_date, service).subscribe(function (data) { return _this.dates = data; });
+        console.log(fecha);
+        console.log(end_date);
+        this.service.addDate(this.dates.fecha, this.dates.end_date, service).subscribe(function (data) {
+            _this.dates = data;
+            console.log(data);
+        });
         this.show = true;
+    };
+    CreateComponent.prototype.addStartDate = function (event) {
+        this.start_date = new Date(event.value);
+        this.dates.fecha = this.start_date.getTime() / 1000.0;
+        console.log(this.dates.fecha);
+    };
+    CreateComponent.prototype.addEndDate = function (event) {
+        this.end_date = new Date(event.value);
+        this.dates.end_date = this.end_date.getTime() / 1000.0;
+        console.log(this.dates.end_date);
     };
     CreateComponent.prototype.addHour = function (start_time, end_time, frequency) {
         var _this = this;
@@ -23502,7 +23517,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Horarios ({{dates.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/create']\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Fecha de inicio\n                                  </th>\n                                  <th>\n                                      Fecha final\n                                  </th>\n                                  <th>\n                                      Servicio\n                                  </th>\n                                  <th>\n                                      Horario inicial\n                                  </th>\n                                  <th>\n                                      Horario final\n                                  </th>\n                                  <th>\n                                      Frecuencia\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let date of dates\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{date.date_id?(date.date_id.start_date):\"N/A\" }}</td>\n                                      <td>{{date.date_id?(date.date_id.end_date):\"N/A\"}}</td>\n                                      <td>\n                                          <h4 class=\"float-left\">\n                                            <i class=\"fa fa-check text-success\"\n                                            *ngIf=\"date.date_id.service\"\n                                            ></i>\n                                            <i class=\"fa fa-times text-danger\"\n                                            *ngIf=\"!date.date_id.service\"\n                                            ></i>\n                                          </h4>\n                                      </td>\n                                      <td>{{date.hour_id?(date.hour_id.start_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.end_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.frequency):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteDate(date.id)\"  >\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(date.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
+module.exports = "\n\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Horarios ({{dates.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" (click)=\"openEditModal('add')\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Fecha de inicio\n                                  </th>\n                                  <th>\n                                      Fecha final\n                                  </th>\n                                  <th>\n                                      Servicio\n                                  </th>\n                                  <th>\n                                      Horario inicial\n                                  </th>\n                                  <th>\n                                      Horario final\n                                  </th>\n                                  <th>\n                                      Frecuencia\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let date of dates\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{date.date_id?(date.date_id.start_date):\"N/A\" }}</td>\n                                      <td>{{date.date_id?(date.date_id.end_date):\"N/A\"}}</td>\n                                      <td>\n                                          <h4 class=\"float-left\">\n                                            <i class=\"fa fa-check text-success\"\n                                            *ngIf=\"date.date_id.service\"\n                                            ></i>\n                                            <i class=\"fa fa-times text-danger\"\n                                            *ngIf=\"!date.date_id.service\"\n                                            ></i>\n                                          </h4>\n                                      </td>\n                                      <td>{{date.hour_id?(date.hour_id.start_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.end_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.frequency):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteDate(date.id)\"  >\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(date.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
 
 /***/ }),
 
@@ -23556,8 +23571,6 @@ var DateinformationComponent = /** @class */ (function () {
         this.fb = fb;
         this._modalService = _modalService;
         this.dates = [];
-        // public hours = [];
-        this.dateInformation = [];
     }
     DateinformationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -23605,7 +23618,8 @@ var DateinformationComponent = /** @class */ (function () {
     DateinformationComponent.prototype.deleteDate = function (id) {
         var _this = this;
         if (confirm('Desea eliminar el horario?')) {
-            this._dateInfoService.deleteDate(id).subscribe(function (data) {
+            this._dateInfoService.deleteDateInfo(id)
+                .subscribe(function (data) {
                 _this.ngOnInit();
             });
         }
@@ -23896,7 +23910,7 @@ var CreatePlaceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-warning\">\n                      <h4 class=\"card-title text-dark\">Lugares ({{places.length}})</h4>\n\n                      <button type=\"button\" class=\"btn btn-success\" (click)=\"openFormModal()\" >\n                        Agregar\n                      </button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table\">\n                              <thead class=\"text-primary\">\n                                <th>\n                                    Lugar\n                                </th>\n                                <th>\n                                    Descripción\n                                </th>\n                                <th>\n                                    Tipo de lugar\n                                </th>\n                                <th>\n                                    Mapa\n                                </th>\n                                <th>\n                                    Tours Asociado\n                                </th>\n                                <th>\n\n                                </th>\n                              <tbody>\n                                <tr *ngFor=\"let place of places\"\n                                class=\"list-group-item-action\">\n                                    <td>{{place.name}}</td>\n                                    <td>{{place.description}}</td>\n                                    <td>{{place.place_type_id.name | titlecase}}</td>\n                                    <td><a [routerLink]=\"['/maps']\">Mapa</a></td>\n                                    <td> \n                                        <ul *ngFor=\"let tour of place.tours\" >\n                                            <li>\n                                                {{tour.name | titlecase}}\n                                            </li>\n                                        </ul>\n                                    </td>\n                                    <td>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-danger\" type =\"button\" (click)=\"deletePlace(place.id)\"  >\n                                                <i class=\"text-white fa fa-trash\"></i>\n                                            </button>\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(place.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>    \n      </div>\n  </div>\n  </div>\n  \n"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-warning\">\n                      <h4 class=\"card-title text-dark\">Lugares ({{places.length}})</h4>\n\n                      <button type=\"button\" class=\"btn btn-success\" (click)=\"openAddModal()\" >\n                        Agregar\n                      </button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table\">\n                              <thead class=\"text-primary\">\n                                <th>\n                                    Lugar\n                                </th>\n                                <th>\n                                    Descripción\n                                </th>\n                                <th>\n                                    Tipo de lugar\n                                </th>\n                                <th>\n                                    Mapa\n                                </th>\n                                <th>\n                                    Tours Asociado\n                                </th>\n                                <th>\n\n                                </th>\n                              <tbody>\n                                <tr *ngFor=\"let place of places\"\n                                class=\"list-group-item-action\">\n                                    <td>{{place.name}}</td>\n                                    <td>{{place.description}}</td>\n                                    <td>{{place.place_type_id.name | titlecase}}</td>\n                                    <td>\n                                        <a class=\"text-primary text-center\"\n                                        (click)=\"openMapModal({\n                                                    name: place.name,\n                                                    lat: place.latitude,\n                                                    lng: place.longitude,\n                                                    type: place.place_type_id.name\n                                                    }, place.tours\n                                                )\">\n                                            Mapa\n                                        </a>\n                                    </td>\n                                    <td> \n                                        <ul *ngFor=\"let tour of place.tours\" >\n                                            <li>\n                                                {{tour.name | titlecase}}\n                                            </li>\n                                        </ul>\n                                    </td>\n                                    <td>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-danger\" type =\"button\" (click)=\"deletePlace(place.id)\"  >\n                                                <i class=\"text-white fa fa-trash\"></i>\n                                            </button>\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(place.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>    \n      </div>\n  </div>\n  </div>\n  \n"
 
 /***/ }),
 
@@ -23926,6 +23940,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var _modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modals/PlaceAddModal.component */ "./src/app/controllers/place/modals/PlaceAddModal.component.ts");
 /* harmony import */ var _modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modals/PlaceEditModal.component */ "./src/app/controllers/place/modals/PlaceEditModal.component.ts");
+/* harmony import */ var _modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modals/GetMapModalComponent.component */ "./src/app/controllers/place/modals/GetMapModalComponent.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23940,60 +23955,56 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var PlaceComponent = /** @class */ (function () {
     function PlaceComponent(service, _modalService) {
         this.service = service;
         this._modalService = _modalService;
         this.places = [];
-        this.allTours = [];
     }
-    PlaceComponent.prototype.openFormModal = function () {
-        var _this = this;
-        var modalRef = this._modalService.open(_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddPlace"]);
-        modalRef.result.then(function (result) {
-            _this, _this.getPlaces();
-            console.log(result);
-        }).catch(function (error) {
-            console.log(error);
-        });
-    };
-    PlaceComponent.prototype.openFormModalEdit = function (id) {
-        var _this = this;
-        var modalRef = this._modalService.open(_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditPlace"]);
-        modalRef.componentInstance.id = id;
-        modalRef.result.then(function (result) {
-            _this.getPlaces();
-            console.log(result);
-        }).catch(function (error) {
-            console.log(error);
-        });
-    };
     PlaceComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.service.getPlaces()
             .subscribe(function (data) { return _this.places = data; });
-    };
-    PlaceComponent.prototype.ngOnChanges = function () {
-        var _this = this;
-        this.service.getPlaces()
-            .subscribe(function (data) { return _this.places = data; });
-        // this.selectedUsuario = "";
-    };
-    PlaceComponent.prototype.deletePlace = function (id) {
-        var _this = this;
-        if (confirm("Desea eliminar el lugar?")) {
-            this.service.deletePlace(id).subscribe(function (data) {
-                _this.ngOnChanges();
-            });
-        }
     };
     PlaceComponent.prototype.getPlaces = function () {
         var _this = this;
         this.service.getPlaces()
             .subscribe(function (res) {
             _this.places = res;
-            console.log(_this.places);
         });
+    };
+    PlaceComponent.prototype.openMapModal = function (info, toursFromPlace) {
+        this.modalRef = this._modalService.open(_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_5__["GetMapModalComponent"], { size: 'lg' });
+        this.modalRef.componentInstance.placeInfo = info;
+        this.modalRef.componentInstance.toursFromPlace = toursFromPlace;
+    };
+    PlaceComponent.prototype.openAddModal = function () {
+        var _this = this;
+        this.modalRef = this._modalService.open(_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddPlace"]);
+        this.modalRef.result.then(function (result) {
+            _this.getPlaces();
+        }).catch(function (error) {
+            console.log(error);
+        });
+    };
+    PlaceComponent.prototype.openEditModal = function (id) {
+        var _this = this;
+        this.modalRef = this._modalService.open(_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditPlace"]);
+        this.modalRef.componentInstance.id = id;
+        this.modalRef.result.then(function (result) {
+            _this.getPlaces();
+        }).catch(function (error) {
+            console.log(error);
+        });
+    };
+    PlaceComponent.prototype.deletePlace = function (id) {
+        var _this = this;
+        if (confirm('Desea eliminar el lugar?')) {
+            this.service.deletePlace(id).subscribe(function (data) {
+                _this.getPlaces();
+            });
+        }
     };
     PlaceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -24001,7 +24012,8 @@ var PlaceComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./place.component.html */ "./src/app/controllers/place/place.component.html"),
             styles: [__webpack_require__(/*! ./place.component.scss */ "./src/app/controllers/place/place.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
+        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
     ], PlaceComponent);
     return PlaceComponent;
 }());
@@ -24207,7 +24219,7 @@ var TicketComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          <div class=\"card-header card-header-primary\">\n            <h4 class=\"card-title\">Tours ({{arrayOfTours.length}})</h4>\n            <button class=\"btn btn-success\" (click)=\"openFormModalAdd()\">Agregar</button>\n          </div>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n              <table class=\"table table-hover\">\n                <thead class=\"\">\n                  <th>\n                    Nombre\n                  </th>\n                  <th>\n                    Información\n                  </th>\n                  <th>\n                    Camiones\n                  </th>\n                  <th>\n                    Horarios\n                  </th>\n                  <th>\n                    Lugares\n                  </th>\n                </thead>\n                <tbody>\n                  <tr *ngFor=\"let tour of arrayOfTours\" class=\"list-group-item-action\">\n                    <td> {{ (tour.name) | titlecase }} </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTourInfo(tour.id)\">\n                        ver\n                      </a>\n                    </td>\n                    \n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayBusInfo(tour)\">\n                        ver\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTimeInfo(tour)\">\n                        ver\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayPlaceInfo(tour)\">\n                        ver\n                      </a>\n                    </td>\n\n                    <td>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteTour(tour.id)\">\n                              <i class=\"fa fa-trash text-white\"></i>\n                          </button>\n                      </div>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(tour.id)\">\n                              <i class=\"fa fa-pencil text-white\"></i>\n                          </button>\n                      </div>\n                  </td>\n                    \n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>  \n    </div>\n  </div>\n</div>"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          <div class=\"card-header card-header-primary\">\n            <h4 class=\"card-title\">Tours ({{arrayOfTours.length}})</h4>\n            <button class=\"btn btn-success\" (click)=\"openFormModalAdd()\">Agregar</button>\n          </div>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n              <table class=\"table table-hover\">\n                <thead class=\"\">\n                  <th>\n                    Nombre\n                  </th>\n                  <th>\n                    Información\n                  </th>\n                  <th>\n                    Camiones\n                  </th>\n                  <th>\n                    Horarios\n                  </th>\n                  <th>\n                    Lugares\n                  </th>\n                </thead>\n                <tbody>\n                  <tr *ngFor=\"let tour of arrayOfTours\" class=\"list-group-item-action\">\n                    <td> {{ (tour.name) | titlecase }} </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTourInfo(tour.id)\">\n                        ver\n                      </a>\n                    </td>\n                    \n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayBusInfo(tour)\">\n                        ver información\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTimeInfo(tour)\">\n                        ver horarios\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayPlaceInfo(tour)\">\n                        ver lugares\n                      </a>\n                    </td>\n\n                    <td>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteTour(tour.id)\">\n                              <i class=\"fa fa-trash text-white\"></i>\n                          </button>\n                      </div>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(tour.id)\">\n                              <i class=\"fa fa-pencil text-white\"></i>\n                          </button>\n                      </div>\n                  </td>\n                    \n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>  \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -24218,7 +24230,7 @@ module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-flu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdG91ci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcV0VCXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFx0b3VyXFx0b3VyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkJBQTBCLEVBQzdCOztBQUNEO0VBQ0ksZ0JBQWUsRUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy90b3VyL3RvdXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhe1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuYTpob3ZlcntcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG4iXX0= */"
+module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdG91ci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcdG91clxcdG91ci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJCQUEwQixFQUM3Qjs7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvdG91ci90b3VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cbmE6aG92ZXJ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -24236,13 +24248,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/tour.service */ "./src/app/services/tour.service.ts");
 /* harmony import */ var _services_bus_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/bus.service */ "./src/app/services/bus.service.ts");
 /* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
-/* harmony import */ var _showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
-/* harmony import */ var _showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
-/* harmony import */ var _showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
-/* harmony import */ var _modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modals/TourAddModal.component */ "./src/app/controllers/tour/modals/TourAddModal.component.ts");
-/* harmony import */ var _modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modals/TourEditModal.component */ "./src/app/controllers/tour/modals/TourEditModal.component.ts");
+/* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/place.service */ "./src/app/services/place.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
+/* harmony import */ var _showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
+/* harmony import */ var _showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
+/* harmony import */ var _showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
+/* harmony import */ var _modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modals/TourAddModal.component */ "./src/app/controllers/tour/modals/TourAddModal.component.ts");
+/* harmony import */ var _modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modals/TourEditModal.component */ "./src/app/controllers/tour/modals/TourEditModal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24263,26 +24276,44 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var TourComponent = /** @class */ (function () {
-    function TourComponent(_tourService, _busService, _dateInfoService, _modalService) {
+    function TourComponent(_tourService, _busService, _placeSerice, _dateInfoService, _modalService) {
         this._tourService = _tourService;
         this._busService = _busService;
+        this._placeSerice = _placeSerice;
         this._dateInfoService = _dateInfoService;
         this._modalService = _modalService;
         this.arrayOfTours = [];
         this.arrayOfBuses = [];
         this.arrayOfDateInfos = [];
+        this.arrayOfPlaces = [];
     }
     TourComponent.prototype.ngOnInit = function () {
+        this.fetchAll();
+    };
+    TourComponent.prototype.fetchAll = function () {
         this.getTours();
         this.getBuses();
         this.getDateInfos();
+        this.getPlaces();
+    };
+    TourComponent.prototype.getPlaces = function () {
+        var _this = this;
+        this._placeSerice.getPlaces()
+            .subscribe(function (res) {
+            _this.arrayOfPlaces = res;
+            console.log('PLACES');
+            console.log(_this.arrayOfPlaces);
+        });
     };
     TourComponent.prototype.getTours = function () {
         var _this = this;
         this._tourService.getTours()
             .subscribe(function (res) {
             _this.arrayOfTours = res;
+            console.log('TOURS');
+            console.log(_this.arrayOfTours);
         });
     };
     TourComponent.prototype.getBuses = function () {
@@ -24290,7 +24321,8 @@ var TourComponent = /** @class */ (function () {
         this._busService.getBuses()
             .subscribe(function (res) {
             _this.arrayOfBuses = res;
-            console.log('Buses just arrived');
+            console.log('BUSES');
+            console.log(_this.arrayOfBuses);
         });
     };
     TourComponent.prototype.getDateInfos = function () {
@@ -24298,9 +24330,10 @@ var TourComponent = /** @class */ (function () {
         this._dateInfoService.getInformation()
             .subscribe(function (res) {
             _this.arrayOfDateInfos = res;
-            console.log('DateInfos just arrived');
+            console.log('DATES');
+            console.log(_this.arrayOfDateInfos);
         }, function (err) {
-            console.log('Error getting DateInfos');
+            // console.log('Error getting DateInfos');
         });
     };
     TourComponent.prototype.deleteTour = function (id) {
@@ -24311,55 +24344,54 @@ var TourComponent = /** @class */ (function () {
         });
     };
     TourComponent.prototype.displayTourInfo = function (id) {
-        this.modalRef = null;
-        this.modalRef = this._modalService.open(_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_5__["TourInfoComponent"]);
+        this.modalRef = this._modalService.open(_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_6__["TourInfoComponent"]);
         this.modalRef.componentInstance.tourId = id;
     };
     TourComponent.prototype.displayBusInfo = function (actualTour) {
         var _this = this;
-        this.modalRef = null;
-        this.modalRef = this._modalService.open(_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_6__["BusInfoComponent"]);
+        this.modalRef = this._modalService.open(_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_7__["BusInfoComponent"]);
         this.modalRef.componentInstance.buses = this.arrayOfBuses;
         this.modalRef.componentInstance.actualTour = actualTour;
         this.modalRef.result.then(function (res) {
-            _this.getBuses();
+            _this.getTours();
         }, function (err) {
-            _this.getBuses();
         });
     };
     TourComponent.prototype.displayTimeInfo = function (actualTour) {
         var _this = this;
-        this.modalRef = null;
-        this.modalRef = this._modalService.open(_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_7__["TimeInfoComponent"]);
+        this.modalRef = this._modalService.open(_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_8__["TimeInfoComponent"]);
         this.modalRef.componentInstance.actualTour = actualTour;
         this.modalRef.componentInstance.dateInfo = this.arrayOfDateInfos;
         this.modalRef.result.then(function (res) {
-            _this.getDateInfos();
+            _this.getTours();
         }, function (err) {
-            _this.getDateInfos();
         });
     };
     TourComponent.prototype.displayPlaceInfo = function (actualTour) {
-        this.modalRef = this._modalService.open(_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_8__["PlaceInfoComponent"]);
+        var _this = this;
+        this.modalRef = this._modalService.open(_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_9__["PlaceInfoComponent"]);
         this.modalRef.componentInstance.actualTour = actualTour;
+        this.modalRef.componentInstance.places = this.arrayOfPlaces;
+        this.modalRef.result.then(function (res) {
+            _this.getTours();
+        }, function (error) {
+        });
     };
     TourComponent.prototype.openFormModalEdit = function (id) {
         var _this = this;
-        this.modalRef = this._modalService.open(_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_10__["NgbdModalEditTour"]);
+        this.modalRef = this._modalService.open(_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_11__["NgbdModalEditTour"]);
         this.modalRef.componentInstance.id = id;
         this.modalRef.result.then(function (result) {
-            _this.getTours();
-            console.log(result);
+            _this.fetchAll();
         }).catch(function (error) {
             console.log('Error on edit' + error);
         });
     };
     TourComponent.prototype.openFormModalAdd = function () {
         var _this = this;
-        this.modalRef = this._modalService.open(_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_9__["NgbdModalAddTour"]);
+        this.modalRef = this._modalService.open(_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_10__["NgbdModalAddTour"]);
         this.modalRef.result.then(function (result) {
-            _this.getTours();
-            console.log(result);
+            _this.fetchAll();
         }).catch(function (error) {
             console.log(error);
         });
@@ -24372,8 +24404,9 @@ var TourComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"],
             _services_bus_service__WEBPACK_IMPORTED_MODULE_2__["BusService"],
+            _services_place_service__WEBPACK_IMPORTED_MODULE_4__["PlaceService"],
             _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__["DateinformationService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]])
     ], TourComponent);
     return TourComponent;
 }());
@@ -24400,7 +24433,7 @@ module.exports = "\n<div class=\"main-content\">\n  <div class=\"container-fluid
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  cursor: pointer;\n  color: purple;\n  margin-right: 10%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdXNlci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcV0VCXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFx1c2VyXFx1c2VyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWU7RUFDZixjQUFhO0VBQ2Isa0JBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvdXNlci91c2VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgY29sb3I6IHB1cnBsZTtcbiAgICBtYXJnaW4tcmlnaHQ6MTAlO1xufSJdfQ== */"
+module.exports = "i {\n  cursor: pointer;\n  color: purple;\n  margin-right: 10%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdXNlci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcdXNlclxcdXNlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsY0FBYTtFQUNiLGtCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL3VzZXIvdXNlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIml7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGNvbG9yOiBwdXJwbGU7XG4gICAgbWFyZ2luLXJpZ2h0OjEwJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -24706,6 +24739,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var ngx_material_file_input__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ngx-material-file-input */ "./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24748,6 +24782,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AdminLayoutModule = /** @class */ (function () {
     function AdminLayoutModule() {
     }
@@ -24770,6 +24805,9 @@ var AdminLayoutModule = /** @class */ (function () {
                 _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__["MatRadioModule"],
                 ngx_material_file_input__WEBPACK_IMPORTED_MODULE_31__["MaterialFileInputModule"],
                 ngx_material_timepicker__WEBPACK_IMPORTED_MODULE_28__["NgxMaterialTimepickerModule"].forRoot(),
+                _agm_core__WEBPACK_IMPORTED_MODULE_32__["AgmCoreModule"].forRoot({
+                    apiKey: 'AIzaSyD9xXq1L6UtsTBi8miLM0FJU2erOkwW_0I'
+                }),
             ],
             declarations: [
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"],
@@ -24929,7 +24967,7 @@ var AdminLayoutRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hcHMvbWFwcy5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "#map {\n    height: 100%;\n}\n\nagm-map {\n    height: 600px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0NBQ2hCOztBQUVEO0lBQ0ksY0FBYztHQUNmIiwiZmlsZSI6InNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbWFwIHtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbmFnbS1tYXAge1xuICAgIGhlaWdodDogNjAwcHg7XG4gIH1cbiJdfQ== */"
 
 /***/ }),
 
@@ -24940,7 +24978,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"map\"></div>\n"
+module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-primary\">\n                        <h4 class=\"card-title text-white\">Rutas</h4>\n                      </div>\n                    <div class=\"card-body\">\n                        <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n                            <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n                        </agm-map>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n </div>"
 
 /***/ }),
 
@@ -24967,106 +25005,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var MapsComponent = /** @class */ (function () {
     function MapsComponent() {
+        this.lat = 19.04334;
+        this.lon = -98.20193;
     }
     MapsComponent.prototype.ngOnInit = function () {
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 13,
-            center: myLatlng,
-            scrollwheel: false,
-            styles: [{
-                    "featureType": "water",
-                    "stylers": [{
-                            "saturation": 43
-                        }, {
-                            "lightness": -11
-                        }, {
-                            "hue": "#0088ff"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "hue": "#ff0000"
-                        }, {
-                            "saturation": -100
-                        }, {
-                            "lightness": 99
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                            "color": "#808080"
-                        }, {
-                            "lightness": 54
-                        }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "color": "#ece2d9"
-                        }]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "color": "#ccdca1"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                            "color": "#767676"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                            "visibility": "off"
-                        }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "visibility": "on"
-                        }, {
-                            "color": "#b8cb93"
-                        }]
-                }, {
-                    "featureType": "poi.park",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.sports_complex",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.medical",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.business",
-                    "stylers": [{
-                            "visibility": "simplified"
-                        }]
-                }]
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title: "Hello World!"
-        });
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
     };
     MapsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

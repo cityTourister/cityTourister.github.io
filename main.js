@@ -210,6 +210,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
 /* harmony import */ var _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./controllers/dateinformation/edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
 /* harmony import */ var ngx_material_file_input__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ngx-material-file-input */ "./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js");
+/* harmony import */ var _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./controllers/place/modals/GetMapModalComponent.component */ "./src/app/controllers/place/modals/GetMapModalComponent.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -218,6 +219,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 // Import: Modules whose classes are needed by the components of this modules, which means
 // that are needed by the declarations
+
 
 
 
@@ -293,10 +295,10 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
                 _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_22__["MatDatepickerModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"].forRoot(),
                 _agm_core__WEBPACK_IMPORTED_MODULE_12__["AgmCoreModule"].forRoot({
-                    apiKey: 'AIzaSyA4rm9L8UDG_OdmRFzLSlzz-lCUfz_zxpQ'
-                }),
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"].forRoot()
+                    apiKey: 'AIzaSyD9xXq1L6UtsTBi8miLM0FJU2erOkwW_0I'
+                })
             ],
             declarations: [
                 //  classes that belong to this module and are related to views.
@@ -315,6 +317,7 @@ var AppModule = /** @class */ (function () {
                 _controllers_tour_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddTour"],
                 _controllers_tour_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_36__["NgbdModalEditTour"],
                 _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_49__["MapComponent"],
+                _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_53__["GetMapModalComponent"],
                 _modals_about_about_component__WEBPACK_IMPORTED_MODULE_24__["AboutComponent"],
                 _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_23__["ModalComponent"],
                 _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_45__["TourInfoComponent"],
@@ -359,7 +362,8 @@ var AppModule = /** @class */ (function () {
                 _controllers_tour_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_46__["BusInfoComponent"],
                 _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_47__["TimeInfoComponent"],
                 _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_48__["PlaceInfoComponent"],
-                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__["DateInfoEditModalComponent"]
+                _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__["DateInfoEditModalComponent"],
+                _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_53__["GetMapModalComponent"]
             ]
         })
     ], AppModule);
@@ -1175,7 +1179,7 @@ var NgbdModalAddBus = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Editar Autobús</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\"\n        (click)=\"activeModal.dismiss('Cross click')\">\n    </button>\n    </div>\n    <form [formGroup]=\"myForm\">\n        <div class=\"modal-boy\">\n            <div class=\"container\" novalidate>\n                    <div class=\"form-group\">\n                            <label for=\"numBus\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'text-danger' : ''\">Número de autobús:</label>\n                            <input id=\"numBus\" [(ngModel)]='currentBus[0]' formControlName=\"numBus\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'is-invalid' : ''\" #numBus>\n                            <label class=\"text-danger\" *ngIf=\"myForm.controls['numBus'].hasError('required')\">\n                                    ¡El Número de autobús es Requerido! Debe de estar compuesto por lo menos por 3 dígitos\n                            </label>\n                            \n                        </div>\n                        \n                        <div class=\"form-group\">\n                            <label for=\"availability\" [ngClass]=\"myForm.controls['availability'].invalid ? 'text-danger' : ''\">Disponibilidad:</label>\n                            <mat-checkbox class=\"example-margin\" value=\"true\" id=\"availability\" [(ngModel)]='currentBus[1]' formControlName=\"availability\"  class=\"form-control\" [ngClass]=\"myForm.controls['availability'].invalid ? 'is-invalid' : ''\" #availability>Disponible</mat-checkbox>\n                            <label class=\"text-danger\" *ngIf=\"myForm.controls['availability'].hasError('required')\">\n                                ¡Disponibilidad requerida!\n                            </label> \n                        </div>\n\n                        <div class=\"form-group\">\n                                <label for=\"tour_id\" [ngClass]=\"myForm.controls['tour_id'].invalid ? 'text-danger' : ''\">Tour:</label>\n                                <select class=\"form-control\" type=\"text\" formControlName=\"tour_id\" id=\"tour_id\" class=\"form-control\" [(ngModel)]='currentBus[2]' [ngClass]=\"myForm.controls['tour_id'].invalid ? 'is-invalid' : ''\" #tour_id>\n                                    <option [value]=\"undefined\" selected></option>\n                                    <option *ngFor=\"let tour of allTours\" [value]=\"tour.id\">\n                                        {{tour.name}}\n                                    </option>\n                                </select>\n                                <label class=\"text-danger\" *ngIf=\"myForm.controls['tour_id'].hasError('required')\">\n                                        El Tour es requerido, si quieres agregar uno hacer click aqui.\n                                </label> \n                        </div>\n            </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\"  (click)=\"updateBus()\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n        </div>\n    </form>"
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Editar autobús</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n        (click)=\"activeModal.dismiss('Cross click')\">\n    </button>\n</div>\n    <form [formGroup]=\"myForm\">\n        <div class=\"modal-boy\">\n            <div class=\"container\" novalidate>\n                    <div class=\"form-group\">\n                            <label for=\"numBus\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'text-danger' : ''\">Número de autobús:</label>\n                            <input id=\"numBus\" [(ngModel)]='currentBus[0]' formControlName=\"numBus\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'is-invalid' : ''\" #numBus>\n                            <label class=\"text-danger\" *ngIf=\"myForm.controls['numBus'].hasError('required')\">\n                                    ¡El Número de autobús es Requerido! Debe de estar compuesto por lo menos por 3 dígitos\n                            </label>\n                            \n                        </div>\n                        \n                        <div class=\"form-group\">\n                            <label for=\"availability\" [ngClass]=\"myForm.controls['availability'].invalid ? 'text-danger' : ''\">Disponibilidad:</label>\n                            <mat-checkbox class=\"example-margin\" value=\"true\" id=\"availability\" [(ngModel)]='currentBus[1]' formControlName=\"availability\"  class=\"form-control\" [ngClass]=\"myForm.controls['availability'].invalid ? 'is-invalid' : ''\" #availability>Disponible</mat-checkbox>\n                            <label class=\"text-danger\" *ngIf=\"myForm.controls['availability'].hasError('required')\">\n                                ¡Disponibilidad requerida!\n                            </label> \n                        </div>\n\n                        <div class=\"form-group\">\n                                <label for=\"tour_id\" [ngClass]=\"myForm.controls['tour_id'].invalid ? 'text-danger' : ''\">Tour:</label>\n                                <select class=\"form-control\" type=\"text\" formControlName=\"tour_id\" id=\"tour_id\" class=\"form-control\" [(ngModel)]='currentBus[2]' [ngClass]=\"myForm.controls['tour_id'].invalid ? 'is-invalid' : ''\" #tour_id>\n                                    <option [value]=\"undefined\" selected></option>\n                                    <option *ngFor=\"let tour of allTours\" [value]=\"tour.id\">\n                                        {{tour.name}}\n                                    </option>\n                                </select>\n                                <label class=\"text-danger\" *ngIf=\"myForm.controls['tour_id'].hasError('required')\">\n                                        El Tour es requerido, si quieres agregar uno hacer click aqui.\n                                </label> \n                        </div>\n            </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\"  (click)=\"updateBus()\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n        </div>\n    </form>"
 
 /***/ }),
 
@@ -1372,6 +1376,7 @@ var NgbdModalAddCompany = /** @class */ (function () {
         console.log(newCompany);
         this._CompanyService.addCompany(newCompany[0], newCompany[1], newCompany[2], newCompany[3], newCompany[4], newCompany[5], newCompany[6], newCompany[7])
             .subscribe(function (res) {
+            console.log(res);
             _this.showNotification(res, 'top', 'right');
         });
     };
@@ -1390,8 +1395,8 @@ var NgbdModalAddCompany = /** @class */ (function () {
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(30),
                 ])],
             phone_number: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(10),
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(10),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(5),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(15),
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/\d/, { hasNumber: true }),
                 ])],
             ieps: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
@@ -1403,10 +1408,9 @@ var NgbdModalAddCompany = /** @class */ (function () {
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/\d/, { hasNumber: true })
                 ])],
             rfc: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/[A-Z]||[a-z]/, { hasCase: true }),
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(12),
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(12),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(10),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(15),
                 ])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/[A-Z]||[a-z]/, { hasCase: true }),
@@ -1547,8 +1551,8 @@ var NgbdModalEditCompany = /** @class */ (function () {
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(30),
                 ])],
             phone_number: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(10),
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(10),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(5),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(15),
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/\d/, { hasNumber: true }),
                 ])],
             ieps: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
@@ -1560,10 +1564,9 @@ var NgbdModalEditCompany = /** @class */ (function () {
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/\d/, { hasNumber: true })
                 ])],
             rfc: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/[A-Z]||[a-z]/, { hasCase: true }),
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(12),
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(12),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(10),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(20),
                 ])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
                     _custom_validators__WEBPACK_IMPORTED_MODULE_4__["CustomValidators"].patternValidator(/[A-Z]||[a-z]/, { hasCase: true }),
@@ -1603,7 +1606,7 @@ var NgbdModalEditCompany = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\">Editar horario: {{id}} </h3>\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Fecha de inicio</h5>\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Fecha de término</h5>\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <br>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Hora de inicio</h5>\n      <ngb-timepicker [(ngModel)]=\"start_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n        <h5>Hora de término</h5>\n        <ngb-timepicker [(ngModel)]=\"end_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Frecuencia</h5>\n      <input type=\"number\" class=\"form-control\" [(ngModel)]=\"hourInterval.frequency\">\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" (click)=\"updateDateInfo()\">Guardar</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n  <h3 class=\"modal-title text-center\" *ngIf=\"!switchToAddModal\">Editar horario: {{id}} </h3>\n  <h3 class=\"modal-title text-center\" *ngIf=\"switchToAddModal\">Agregar nuuevo Horario </h3>\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Fecha de inicio</h5>\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"startDate\" \n              [(ngModel)]=\"start_date\"\n              (dateChange)=\"updateStartDate($event)\"\n              (dateInput)=\"updateStartDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n            <mat-datepicker #startDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Fecha de término</h5>\n        <mat-form-field>\n            <input  matInput [matDatepicker]=\"endDate\"\n              [(ngModel)]=\"end_date\"\n              (dateChange)=\"updateEndDate($event)\"\n              (dateInput)=\"updateEndDate($event)\">\n            <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n            <mat-datepicker #endDate></mat-datepicker>\n        </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-checkbox [(ngModel)]=\"dateInterval.service\">Servicio</mat-checkbox>\n    </div>\n  </div>\n  <br>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <h5>Hora de inicio</h5>\n      <ngb-timepicker [(ngModel)]=\"start_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n        <h5>Hora de término</h5>\n        <ngb-timepicker [(ngModel)]=\"end_hour\" [meridian]=\"true\"></ngb-timepicker>\n    </div>\n    <div class=\"col-md-4\">\n      <h5>Frecuencia</h5>\n      <input type=\"number\" class=\"form-control\" [(ngModel)]=\"hourInterval.frequency\">\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button class=\"btn btn-success\" \n    (click)=\"updateDateInfo()\"\n    *ngIf=\"!switchToAddModal\">\n    Actualizar\n  </button>\n  <button class=\"btn btn-success\" \n    (click)=\"addDate()\"\n    *ngIf=\"switchToAddModal\">\n    Guardar\n  </button>\n</div>"
 
 /***/ }),
 
@@ -1622,6 +1625,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1636,6 +1641,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var DateInfoEditModalComponent = /** @class */ (function () {
     function DateInfoEditModalComponent(service, route, router, fb, activeModal) {
         this.service = service;
@@ -1643,10 +1649,81 @@ var DateInfoEditModalComponent = /** @class */ (function () {
         this.router = router;
         this.fb = fb;
         this.activeModal = activeModal;
+        this.switchToAddModal = false;
+        this.dateInterval = {
+            id: -1,
+            start_date: 0,
+            end_date: 0,
+            service: false
+        };
+        this.hourInterval = {
+            id: -1,
+            start_time: 0,
+            end_time: 0,
+            frequency: 10
+        };
+        this.start_date = new Date();
+        this.end_date = new Date();
     }
     DateInfoEditModalComponent.prototype.ngOnInit = function () {
+        if (!Object(util__WEBPACK_IMPORTED_MODULE_5__["isNumber"])(this.id)) {
+            this.switchToAddModal = true;
+            this.getHoursAndMinutes(this.start_date, this.end_date);
+        }
+        else {
+            this.populateById(this.id);
+        }
+    };
+    DateInfoEditModalComponent.prototype.addDate = function () {
         var _this = this;
-        this.service.getDateInfoById(this.id)
+        var date_id;
+        console.log('Date por agregar: ');
+        console.log(this.dateInterval.start_date);
+        console.log(this.dateInterval.end_date);
+        this.service.addDate(this.dateInterval.start_date, this.dateInterval.end_date, this.dateInterval.service)
+            .subscribe(function (res) {
+            date_id = res.id;
+            _this.addHour(date_id);
+        }, function (err) {
+            console.log('Error adding Date Interval');
+            console.log(err);
+        });
+    };
+    DateInfoEditModalComponent.prototype.addHour = function (date_id) {
+        var _this = this;
+        var hour_id;
+        var temp = {
+            start: new Date(),
+            end: new Date()
+        };
+        temp.start.setHours(this.start_hour.hour);
+        temp.start.setMinutes(this.start_hour.minute);
+        temp.start.setSeconds(0);
+        this.hourInterval.start_time = Math.trunc(temp.start.getTime() / 1000);
+        temp.end.setHours(this.end_hour.hour);
+        temp.end.setMinutes(this.end_hour.minute);
+        temp.end.setSeconds(0);
+        this.hourInterval.end_time = Math.trunc(temp.end.getTime() / 1000);
+        console.log('Hour por agregar: ');
+        console.log(this.hourInterval.start_time);
+        console.log(this.hourInterval.end_time);
+        this.service.addHour(this.hourInterval.start_time, this.hourInterval.end_time, this.hourInterval.frequency).subscribe(function (res) {
+            hour_id = res.id;
+            _this.addDateInfo(date_id, hour_id);
+        }, function (err) {
+            console.log('Error adding Hour Interval');
+            console.log(err);
+        });
+    };
+    DateInfoEditModalComponent.prototype.addDateInfo = function (date_id, hour_id) {
+        this.service.addInformationDate(date_id, hour_id)
+            .subscribe(function (res) {
+            console.log(res);
+        });
+    };
+    DateInfoEditModalComponent.prototype.populateById = function (id) {
+        var _this = this;
+        this.service.getDateInfoById(id)
             .subscribe(function (res) {
             _this.dateInterval = res.date_id;
             _this.start_date = new Date(_this.dateInterval.start_date * 1000.0);
@@ -1703,7 +1780,7 @@ var DateInfoEditModalComponent = /** @class */ (function () {
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Number)
+        __metadata("design:type", Object)
     ], DateInfoEditModalComponent.prototype, "id", void 0);
     DateInfoEditModalComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1731,7 +1808,7 @@ var DateInfoEditModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".cdk-overlay-container {\n  z-index: 100000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2VkaXQvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXFdFQlxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcZGF0ZWluZm9ybWF0aW9uXFxlZGl0XFxlZGl0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWUsRUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy9kYXRlaW5mb3JtYXRpb24vZWRpdC9lZGl0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNkay1vdmVybGF5LWNvbnRhaW5lcnsgICAgXG4gICAgei1pbmRleDogMTAwMDAwO1xufSJdfQ== */"
+module.exports = ".cdk-overlay-container {\n  z-index: 100000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2VkaXQvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGRhdGVpbmZvcm1hdGlvblxcZWRpdFxcZWRpdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2VkaXQvZWRpdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jZGstb3ZlcmxheS1jb250YWluZXJ7ICAgIFxuICAgIHotaW5kZXg6IDEwMDAwMDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -1753,7 +1830,7 @@ module.exports = "<div class=\"cotainer\">\n\t<div class=\"d-flex justify-conten
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-body {\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n.card {\n  width: 600px;\n  background: #fff; }\n\n.img_logo span img {\n  width: 10em;\n  margin-top: 0em; }\n\n.input-group-prepend span {\n  background: #BDBDBD; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvbG9naW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXFdFQlxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcbG9naW5cXGxvZ2luLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0ksNkJBQTRCO0VBQzVCLHVCQUFzQixFQUN6Qjs7QUFFRDtFQUNFLGFBQVk7RUFDWixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDSSxZQUFXO0VBQ1gsZ0JBQWUsRUFDbEI7O0FBRUQ7RUFDRSxvQkFBbUIsRUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuICAuY2FyZC1ib2R5e1xuICAgICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIH1cbiAgXG4gIC5jYXJkIHtcbiAgICB3aWR0aDogNjAwcHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgfVxuICBcbiAgLmltZ19sb2dvIHNwYW4gaW1ne1xuICAgICAgd2lkdGg6IDEwZW07XG4gICAgICBtYXJnaW4tdG9wOiAwZW07XG4gIH1cbiAgXG4gIC5pbnB1dC1ncm91cC1wcmVwZW5kIHNwYW57XG4gICAgYmFja2dyb3VuZDogI0JEQkRCRDtcbiAgfVxuICAiXX0= */"
+module.exports = ".card-body {\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n.card {\n  width: 600px;\n  background: #fff; }\n\n.img_logo span img {\n  width: 10em;\n  margin-top: 0em; }\n\n.input-group-prepend span {\n  background: #BDBDBD; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvbG9naW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGxvZ2luXFxsb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDRTtFQUNJLDZCQUE0QjtFQUM1Qix1QkFBc0IsRUFDekI7O0FBRUQ7RUFDRSxhQUFZO0VBQ1osaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0ksWUFBVztFQUNYLGdCQUFlLEVBQ2xCOztBQUVEO0VBQ0Usb0JBQW1CLEVBQ3BCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvbG9naW4vbG9naW4uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgLmNhcmQtYm9keXtcbiAgICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB9XG4gIFxuICAuY2FyZCB7XG4gICAgd2lkdGg6IDYwMHB4O1xuICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gIH1cbiAgXG4gIC5pbWdfbG9nbyBzcGFuIGltZ3tcbiAgICAgIHdpZHRoOiAxMGVtO1xuICAgICAgbWFyZ2luLXRvcDogMGVtO1xuICB9XG4gIFxuICAuaW5wdXQtZ3JvdXAtcHJlcGVuZCBzcGFue1xuICAgIGJhY2tncm91bmQ6ICNCREJEQkQ7XG4gIH1cbiAgIl19 */"
 
 /***/ }),
 
@@ -1805,7 +1882,7 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.loginAdmin = function (email, password) {
         var _this = this;
         this._loginService.login(email, password).subscribe(function (res) {
-            _this._loginService.setToken(res.token);
+            _this._loginService.setToken(res.token, '' + res.id);
             _this.showNotification(res, 'top', 'right');
             _this.router.navigateByUrl('/dashboard');
         }, function (err) {
@@ -1900,6 +1977,78 @@ var MapComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MapComponent);
     return MapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/controllers/place/modals/GetMapModal.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/controllers/place/modals/GetMapModal.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\"> {{ name }} </h3>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <p class=\"font-weight-bold text-danger\">Nota: haz click sobre el marcador</p>\n            <agm-map style=\"height: 500px;\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"17\">\n                <agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n                    <agm-info-window [maxWidth]=\"300\">\n                        <div class=\"card\">\n                            <div class=\"card-header card-header-primary\">\n                                <h5 class=\"text-white\">{{place_type}}</h5>\n                            </div>\n                        </div>\n                        <div class=\"card-body\">\n                            <h6>Tours: </h6>\n                            <ul class=\"list-group\">\n                                <li class=\"list-group-item text-dark\" *ngFor=\"let tour of toursAssociated\">\n                                    {{tour.name}}\n                                </li>\n                            </ul>\n                        </div>\n                    </agm-info-window>\n                </agm-marker>\n            </agm-map>\n        </div>\n    </div>\n</div>\n<div class=\"modal-footer\">\n    <button class=\"btn btn-success\" (click)=\"activeModal.close()\">Aceptar</button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/controllers/place/modals/GetMapModalComponent.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/controllers/place/modals/GetMapModalComponent.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: GetMapModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetMapModalComponent", function() { return GetMapModalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GetMapModalComponent = /** @class */ (function () {
+    function GetMapModalComponent(activeModal) {
+        this.activeModal = activeModal;
+        this.toursAssociated = [];
+    }
+    GetMapModalComponent.prototype.ngOnInit = function () {
+        this.name = this.placeInfo.name;
+        this.place_type = this.placeInfo.type;
+        this.lat = Number.parseFloat(this.placeInfo.lat);
+        this.lng = Number.parseFloat(this.placeInfo.lng);
+        this.toursAssociated = this.toursFromPlace;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], GetMapModalComponent.prototype, "placeInfo", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], GetMapModalComponent.prototype, "coordinates", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], GetMapModalComponent.prototype, "toursFromPlace", void 0);
+    GetMapModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-map-place',
+            template: __webpack_require__(/*! ./GetMapModal.component.html */ "./src/app/controllers/place/modals/GetMapModal.component.html"),
+        }),
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbActiveModal"]])
+    ], GetMapModalComponent);
+    return GetMapModalComponent;
 }());
 
 
@@ -2450,7 +2599,7 @@ module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvcHVyY2hhc2UvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXFdFQlxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xccHVyY2hhc2VcXHB1cmNoYXNlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkJBQTBCLEVBQzdCOztBQUNEO0VBQ0ksZ0JBQWUsRUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy9wdXJjaGFzZS9wdXJjaGFzZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImF7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5hOmhvdmVye1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn0iXX0= */"
+module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvcHVyY2hhc2UvQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXHB1cmNoYXNlXFxwdXJjaGFzZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJCQUEwQixFQUM3Qjs7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvcHVyY2hhc2UvcHVyY2hhc2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhe1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuYTpob3ZlcntcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */"
 
 /***/ }),
 
@@ -2799,7 +2948,7 @@ var NgbdModalEditTour = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\">Editar autobuses: {{actualTour.name | titlecase}} </h3>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-boy\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <table class=\"table\">\n                    <thead>\n                        <th>\n                            Nombre\n                        </th>\n                        <th>\n                            Agregar/Quitar\n                        </th>\n                    </thead>\n                    <tbody>\n                        <tr class=\"list-group-item-action\"\n                        *ngFor=\"let bus of arrayOfAllBuses\">\n                            <td>\n                                {{ bus.numBus | titlecase }}\n                            </td>\n                            <td>\n                                <mat-checkbox \n                                    [(ngModel)]=\"bus.busAtTour\"\n                                    [disabled]=\"bus.availability\"\n                                    color=\"primary\">\n                                </mat-checkbox>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n<br>\nSi quieres agregar mas Camiones, haz click aqui.\n<div class=\"modal-footer\">\n    <button type=\"button\"  (click)=\"updateTour()\" class=\"btn btn-success\">Editar</button> \n</div>"
+module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\">Editar autobuses: {{actualTour.name | titlecase}} </h3>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-boy\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <table class=\"table\">\n                    <thead>\n                        <th>\n                            Nombre\n                        </th>\n                        <th>\n                            Agregar/Quitar\n                        </th>\n                    </thead>\n                    <tbody>\n                        <tr class=\"list-group-item-action\"\n                        *ngFor=\"let bus of arrayOfAllBuses\">\n                            <td>\n                                {{ bus.numBus | titlecase }}\n                            </td>\n                            <td>\n                                <mat-checkbox \n                                    [(ngModel)]=\"bus.busAtTour\"\n                                    [disabled]=\"!bus.availability\"\n                                    color=\"primary\">\n                                </mat-checkbox>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n<br>\nSi quieres agregar mas Camiones, haz click aqui.\n<div class=\"modal-footer\">\n    <button type=\"button\"  (click)=\"updateTour()\" class=\"btn btn-success\">Editar</button> \n</div>"
 
 /***/ }),
 
@@ -2912,7 +3061,7 @@ var BusInfoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n\n\n<form [formGroup]=\"form\">\n    <div class=\"modal-boy\">\n        <div class=\"container\" novalidate>\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <br>\n                    <p class=\"font-weight-bold\">Lugares Asignados:</p>\n                    <div class=\"checkbox\" *ngFor=\"let place of form.controls.arrayOfAllPlaces.controls; let i = index\">\n                        <label formArrayName=\"arrayOfAllPlaces\">\n                            <input type=\"checkbox\" [formControlName]=\"i\">\n                            {{arrayOfAllPlaces[i].name}}<br>\n                        </label> \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <br>\n    Si quieres agregar mas Places, haz click aqui.\n    <div class=\"modal-footer\">\n        <button type=\"button\"  (click)=\"updateTour()\"  [disabled]=\"form.pristine || form.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n    </div>\n</form>\n"
+module.exports = "<div class=\"modal-header\">\n    <h3 class=\"modal-title text-center\">Editar autobuses: {{actualTour.name | titlecase}} </h3>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-boy\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <table class=\"table\">\n                    <thead>\n                        <th>\n                            Nombre\n                        </th>\n                        <th>\n                            Agregar/Quitar\n                        </th>\n                    </thead>\n                    <tbody>\n                        <tr class=\"list-group-item-action\"\n                        *ngFor=\"let place of arrayOfAllPlaces\">\n                            <td>\n                                {{ place.name | titlecase }}\n                            </td>\n                            <td>\n                                <mat-checkbox \n                                    [(ngModel)]=\"place.placeAtTour\"\n                                    color=\"primary\">\n                                </mat-checkbox>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n<br>\nSi quieres agregar mas Camiones, haz click aqui.\n<div class=\"modal-footer\">\n    <button type=\"button\"  (click)=\"updateTour()\" class=\"btn btn-success\">Editar</button> \n</div>"
 
 /***/ }),
 
@@ -2927,10 +3076,9 @@ module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" clas
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlaceInfoComponent", function() { return PlaceInfoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
-/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/tour.service */ "./src/app/services/tour.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2944,23 +3092,41 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var PlaceInfoComponent = /** @class */ (function () {
-    function PlaceInfoComponent(formBuilder, _placeService, activeModal, _tourService) {
+    function PlaceInfoComponent(formBuilder, activeModal, _tourService) {
         this.formBuilder = formBuilder;
-        this._placeService = _placeService;
         this.activeModal = activeModal;
         this._tourService = _tourService;
-        this.arrayOfPlaces = [];
-        this.arrayOfAllPlaces = [undefined];
+        this.arrayOfTourIndex = [];
+        this.arrayOfAllPlaces = [];
     }
     PlaceInfoComponent.prototype.ngOnInit = function () {
-        this.arrayOfPlaces = this.actualTour.places;
-        this.getPlaces();
+        this.arrayOfAllPlaces = this.places;
+        this.mapPlacesFromTourIndex(this.actualTour.places);
     };
-    PlaceInfoComponent.prototype.getPlaces = function () {
+    PlaceInfoComponent.prototype.mapPlacesFromTourIndex = function (tourPlaces) {
         var _this = this;
-        this._placeService.getPlaces().subscribe(function (res) { _this.arrayOfAllPlaces = res; _this.createForm(); });
+        tourPlaces.map(function (bus) {
+            _this.arrayOfTourIndex.push(bus.id);
+        });
+        this.arrayOfAllPlaces.map(function (value) {
+            value.placeAtTour = false;
+            if (_this.arrayOfTourIndex.includes(value.id)) {
+                value.placeAtTour = true;
+            }
+        });
+    };
+    PlaceInfoComponent.prototype.updateTour = function () {
+        for (var _i = 0, _a = this.arrayOfAllPlaces; _i < _a.length; _i++) {
+            var place = _a[_i];
+            if (place.placeAtTour) {
+                this._tourService.addPlace(place.id, this.actualTour.id).subscribe();
+            }
+            else {
+                this._tourService.removePlace(place.id, this.actualTour.id).subscribe();
+            }
+        }
+        this.showNotification('top', 'right');
     };
     PlaceInfoComponent.prototype.showNotification = function (from, align) {
         var _this = this;
@@ -2972,60 +3138,31 @@ var PlaceInfoComponent = /** @class */ (function () {
                 from: from,
                 align: align
             },
-            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n        <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n        <span data-notify=\"icon\"></span>\n        <span data-notify=\"message\">{2}</span>\n        <div class=\"progress\" data-notify=\"progressbar\">\n        <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n        </div>\n        </div>",
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n      <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n      <span data-notify=\"icon\"></span>\n      <span data-notify=\"message\">{2}</span>\n      <div class=\"progress\" data-notify=\"progressbar\">\n      <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n      </div>\n      </div>",
             onShow: function () {
                 _this.closeModal();
-            },
-            onClose: function () {
-                window.location.reload();
             }
         });
     };
     PlaceInfoComponent.prototype.closeModal = function () {
         this.activeModal.close('Modal Closed');
     };
-    PlaceInfoComponent.prototype.updateTour = function () {
-        for (var i = 0; i < this.arrayOfAllPlaces.length; i++) {
-            if (this.controls[i].value == true) {
-                //add bus
-                this._tourService.addPlace(this.arrayOfAllPlaces[i].id, this.actualTour.id).subscribe();
-            }
-            else {
-                //remove bus
-                this._tourService.removePlace(this.arrayOfAllPlaces[i].id, this.actualTour.id).subscribe();
-            }
-        }
-        this.showNotification('top', 'right');
-    };
-    PlaceInfoComponent.prototype.createForm = function () {
-        this.controls = this.arrayOfAllPlaces.map(function (c) { return new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](false); });
-        //esto se podria hacer mil veces mas eficiente (primera idea... un sort)... 
-        for (var _i = 0, _a = this.arrayOfPlaces; _i < _a.length; _i++) {
-            var myplace = _a[_i];
-            for (var i = 0; i < this.arrayOfAllPlaces.length; i++) {
-                if (myplace.id == this.arrayOfAllPlaces[i].id) {
-                    this.controls[i].setValue(true);
-                    break;
-                }
-            }
-        }
-        this.form = this.formBuilder.group({
-            arrayOfAllPlaces: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormArray"](this.controls)
-        });
-    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
     ], PlaceInfoComponent.prototype, "actualTour", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], PlaceInfoComponent.prototype, "places", void 0);
     PlaceInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-aboutplace',
             template: __webpack_require__(/*! ./placeInfo.component.html */ "./src/app/controllers/tour/showModals/placeInfo.component.html")
         }),
-        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
-            _services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"],
-            _services_tour_service__WEBPACK_IMPORTED_MODULE_2__["TourService"]])
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
+            _services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"]])
     ], PlaceInfoComponent);
     return PlaceInfoComponent;
 }());
@@ -3813,7 +3950,7 @@ var DateinformationService = /** @class */ (function () {
     DateinformationService.prototype.getHours = function () {
         return this.http.get(API_URL + '/hourinterval', AUTH);
     };
-    DateinformationService.prototype.deleteDate = function (id) {
+    DateinformationService.prototype.deleteDateInfo = function (id) {
         return this.http.delete(API_URL + '/dateinformation/' + id, AUTH);
     };
     DateinformationService.prototype.addDate = function (start_date, end_date, service) {
@@ -3910,8 +4047,9 @@ var LoginService = /** @class */ (function () {
         this.http = http;
         this.router = router;
     }
-    LoginService.prototype.setToken = function (token) {
+    LoginService.prototype.setToken = function (token, id) {
         localStorage.setItem('TOKEN', token);
+        localStorage.setItem('ID', id);
     };
     LoginService.prototype.isLoggedIn = function () {
         return localStorage.getItem('TOKEN') != null;
@@ -3919,6 +4057,7 @@ var LoginService = /** @class */ (function () {
     LoginService.prototype.logout = function () {
         this.router.navigate(['/login']);
         localStorage.removeItem('TOKEN');
+        localStorage.removeItem('ID');
     };
     LoginService.prototype.login = function (email, password) {
         return this.http.post(API_URL + '/admin' + '/login', { email: email, password: password });
@@ -4476,7 +4615,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Bego Montes\Documents\SemestreI\WEB\front2\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Bego Montes\Documents\SemestreI\front2\src\main.ts */"./src/main.ts");
 
 
 /***/ })
