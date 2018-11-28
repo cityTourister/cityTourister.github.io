@@ -1065,7 +1065,7 @@ var NgbdModalEditAdmin = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar Autobús</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\"\n        (click)=\"activeModal.dismiss('Cross click')\">\n    </button>\n    </div>\n    <form [formGroup]=\"myForm\">\n        <div class=\"modal-boy\">\n            <div class=\"container\" novalidate>\n                \n                <div class=\"form-group\">\n                    <label for=\"numBus\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'text-danger' : ''\">Número de autobús:</label>\n                    <input id=\"numBus\" [(ngModel)]='currentBus[0]' formControlName=\"numBus\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'is-invalid' : ''\" #numBus>\n                    <label class=\"text-danger\" *ngIf=\"myForm.controls['numBus'].hasError('required')\">\n                            ¡El Número de autobús es Requerido! Debe de estar compuesto por lo menos por tres dígitos.\n                    </label>\n                    \n                </div>\n                \n                <div class=\"form-group\">\n                    \n                    <label for=\"availability\" [ngClass]=\"myForm.controls['availability'].invalid ? 'text-danger' : ''\">Disponibilidad:</label>\n                    <mat-checkbox class=\"example-margin\" value=\"true\" id=\"availability\" [(ngModel)]='currentBus[1]' formControlName=\"availability\"  class=\"form-control\" [ngClass]=\"myForm.controls['availability'].invalid ? 'is-invalid' : ''\" #availability>Disponible</mat-checkbox>\n                    <label class=\"text-danger\" *ngIf=\"myForm.controls['availability'].hasError('required')\">\n                        ¡Disponibilidad requerida!\n                    </label> \n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"tour_id\" [ngClass]=\"myForm.controls['tour_id'].invalid ? 'text-danger' : ''\">Tour:</label>\n                    <select class=\"form-control\" type=\"text\" formControlName=\"tour_id\" id=\"tour_id\" class=\"form-control\" [(ngModel)]='currentBus[2]' [ngClass]=\"myForm.controls['tour_id'].invalid ? 'is-invalid' : ''\" #tour_id>\n                        <option [value]=\"undefined\" selected></option>\n                        <option *ngFor=\"let tour of allTours\" [value]=\"tour.id\">\n                            {{tour.name}}\n                        </option>\n                    </select>\n                    <label class=\"text-danger\" *ngIf=\"myForm.controls['tour_id'].hasError('required')\">\n                            El Tour es requerido, si quieres agregar uno hacer click aqui.\n                    </label> \n                </div>\n                 \n            </div>\n        </div>\n            <div class=\"modal-footer\">\n                <button type=\"button\"  (click)=\"addBus(currentBus)\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-right\">Agregar</button> \n            </div>\n    </form>"
+module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar Autobús</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\"\n        (click)=\"activeModal.dismiss('Cross click')\">\n    </button>\n    </div>\n    <form [formGroup]=\"myForm\">\n        <div class=\"modal-boy\">\n            <div class=\"container\" novalidate>\n                \n                <div class=\"form-group\">\n                    <label for=\"numBus\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'text-danger' : ''\">Número de autobús:</label>\n                    <input id=\"numBus\" [(ngModel)]='currentBus[0]' formControlName=\"numBus\" type=\"text\" class=\"form-control\" [ngClass]=\"myForm.controls['numBus'].invalid ? 'is-invalid' : ''\" #numBus>\n                    <label class=\"text-danger\" *ngIf=\"myForm.controls['numBus'].hasError('required')\">\n                            ¡El Número de autobús es Requerido! Debe de estar compuesto por lo menos por tres dígitos.\n                    </label>\n                    \n                </div>\n                \n                <div class=\"form-group\">\n                    \n                    <label for=\"availability\" [ngClass]=\"myForm.controls['availability'].invalid ? 'text-danger' : ''\">Disponibilidad:</label>\n                    <mat-checkbox class=\"example-margin\" value=\"true\" id=\"availability\" [(ngModel)]='currentBus[1]' formControlName=\"availability\"  class=\"form-control\" [ngClass]=\"myForm.controls['availability'].invalid ? 'is-invalid' : ''\" #availability>Disponible</mat-checkbox>\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"tour_id\">Tour:</label>\n                    <select class=\"form-control\" type=\"text\" formControlName=\"tour_id\" id=\"tour_id\" class=\"form-control\" [(ngModel)]='currentBus[2]' [ngClass]=\"myForm.controls['tour_id'].invalid ? 'is-invalid' : ''\" #tour_id>\n                        <option [value]=\"undefined\" selected></option>\n                        <option *ngFor=\"let tour of allTours\" [value]=\"tour.id\">\n                            {{tour.name}}\n                        </option>\n                    </select>\n                </div>\n                 \n            </div>\n        </div>\n            <div class=\"modal-footer\">\n                <button type=\"button\"  (click)=\"addBus(currentBus)\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-right\">Agregar</button> \n            </div>\n    </form>"
 
 /***/ }),
 
@@ -1155,8 +1155,8 @@ var NgbdModalAddBus = /** @class */ (function () {
                     _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required,
                     _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(3)
                 ])],
-            availability: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            tour_id: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+            availability: ['',],
+            tour_id: ['']
         });
     };
     NgbdModalAddBus = __decorate([
@@ -1250,6 +1250,10 @@ var NgbdModalEditBus = /** @class */ (function () {
     };
     NgbdModalEditBus.prototype.updateBus = function () {
         var _this = this;
+        console.log(this.currentBus);
+        if (this.currentBus[2]) {
+            this.currentBus[2] = this.currentBus[2].id;
+        }
         this._busService.updateBus(this.currentBus[0], this.currentBus[1], this.currentBus[2], this.id).subscribe(function (res) {
             _this.showNotification(res, 'top', 'right');
         });
@@ -1263,7 +1267,6 @@ var NgbdModalEditBus = /** @class */ (function () {
         var _this = this;
         this._TourService.getTours().subscribe(function (res) {
             _this.allTours = res;
-            console.log(res);
         });
     };
     NgbdModalEditBus.prototype.getByIDBus = function () {
@@ -2064,7 +2067,7 @@ var GetMapModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar nuevo lugar</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n                <span aria-hidden=\"true\">&times;</span>\n        </button>\n</div>\n        <div class=\"modal-boy\">\n                <div class=\"container\">\n                        <div class=\"form-group\">\n                                <label for=\"name\"  class=\"text-muted\">Nombre del lugar:</label>\n                                <input [(ngModel)]='currentPlace.name' type=\"text\" class=\"form-control\" >\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.nameIsNotValid\">\n                                        Verfica el nombre\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"description\" class=\"text-muted\">Descripcion del lugar:</label>\n                                <textarea outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentPlace.description' type=\"text\" class=\"form-control\" ></textarea>\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.descriptionIsEmpty\">\n                                        La descripción del lugar es requerido\n                                </small> \n                        </div>\n\n                        <div class=\"form-group\">\n                                <label for=\"image_url\"  class=\"text-muted\">Imagen (URL):</label>\n                                <input [(ngModel)]='currentPlace.image_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n                        \n                        <div class=\"form-group\">\n                                <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                                <input [(ngModel)]='currentPlace.narrative_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n\n                        <p class=\"font-weight-bold text-danger\">Nota: haz click sobre el mapa para mover el marcador</p>\n                        <agm-map style=\"height: 420px;\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"17\" (mapClick)=\"changeMarkerOnMap($event)\">\n                                <agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n                                        <agm-info-window style=\"height: 220px;\" [isOpen]=\"true\">\n                                                <h5 class=\"text-dark font-weight-bold\">Tipo de lugar: </h5>\n                                                <mat-radio-group [(ngModel)]=\"currentPlace.place_type\">\n                                                        <ul class=\"list-group list-group-flush\">\n                                                                <li class=\"list-group-item\" *ngFor=\"let type of allTypeOfPlaces\">\n                                                                        <mat-radio-button [value]=\"type.id\" >\n                                                                                {{type.name}}\n                                                                        </mat-radio-button>\n                                                                </li>\n                                                        </ul>  \n                                                </mat-radio-group>\n                                        </agm-info-window>\n                                </agm-marker>\n                        </agm-map> \n                        <small class=\"form-text text-danger\" *ngIf=\"currentPlace.noPlaceTypeSelected\">\n                                Seleccione tipo de lugar\n                        </small>\n                </div>\n        </div>\n        <div class=\"modal-footer\">\n                <button type=\"button\" \n                        (click)=\"addPlace(currentPlace)\" \n                        class=\"btn btn-success\">\n                        Agregar\n                </button> \n        </div>\n\n\n\n\n"
+module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar nuevo lugar</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n                <span aria-hidden=\"true\">&times;</span>\n        </button>\n</div>\n        <div class=\"modal-boy\">\n                <div class=\"container\">\n                        <div class=\"form-group\">\n                                <label for=\"name\"  class=\"text-muted\">Nombre del lugar:</label>\n                                <input [(ngModel)]='currentPlace.name' type=\"text\" class=\"form-control\" >\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.nameIsNotValid\">\n                                        Verfica el nombre\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"description\" class=\"text-muted\">Descripcion del lugar:</label>\n                                <textarea outline=\"1px solid blue\" rows=\"3\" [(ngModel)]='currentPlace.description' type=\"text\" class=\"form-control\" ></textarea>\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.descriptionIsEmpty\">\n                                        La descripción del lugar es requerida\n                                </small> \n                        </div>\n\n                        <div class=\"form-group\">\n                                <label for=\"image_url\"  class=\"text-muted\">Imagen (URL):</label>\n                                <input [(ngModel)]='currentPlace.image_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n                        \n                        <div class=\"form-group\">\n                                <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                                <input [(ngModel)]='currentPlace.narrative_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n\n                        <p class=\"font-weight-bold text-danger\">Nota: haz click sobre el mapa para mover el marcador</p>\n                        <agm-map style=\"height: 420px;\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"17\" (mapClick)=\"changeMarkerOnMap($event)\">\n                                <agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n                                        <agm-info-window style=\"height: 220px;\" [isOpen]=\"true\">\n                                                <h5 class=\"text-dark font-weight-bold\">Tipo de lugar: </h5>\n                                                <mat-radio-group [(ngModel)]=\"currentPlace.place_type\">\n                                                        <ul class=\"list-group list-group-flush\">\n                                                                <li class=\"list-group-item\" *ngFor=\"let type of allTypeOfPlaces\">\n                                                                        <mat-radio-button [value]=\"type.id\" >\n                                                                                {{type.name}}\n                                                                        </mat-radio-button>\n                                                                </li>\n                                                        </ul>  \n                                                </mat-radio-group>\n                                        </agm-info-window>\n                                </agm-marker>\n                        </agm-map> \n                        <small class=\"form-text text-danger\" *ngIf=\"currentPlace.noPlaceTypeSelected\">\n                                Seleccione tipo de lugar\n                        </small>\n                </div>\n        </div>\n        <div class=\"modal-footer\">\n                <button type=\"button\" \n                        (click)=\"addPlace(currentPlace)\" \n                        class=\"btn btn-success\">\n                        Agregar\n                </button> \n        </div>\n\n\n\n\n"
 
 /***/ }),
 
@@ -2081,7 +2084,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2094,12 +2096,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var NgbdModalAddPlaceComponent = /** @class */ (function () {
-    function NgbdModalAddPlaceComponent(_PlaceService, activeModal, formBuilder) {
+    function NgbdModalAddPlaceComponent(_PlaceService, activeModal) {
         this._PlaceService = _PlaceService;
         this.activeModal = activeModal;
-        this.formBuilder = formBuilder;
         this.currentPlace = {
             name: '',
             nameIsNotValid: false,
@@ -2115,7 +2115,6 @@ var NgbdModalAddPlaceComponent = /** @class */ (function () {
         this.lng = -98.20193;
     }
     NgbdModalAddPlaceComponent.prototype.ngOnInit = function () {
-        this.getPlaces();
         this.getPlaceType();
     };
     NgbdModalAddPlaceComponent.prototype.showNotification = function (data, from, align) {
@@ -2179,11 +2178,6 @@ var NgbdModalAddPlaceComponent = /** @class */ (function () {
         }
         return true;
     };
-    NgbdModalAddPlaceComponent.prototype.getPlaces = function () {
-        var _this = this;
-        this._PlaceService.getPlaces()
-            .subscribe(function (res) { _this.allPlaces = res; });
-    };
     NgbdModalAddPlaceComponent.prototype.getPlaceType = function () {
         var _this = this;
         this._PlaceService.getPlaceType()
@@ -2194,8 +2188,7 @@ var NgbdModalAddPlaceComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./PlaceAddModal.component.html */ "./src/app/controllers/place/modals/PlaceAddModal.component.html"),
         }),
         __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
     ], NgbdModalAddPlaceComponent);
     return NgbdModalAddPlaceComponent;
 }());
@@ -2211,7 +2204,7 @@ var NgbdModalAddPlaceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title\">Editar Lugar</h4>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\"\n    (click)=\"activeModal.dismiss('Cross click')\">\n</button>\n</div>\n<form [formGroup]=\"placeForm\" novalidate >\n    <div class=\"modal-boy\">\n            <div class=\"container\" novalidate>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"name\" [ngClass]=\"placeForm.controls['name'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Nombre del lugar:</label>\n                            <input id=\"name\" [(ngModel)]='currentPlace[0]' formControlName=\"name\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['name'].invalid ? 'is-invalid' : ''\" #name>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['name'].hasError('required')\">\n                                    El nombre del lugar es requerido\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"description\" [ngClass]=\"placeForm.controls['description'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Descripcion del lugar:</label>\n                            <textarea id=\"description\" outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentPlace[1]' formControlName=\"description\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['description'].invalid ? 'is-invalid' : ''\" #description></textarea>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['description'].hasError('required')\">\n                                    La descripcion del lugar es requerido\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"latitude\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Latitud del lugar:</label>\n                            <input id=\"latitude\" [(ngModel)]='currentPlace[2]' formControlName=\"latitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'is-invalid' : ''\" #latitude>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['latitude'].hasError('required')\">\n                                    La latitud del lugar es requerida\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"longitude\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Longitud del lugar:</label>\n                            <input id=\"longitude\" [(ngModel)]='currentPlace[3]' formControlName=\"longitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'is-invalid' : ''\" #longitude>\n                            <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['longitude'].hasError('required')\">\n                                    La longitud del lugar es requerida\n                            </small> \n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                            <input id=\"narrative_url\" [(ngModel)]='currentPlace[4]' formControlName=\"narrative_url\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['narrative_url'].invalid ? 'is-invalid' : ''\" #narrative_url>\n                    </div>\n                    \n                    <div class=\"form-group\">\n                            <label for=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'text-danger' : ''\">Tipo de Lugar:</label>\n                            <div class=\"radio\" *ngFor=\"let type of allTypeOfPlaces\">\n                                    <label>\n                                            <input id=\"place_type_id\" type=\"radio\" [value]=\"type.id\" [(ngModel)]='currentPlace[5]' formControlName=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'is-invalid' : ''\" #place_type_id>\n                                            {{type.name}}\n                                    </label>\n                            </div>\n                            <label class=\"text-danger\" *ngIf=\"placeForm.controls['place_type_id'].hasError('required')\">\n                                    El Tipo de Lugar es requerido.\n                            </label> \n                    </div>   \n                    \n            </div>\n    </div>\n    <div class=\"modal-footer\">\n            <button type=\"button\"  (click)=\"updatePlace(currentPlace)\"  [disabled]=\"placeForm.pristine || placeForm.invalid\"  class=\"btn btn-danger pull-right\">Editar</button> \n    </div>\n</form>\n\n\n\n\n"
+module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar nuevo lugar</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n                <span aria-hidden=\"true\">&times;</span>\n        </button>\n</div>\n        <div class=\"modal-boy\">\n                <div class=\"container\">\n                        <div class=\"form-group\">\n                                <label for=\"name\"  class=\"text-muted\">Nombre del lugar:</label>\n                                <input [(ngModel)]='currentPlace.name' type=\"text\" class=\"form-control\" >\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.nameIsNotValid\">\n                                        Verfica el nombre\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"description\" class=\"text-muted\">Descripcion del lugar:</label>\n                                <textarea outline=\"1px solid blue\" rows=\"3\" [(ngModel)]='currentPlace.description' type=\"text\" class=\"form-control\" ></textarea>\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.descriptionIsEmpty\">\n                                        La descripción del lugar es requerida\n                                </small> \n                        </div>\n\n                        <div class=\"form-group\">\n                                <label for=\"image_url\"  class=\"text-muted\">Imagen (URL):</label>\n                                <input [(ngModel)]='currentPlace.image_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n                        \n                        <div class=\"form-group\">\n                                <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                                <input [(ngModel)]='currentPlace.narrative_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n\n                        <p class=\"font-weight-bold text-danger\">Nota: haz click sobre el mapa para mover el marcador</p>\n                        <agm-map style=\"height: 420px;\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"17\" (mapClick)=\"changeMarkerOnMap($event)\">\n                                <agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n                                        <agm-info-window style=\"height: 220px;\" [isOpen]=\"true\">\n                                                <h5 class=\"text-dark font-weight-bold\">Tipo de lugar: </h5>\n                                                <mat-radio-group [(ngModel)]=\"currentPlace.place_type\">\n                                                        <ul class=\"list-group list-group-flush\">\n                                                                <li class=\"list-group-item\" *ngFor=\"let type of allTypeOfPlaces\">\n                                                                        <mat-radio-button [value]=\"type.id\" >\n                                                                                {{type.name}}\n                                                                        </mat-radio-button>\n                                                                </li>\n                                                        </ul>  \n                                                </mat-radio-group>\n                                        </agm-info-window>\n                                </agm-marker>\n                        </agm-map> \n                        <small class=\"form-text text-danger\" *ngIf=\"currentPlace.noPlaceTypeSelected\">\n                                Seleccione tipo de lugar\n                        </small>\n                </div>\n        </div>\n        <div class=\"modal-footer\">\n                <button type=\"button\" \n                        (click)=\"updatePlace(currentPlace)\" \n                        class=\"btn btn-success\">\n                        Actualizar\n                </button> \n        </div>\n\n\n\n\n"
 
 /***/ }),
 
@@ -2228,7 +2221,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2241,27 +2233,91 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var NgbdModalEditPlace = /** @class */ (function () {
-    function NgbdModalEditPlace(_PlaceService, activeModal, formBuilder) {
+    function NgbdModalEditPlace(_PlaceService, activeModal) {
         this._PlaceService = _PlaceService;
         this.activeModal = activeModal;
-        this.formBuilder = formBuilder;
-        this.currentPlace = [undefined];
+        this.currentPlace = {
+            id: null,
+            name: '',
+            nameIsNotValid: false,
+            description: '',
+            descriptionIsEmpty: false,
+            place_type: null,
+            noPlaceTypeSelected: true,
+            narrative_url: '',
+            image_url: ''
+        };
     }
     NgbdModalEditPlace.prototype.ngOnInit = function () {
-        this.getByIdPlace();
-        this.createForm();
-        this.getPlaceType();
-    };
-    NgbdModalEditPlace.prototype.getByIdPlace = function () {
         var _this = this;
-        this._PlaceService.getIDPlace(this.id).subscribe(function (res) { _this.currentPlace[0] = res.name; _this.currentPlace[1] = res.description; _this.currentPlace[2] = res.latitude; _this.currentPlace[3] = res.longitude; _this.currentPlace[4] = res.narrative; });
+        this.getPlaceType();
+        this._PlaceService.getIDPlace(this.id)
+            .subscribe(function (res) {
+            _this.currentPlace.id = res.id;
+            _this.currentPlace.name = res.name;
+            _this.currentPlace.description = res.description;
+            _this.currentPlace.place_type = res.place_type_id.id;
+            _this.currentPlace.narrative_url = res.narrative_url;
+            _this.currentPlace.image_url = res.image_url;
+            _this.lat = res.latitude;
+            _this.lng = res.longitude;
+            console.log(res);
+        });
+    };
+    NgbdModalEditPlace.prototype.updatePlace = function (currentPlace) {
+        var _this = this;
+        if (this.fieldsAreGoodToGo()) {
+            this._PlaceService.updatePlace(this.currentPlace.name, this.currentPlace.description, this.lat, this.lng, this.currentPlace.narrative_url, this.currentPlace.place_type, this.currentPlace.image_url, this.currentPlace.id).subscribe(function (res) {
+                _this.showNotification({
+                    info: 'Lugar actualizado',
+                    color: 'success'
+                }, 'top', 'right');
+            }, function (err) {
+                _this.showNotification({
+                    info: 'Ha habido un error',
+                    color: 'danger'
+                }, 'top', 'right');
+            });
+        }
+    };
+    NgbdModalEditPlace.prototype.getPlaceType = function () {
+        var _this = this;
+        this._PlaceService.getPlaceType()
+            .subscribe(function (res) { _this.allTypeOfPlaces = res; });
+    };
+    NgbdModalEditPlace.prototype.changeMarkerOnMap = function ($event) {
+        this.lat = $event.coords.lat;
+        this.lng = $event.coords.lng;
+    };
+    NgbdModalEditPlace.prototype.fieldsAreGoodToGo = function () {
+        if (this.currentPlace.name.length > 5) {
+            this.currentPlace.nameIsNotValid = false;
+        }
+        else {
+            this.currentPlace.nameIsNotValid = true;
+            return false;
+        }
+        if (this.currentPlace.description.length > 10) {
+            this.currentPlace.descriptionIsEmpty = false;
+        }
+        else {
+            this.currentPlace.descriptionIsEmpty = true;
+            return false;
+        }
+        if (this.currentPlace.place_type != null) {
+            this.currentPlace.noPlaceTypeSelected = false;
+        }
+        else {
+            this.currentPlace.place_type = true;
+            return false;
+        }
+        return true;
     };
     NgbdModalEditPlace.prototype.showNotification = function (data, from, align) {
         var _this = this;
         $.notify({
-            message: "Lugar editado"
+            message: data.info
         }, {
             type: data.color,
             timer: 1000,
@@ -2269,47 +2325,10 @@ var NgbdModalEditPlace = /** @class */ (function () {
                 from: from,
                 align: align
             },
-            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                <span data-notify=\"icon\"></span>\n                <span data-notify=\"message\">{2}</span>\n                <div class=\"progress\" data-notify=\"progressbar\">\n                <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                </div>\n                </div>",
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n            <span data-notify=\"icon\"></span>\n            <span data-notify=\"message\">{2}</span>\n            <div class=\"progress\" data-notify=\"progressbar\">\n            <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n            </div>\n            </div>",
             onShow: function () {
-                _this.closeModal();
-            },
-            onClose: function () {
-                // window.location.reload();
+                _this.activeModal.close('Modal Closed');
             }
-        });
-    };
-    NgbdModalEditPlace.prototype.closeModal = function () {
-        this.activeModal.close('Modal Closed');
-    };
-    NgbdModalEditPlace.prototype.updatePlace = function (newPlace) {
-        var _this = this;
-        this._PlaceService.updatePlace(newPlace[0], newPlace[1], newPlace[2], newPlace[3], newPlace[4], newPlace[5], this.id)
-            .subscribe(function (res) {
-            _this.showNotification(res, 'top', 'right');
-        });
-    };
-    NgbdModalEditPlace.prototype.getPlaceType = function () {
-        var _this = this;
-        this._PlaceService.getPlaceType().subscribe(function (res) { _this.allTypeOfPlaces = res; });
-    };
-    NgbdModalEditPlace.prototype.createForm = function () {
-        this.placeForm = this.formBuilder.group({
-            name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
-                ])],
-            description: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-            latitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-            longitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-            narrative_url: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([])],
-            place_type_id: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
         });
     };
     __decorate([
@@ -2321,8 +2340,7 @@ var NgbdModalEditPlace = /** @class */ (function () {
             template: __webpack_require__(/*! ./PlaceEditModal.component.html */ "./src/app/controllers/place/modals/PlaceEditModal.component.html"),
         }),
         __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
     ], NgbdModalEditPlace);
     return NgbdModalEditPlace;
 }());
@@ -2602,7 +2620,7 @@ var NgbdModalEditPrice = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> {{  purchase.user_id.name | titlecase}} </h3>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.email }} </h6>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.phone_number }} </h6>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-italic\"> {{ purchase.createdAt | date: 'fullDate' }} </p>\n                <p class=\"font-weight-bold\">Boletos</p>\n                <ul class=\"list-group\">\n                  <li class=\"list-group-item\" *ngIf=\"kidTickets.length>0\">Niño ({{ kidTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"adultTickets.length>0\">Adulto ({{ adultTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"oldTickets.length>0\">Anciano ({{ oldTickets.length }})</li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left\">Subtotal</p>\n            <div class=\"float-right \">\n                ${{ purchase.sub_total }}\n            </div>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left font-weight-bold\">Total</p>\n            <p class=\"float-right text-danger\">\n                ${{ purchase.total }}\n            </p>\n          </div>\n        </div>\n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> {{  purchase.user_id.name | titlecase}} </h3>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.email }} </h6>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.phone_number }} </h6>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-italic\"> {{ purchase.createdAt | date: 'fullDate' }} </p>\n                <p class=\"font-weight-bold\">Boletos</p>\n                <ul class=\"list-group\">\n                  <li class=\"list-group-item\" *ngIf=\"kidTickets.length>0\">Niño ({{ kidTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"adultTickets.length>0\">Adulto ({{ adultTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"oldTickets.length>0\">Anciano ({{ oldTickets.length }})</li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left\">Subtotal</p>\n            <div class=\"float-right \">\n                ${{ money.subtotal }}\n            </div>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left font-weight-bold\">Total</p>\n            <p class=\"float-right text-danger\">\n                ${{ money.total }}\n            </p>\n          </div>\n        </div>\n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
 
 /***/ }),
 
@@ -2702,13 +2720,18 @@ var PurchaseInfoComponent = /** @class */ (function () {
     }
     PurchaseInfoComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.getTotals(this.purchaseId);
         this._purchaseService.getPurchaseById(this.purchaseId)
             .subscribe(function (res) {
             _this.purchase = res;
-            _this.getGenetalTicketInfo(_this.purchase.tickets);
+            _this.getGeneralTicketInfo(_this.purchase.tickets);
         });
     };
-    PurchaseInfoComponent.prototype.getGenetalTicketInfo = function (tickets) {
+    PurchaseInfoComponent.prototype.getTotals = function (id) {
+        var _this = this;
+        this._purchaseService.getTotal(id).subscribe(function (res) { _this.money = res; });
+    };
+    PurchaseInfoComponent.prototype.getGeneralTicketInfo = function (tickets) {
         for (var _i = 0, tickets_1 = tickets; _i < tickets_1.length; _i++) {
             var ticket = tickets_1[_i];
             if (ticket.id == 1)
@@ -4168,14 +4191,15 @@ var PlaceService = /** @class */ (function () {
     PlaceService.prototype.getIDPlace = function (id) {
         return this.http.get(API_URL + '/place/' + id, AUTH);
     };
-    PlaceService.prototype.updatePlace = function (name, description, latitude, longitude, narrative_url, place_type_id, id) {
+    PlaceService.prototype.updatePlace = function (name, description, latitude, longitude, narrative_url, place_type_id, image_url, id) {
         var obj = {
             name: name,
             description: description,
             latitude: latitude,
             longitude: longitude,
             narrative_url: narrative_url,
-            place_type_id: place_type_id
+            place_type_id: place_type_id,
+            image_url: image_url
         };
         return this.http.put(API_URL + '/place/edit/' + id, obj, AUTH);
     };
@@ -4297,6 +4321,9 @@ var PurchaseService = /** @class */ (function () {
     };
     PurchaseService.prototype.getPurchaseById = function (id) {
         return this.http.get(API_URL + '/purchase/' + id, AUTH);
+    };
+    PurchaseService.prototype.getTotal = function (id) {
+        return this.http.get(API_URL + '/purchase/total/' + id, AUTH);
     };
     PurchaseService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),

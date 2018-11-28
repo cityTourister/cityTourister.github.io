@@ -23987,7 +23987,7 @@ var PlaceComponent = /** @class */ (function () {
     };
     PlaceComponent.prototype.openEditModal = function (id) {
         var _this = this;
-        this.modalRef = this._modalService.open(_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditPlace"]);
+        this.modalRef = this._modalService.open(_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditPlace"], { size: 'lg' });
         this.modalRef.componentInstance.id = id;
         this.modalRef.result.then(function (result) {
             _this.getPlaces();
@@ -24987,7 +24987,7 @@ var AdminLayoutRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#map {\n    height: 100%;\n}\n\nagm-map {\n    height: 600px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0NBQ2hCOztBQUVEO0lBQ0ksY0FBYztHQUNmIiwiZmlsZSI6InNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbWFwIHtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbmFnbS1tYXAge1xuICAgIGhlaWdodDogNjAwcHg7XG4gIH1cbiJdfQ== */"
+module.exports = "\nagm-map {\n    height: 600px;\n}\n\nimg {\n    width: 120px;\n    height: 120px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksY0FBYztDQUNqQjs7QUFFRDtJQUNJLGFBQWE7SUFDYixjQUFjO0NBQ2pCIiwiZmlsZSI6InNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbmFnbS1tYXAge1xuICAgIGhlaWdodDogNjAwcHg7XG59XG5cbmltZyB7XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogMTIwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -24998,7 +24998,7 @@ module.exports = "#map {\n    height: 100%;\n}\n\nagm-map {\n    height: 600px;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-primary\">\n                        <h4 class=\"card-title text-white\">Rutas</h4>\n                      </div>\n                    <div class=\"card-body\">\n                        <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n                            <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n                        </agm-map>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n </div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-primary\">\n                        <h4 class=\"card-title text-white\">Rutas</h4>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <mat-form-field>\n                                    <mat-select \n                                        [(ngModel)]=\"currentTour.id\">\n                                        <mat-option \n                                            *ngFor=\"let tour of arrayOfTours\" \n                                            [value]=\"tour.id\"\n                                            (click)=\"updateCurrentTour(tour.id)\">\n                                            {{ tour.name }}\n                                        </mat-option>\n                                    </mat-select>\n                                </mat-form-field>\n                            </div>\n                        </div>\n                        <agm-map \n                            [latitude]=\"center.lat\" \n                            [longitude]=\"center.lng\" \n                            [zoom]=\"14\">\n                            <agm-polygon\n                                [geodesic]=\"true\"\n                                [strokeColor]=\"\"\n                                [strokeOpacity]=\"0.3\"\n                                [fillOpacity]=\"0.0\"\n                                [strokeWeight]=\"3\"\n                                [paths]=\"markersOnMap\">\n                                    <agm-marker\n                                        *ngFor=\"let marker of markersOnMap\"\n                                        [latitude]=\"marker.lat\" \n                                        [longitude]=\"marker.lng\">\n                                        <agm-info-window\n                                            [maxWidth]=\"150\">\n                                            <div class=\"container\">\n                                                <p class=\"font-weight-bold\">\n                                                    {{marker.name}}\n                                                </p>\n                                                <img \n                                                    src=\"{{marker.image_url}}\" \n                                                    class=\"img-thumbnail\"\n                                                    *ngIf=\"marker.image_url.length > 5\">\n                                            </div>\n                                        </agm-info-window>\n                                    </agm-marker>\n                            </agm-polygon>\n                        </agm-map>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n </div>"
 
 /***/ }),
 
@@ -25013,6 +25013,7 @@ module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-flu
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapsComponent", function() { return MapsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/tour.service */ "./src/app/services/tour.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25023,12 +25024,59 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+var Marker = /** @class */ (function () {
+    function Marker(lat, lng, name, image_url) {
+        this.lat = lat;
+        this.lng = lng;
+        this.name = name;
+        this.image_url = image_url;
+    }
+    return Marker;
+}());
 var MapsComponent = /** @class */ (function () {
-    function MapsComponent() {
-        this.lat = 19.04334;
-        this.lon = -98.20193;
+    function MapsComponent(_tourService) {
+        this._tourService = _tourService;
+        this.center = {
+            lat: 19.04334,
+            lng: -98.20193
+        };
+        this.arrayOfTours = [];
+        this.currentTour = {
+            id: 0,
+            places: []
+        };
+        this.markersOnMap = [];
     }
     MapsComponent.prototype.ngOnInit = function () {
+        this.getTours();
+    };
+    MapsComponent.prototype.getTours = function () {
+        var _this = this;
+        this._tourService.getTours()
+            .subscribe(function (res) {
+            _this.arrayOfTours = res;
+            _this.currentTour.id = _this.arrayOfTours[0].id;
+            _this.currentTour.places = _this.arrayOfTours[0].places;
+            _this.drawMarkersOnMap(_this.currentTour.places);
+        });
+    };
+    MapsComponent.prototype.drawMarkersOnMap = function (arrayOfPlaces) {
+        var _this = this;
+        this.markersOnMap = [];
+        arrayOfPlaces.forEach(function (place) {
+            _this.markersOnMap.push(new Marker(Number.parseFloat(place.latitude), Number.parseFloat(place.longitude), place.name, place.image_url));
+        });
+    };
+    MapsComponent.prototype.updateCurrentTour = function (id) {
+        for (var _i = 0, _a = this.arrayOfTours; _i < _a.length; _i++) {
+            var tour = _a[_i];
+            if (tour.id === id) {
+                this.currentTour.places = tour.places;
+                this.currentTour.id = tour.id;
+            }
+        }
+        this.drawMarkersOnMap(this.currentTour.places);
     };
     MapsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -25036,7 +25084,7 @@ var MapsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./maps.component.html */ "./src/app/maps/maps.component.html"),
             styles: [__webpack_require__(/*! ./maps.component.css */ "./src/app/maps/maps.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"]])
     ], MapsComponent);
     return MapsComponent;
 }());
