@@ -23544,10 +23544,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateinformationComponent", function() { return DateinformationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23561,24 +23559,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var DateinformationComponent = /** @class */ (function () {
-    function DateinformationComponent(_dateInfoService, route, router, fb, _modalService) {
+    function DateinformationComponent(_dateInfoService, _modalService) {
         this._dateInfoService = _dateInfoService;
-        this.route = route;
-        this.router = router;
-        this.fb = fb;
         this._modalService = _modalService;
         this.dates = [];
     }
     DateinformationComponent.prototype.ngOnInit = function () {
+        this.getDateInfo();
+    };
+    DateinformationComponent.prototype.getDateInfo = function () {
         var _this = this;
         this._dateInfoService.getInformation()
             .subscribe(function (data) {
             _this.dates = data;
+            console.log('Datesss');
             _this.convertToDates(_this.dates);
             _this.convertToHours(_this.dates);
+            console.log(_this.dates);
         });
     };
     DateinformationComponent.prototype.convertToDates = function (arrayOfDates) {
@@ -23609,10 +23607,12 @@ var DateinformationComponent = /** @class */ (function () {
     };
     DateinformationComponent.prototype.openEditModal = function (id) {
         var _this = this;
-        var modalRef = this._modalService.open(_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_5__["DateInfoEditModalComponent"], { size: 'lg' });
+        var modalRef = this._modalService.open(_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_3__["DateInfoEditModalComponent"], { size: 'lg' });
         modalRef.componentInstance.id = id;
         modalRef.result.then(function (res) {
-            _this.ngOnInit();
+            _this.getDateInfo();
+        }, function (err) {
+            _this.getDateInfo();
         });
     };
     DateinformationComponent.prototype.deleteDate = function (id) {
@@ -23631,10 +23631,7 @@ var DateinformationComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./dateinformation.component.scss */ "./src/app/controllers/dateinformation/dateinformation.component.scss")]
         }),
         __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__["DateinformationService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
     ], DateinformationComponent);
     return DateinformationComponent;
 }());
@@ -23862,7 +23859,7 @@ var CreatePlaceComponent = /** @class */ (function () {
     };
     CreatePlaceComponent.prototype.addPlace = function (name, description, longitude, latitude, place_type_id, narrative) {
         var _this = this;
-        this.service.addPlace(name, description, longitude, latitude, place_type_id, narrative).subscribe(function (data) {
+        this.service.addPlace(name, description, longitude, latitude, place_type_id, narrative, 1).subscribe(function (data) {
             _this.places = data;
             console.log(data);
             _this.showNotification(data, "top", "left");
@@ -23981,11 +23978,11 @@ var PlaceComponent = /** @class */ (function () {
     };
     PlaceComponent.prototype.openAddModal = function () {
         var _this = this;
-        this.modalRef = this._modalService.open(_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddPlace"]);
+        this.modalRef = this._modalService.open(_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddPlaceComponent"], { size: 'lg' });
         this.modalRef.result.then(function (result) {
             _this.getPlaces();
         }).catch(function (error) {
-            console.log(error);
+            _this.getPlaces();
         });
     };
     PlaceComponent.prototype.openEditModal = function (id) {
@@ -23995,16 +23992,39 @@ var PlaceComponent = /** @class */ (function () {
         this.modalRef.result.then(function (result) {
             _this.getPlaces();
         }).catch(function (error) {
-            console.log(error);
+            _this.getPlaces();
         });
     };
     PlaceComponent.prototype.deletePlace = function (id) {
         var _this = this;
         if (confirm('Desea eliminar el lugar?')) {
             this.service.deletePlace(id).subscribe(function (data) {
+                _this.showNotification({
+                    info: 'Eliminado correctamente',
+                    color: 'success'
+                }, 'top', 'right');
                 _this.getPlaces();
+            }, function (err) {
+                _this.showNotification({
+                    info: 'Ha habido un error',
+                    color: 'danger'
+                }, 'top', 'right');
             });
+            this.getPlaces();
         }
+    };
+    PlaceComponent.prototype.showNotification = function (data, from, align) {
+        $.notify({
+            message: data.info
+        }, {
+            type: data.color,
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n        <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n        <span data-notify=\"icon\"></span>\n        <span data-notify=\"message\">{2}</span>\n        <div class=\"progress\" data-notify=\"progressbar\">\n        <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n        </div>\n        </div>"
+        });
     };
     PlaceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -24219,7 +24239,7 @@ var TicketComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          <div class=\"card-header card-header-primary\">\n            <h4 class=\"card-title\">Tours ({{arrayOfTours.length}})</h4>\n            <button class=\"btn btn-success\" (click)=\"openFormModalAdd()\">Agregar</button>\n          </div>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n              <table class=\"table table-hover\">\n                <thead class=\"\">\n                  <th>\n                    Nombre\n                  </th>\n                  <th>\n                    Información\n                  </th>\n                  <th>\n                    Camiones\n                  </th>\n                  <th>\n                    Horarios\n                  </th>\n                  <th>\n                    Lugares\n                  </th>\n                </thead>\n                <tbody>\n                  <tr *ngFor=\"let tour of arrayOfTours\" class=\"list-group-item-action\">\n                    <td> {{ (tour.name) | titlecase }} </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTourInfo(tour.id)\">\n                        ver\n                      </a>\n                    </td>\n                    \n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayBusInfo(tour)\">\n                        ver información\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTimeInfo(tour)\">\n                        ver horarios\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayPlaceInfo(tour)\">\n                        ver lugares\n                      </a>\n                    </td>\n\n                    <td>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteTour(tour.id)\">\n                              <i class=\"fa fa-trash text-white\"></i>\n                          </button>\n                      </div>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(tour.id)\">\n                              <i class=\"fa fa-pencil text-white\"></i>\n                          </button>\n                      </div>\n                  </td>\n                    \n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>  \n    </div>\n  </div>\n</div>"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          <div class=\"card-header card-header-primary\">\n            <h4 class=\"card-title\">Tours ({{arrayOfTours.length}})</h4>\n            <button class=\"btn btn-success\" (click)=\"openFormModalAdd()\">Agregar</button>\n          </div>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n              <table class=\"table table-hover\">\n                <thead class=\"\">\n                  <th>\n                    Nombre\n                  </th>\n                  <th>\n                    Información\n                  </th>\n                  <th>\n                    Camiones\n                  </th>\n                  <th>\n                    Horarios\n                  </th>\n                  <th>\n                    Lugares\n                  </th>\n                </thead>\n                <tbody>\n                  <tr *ngFor=\"let tour of arrayOfTours\" class=\"list-group-item-action\">\n                    <td> {{ (tour.name) | titlecase }} </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTourInfo(tour.id)\">\n                        ver información\n                      </a>\n                    </td>\n                    \n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayBusInfo(tour)\">\n                        ver autobuses\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTimeInfo(tour)\">\n                        ver horarios\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayPlaceInfo(tour)\">\n                        ver lugares\n                      </a>\n                    </td>\n\n                    <td>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteTour(tour.id)\">\n                              <i class=\"fa fa-trash text-white\"></i>\n                          </button>\n                      </div>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(tour.id)\">\n                              <i class=\"fa fa-pencil text-white\"></i>\n                          </button>\n                      </div>\n                  </td>\n                    \n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>  \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 

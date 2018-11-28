@@ -210,7 +210,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
 /* harmony import */ var _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./controllers/dateinformation/edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
 /* harmony import */ var ngx_material_file_input__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ngx-material-file-input */ "./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js");
-/* harmony import */ var _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./controllers/place/modals/GetMapModalComponent.component */ "./src/app/controllers/place/modals/GetMapModalComponent.component.ts");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
+/* harmony import */ var _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./controllers/place/modals/GetMapModalComponent.component */ "./src/app/controllers/place/modals/GetMapModalComponent.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -219,6 +220,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 // Import: Modules whose classes are needed by the components of this modules, which means
 // that are needed by the declarations
+
 
 
 
@@ -291,6 +293,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormFieldModule"],
                 ngx_material_file_input__WEBPACK_IMPORTED_MODULE_52__["MaterialFileInputModule"],
                 _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_44__["MatCheckboxModule"],
+                _angular_material_radio__WEBPACK_IMPORTED_MODULE_53__["MatRadioModule"],
                 _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
@@ -310,14 +313,14 @@ var AppModule = /** @class */ (function () {
                 _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalEditCompany"],
                 _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__["NgbdModalAddPrice"],
                 _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalEditPrice"],
-                _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__["NgbdModalAddPlace"],
+                _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__["NgbdModalAddPlaceComponent"],
                 _controllers_place_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_34__["NgbdModalEditPlace"],
                 _controllers_bus_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_42__["NgbdModalAddBus"],
                 _controllers_bus_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_43__["NgbdModalEditBus"],
                 _controllers_tour_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddTour"],
                 _controllers_tour_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_36__["NgbdModalEditTour"],
                 _controllers_map_map_component__WEBPACK_IMPORTED_MODULE_49__["MapComponent"],
-                _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_53__["GetMapModalComponent"],
+                _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_54__["GetMapModalComponent"],
                 _modals_about_about_component__WEBPACK_IMPORTED_MODULE_24__["AboutComponent"],
                 _modals_modal_modal_component__WEBPACK_IMPORTED_MODULE_23__["ModalComponent"],
                 _controllers_tour_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_45__["TourInfoComponent"],
@@ -351,7 +354,7 @@ var AppModule = /** @class */ (function () {
                 _controllers_company_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_29__["NgbdModalEditCompany"],
                 _controllers_price_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_33__["NgbdModalAddPrice"],
                 _controllers_price_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_32__["NgbdModalEditPrice"],
-                _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__["NgbdModalAddPlace"],
+                _controllers_place_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_35__["NgbdModalAddPlaceComponent"],
                 _controllers_place_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_34__["NgbdModalEditPlace"],
                 _controllers_tour_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_37__["NgbdModalAddTour"],
                 _controllers_tour_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_36__["NgbdModalEditTour"],
@@ -363,7 +366,7 @@ var AppModule = /** @class */ (function () {
                 _controllers_tour_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_47__["TimeInfoComponent"],
                 _controllers_tour_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_48__["PlaceInfoComponent"],
                 _controllers_dateinformation_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_51__["DateInfoEditModalComponent"],
-                _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_53__["GetMapModalComponent"]
+                _controllers_place_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_54__["GetMapModalComponent"]
             ]
         })
     ], AppModule);
@@ -1625,8 +1628,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ng_bootstrap_ng_bootstrap_util_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap/util/util */ "./node_modules/@ng-bootstrap/ng-bootstrap/util/util.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1666,7 +1668,7 @@ var DateInfoEditModalComponent = /** @class */ (function () {
         this.end_date = new Date();
     }
     DateInfoEditModalComponent.prototype.ngOnInit = function () {
-        if (!Object(util__WEBPACK_IMPORTED_MODULE_5__["isNumber"])(this.id)) {
+        if (Object(_ng_bootstrap_ng_bootstrap_util_util__WEBPACK_IMPORTED_MODULE_5__["isString"])(this.id)) {
             this.switchToAddModal = true;
             this.getHoursAndMinutes(this.start_date, this.end_date);
         }
@@ -2062,7 +2064,7 @@ var GetMapModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar Lugar</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\"\n        (click)=\"activeModal.dismiss('Cross click')\">\n    </button>\n</div>\n<form [formGroup]=\"placeForm\" novalidate >\n        <div class=\"modal-boy\">\n                <div class=\"container\" novalidate>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"name\" [ngClass]=\"placeForm.controls['name'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Nombre del lugar:</label>\n                                <input id=\"name\" [(ngModel)]='currentPlace[0]' formControlName=\"name\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['name'].invalid ? 'is-invalid' : ''\" #name>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['name'].hasError('required')\">\n                                        El nombre del lugar es requerido\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"description\" [ngClass]=\"placeForm.controls['description'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Descripcion del lugar:</label>\n                                <textarea id=\"description\" outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentPlace[1]' formControlName=\"description\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['description'].invalid ? 'is-invalid' : ''\" #description></textarea>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['description'].hasError('required')\">\n                                        La descripcion del lugar es requerido\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"latitude\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Latitud del lugar:</label>\n                                <input id=\"latitude\" [(ngModel)]='currentPlace[2]' formControlName=\"latitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['latitude'].invalid ? 'is-invalid' : ''\" #latitude>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['latitude'].hasError('required')\">\n                                        La latitud del lugar es requerida\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"longitude\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'text-danger' : 'text-success'\" class=\"text-muted\">Longitud del lugar:</label>\n                                <input id=\"longitude\" [(ngModel)]='currentPlace[3]' formControlName=\"longitude\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['longitude'].invalid ? 'is-invalid' : ''\" #longitude>\n                                <small class=\"form-text text-danger\" *ngIf=\"placeForm.controls['longitude'].hasError('required')\">\n                                        La longitud del lugar es requerida\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                                <input id=\"narrative_url\" [(ngModel)]='currentPlace[4]' formControlName=\"narrative_url\" type=\"text\" class=\"form-control\" [ngClass]=\"placeForm.controls['narrative_url'].invalid ? 'is-invalid' : ''\" #narrative_url>\n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'text-danger' : ''\">Tipo de Lugar:</label>\n                                <div class=\"radio\" *ngFor=\"let type of allTypeOfPlaces\">\n                                        <label>\n                                                <input id=\"place_type_id\" type=\"radio\" [value]=\"type.id\" [(ngModel)]='currentPlace[5]' formControlName=\"place_type_id\" [ngClass]=\"placeForm.controls['place_type_id'].invalid ? 'is-invalid' : ''\" #place_type_id>\n                                                {{type.name}}\n                                        </label>\n                                </div>\n                                <label class=\"text-danger\" *ngIf=\"placeForm.controls['place_type_id'].hasError('required')\">\n                                        El Tipo de Lugar es requerido.\n                                </label> \n                        </div>   \n                        \n                </div>\n        </div>\n        <div class=\"modal-footer\">\n                <button type=\"button\"  (click)=\"addPlace(currentPlace)\"  [disabled]=\"placeForm.pristine || placeForm.invalid\"  class=\"btn btn-danger pull-right\">Agregar</button> \n        </div>\n</form>\n\n\n\n\n"
+module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\">Agregar nuevo lugar</h4>\n        <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n                <span aria-hidden=\"true\">&times;</span>\n        </button>\n</div>\n        <div class=\"modal-boy\">\n                <div class=\"container\">\n                        <div class=\"form-group\">\n                                <label for=\"name\"  class=\"text-muted\">Nombre del lugar:</label>\n                                <input [(ngModel)]='currentPlace.name' type=\"text\" class=\"form-control\" >\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.nameIsNotValid\">\n                                        Verfica el nombre\n                                </small> \n                        </div>\n                        \n                        <div class=\"form-group\">\n                                <label for=\"description\" class=\"text-muted\">Descripcion del lugar:</label>\n                                <textarea outline=\"1px solid blue\" rows=\"5\" [(ngModel)]='currentPlace.description' type=\"text\" class=\"form-control\" ></textarea>\n                                <small class=\"form-text text-danger\" *ngIf=\"currentPlace.descriptionIsEmpty\">\n                                        La descripción del lugar es requerido\n                                </small> \n                        </div>\n\n                        <div class=\"form-group\">\n                                <label for=\"image_url\"  class=\"text-muted\">Imagen (URL):</label>\n                                <input [(ngModel)]='currentPlace.image_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n                        \n                        <div class=\"form-group\">\n                                <label for=\"narrative_url\"  class=\"text-muted\">Narrativa del lugar (URL):</label>\n                                <input [(ngModel)]='currentPlace.narrative_url' type=\"text\" class=\"form-control\" >\n                        </div>  \n\n                        <p class=\"font-weight-bold text-danger\">Nota: haz click sobre el mapa para mover el marcador</p>\n                        <agm-map style=\"height: 420px;\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"17\" (mapClick)=\"changeMarkerOnMap($event)\">\n                                <agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n                                        <agm-info-window style=\"height: 220px;\" [isOpen]=\"true\">\n                                                <h5 class=\"text-dark font-weight-bold\">Tipo de lugar: </h5>\n                                                <mat-radio-group [(ngModel)]=\"currentPlace.place_type\">\n                                                        <ul class=\"list-group list-group-flush\">\n                                                                <li class=\"list-group-item\" *ngFor=\"let type of allTypeOfPlaces\">\n                                                                        <mat-radio-button [value]=\"type.id\" >\n                                                                                {{type.name}}\n                                                                        </mat-radio-button>\n                                                                </li>\n                                                        </ul>  \n                                                </mat-radio-group>\n                                        </agm-info-window>\n                                </agm-marker>\n                        </agm-map> \n                        <small class=\"form-text text-danger\" *ngIf=\"currentPlace.noPlaceTypeSelected\">\n                                Seleccione tipo de lugar\n                        </small>\n                </div>\n        </div>\n        <div class=\"modal-footer\">\n                <button type=\"button\" \n                        (click)=\"addPlace(currentPlace)\" \n                        class=\"btn btn-success\">\n                        Agregar\n                </button> \n        </div>\n\n\n\n\n"
 
 /***/ }),
 
@@ -2070,12 +2072,12 @@ module.exports = "<div class=\"modal-header\">\n        <h4 class=\"modal-title\
 /*!*********************************************************************!*\
   !*** ./src/app/controllers/place/modals/PlaceAddModal.component.ts ***!
   \*********************************************************************/
-/*! exports provided: NgbdModalAddPlace */
+/*! exports provided: NgbdModalAddPlaceComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdModalAddPlace", function() { return NgbdModalAddPlace; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdModalAddPlaceComponent", function() { return NgbdModalAddPlaceComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/place.service */ "./src/app/services/place.service.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
@@ -2093,22 +2095,33 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var NgbdModalAddPlace = /** @class */ (function () {
-    function NgbdModalAddPlace(_PlaceService, activeModal, formBuilder) {
+var NgbdModalAddPlaceComponent = /** @class */ (function () {
+    function NgbdModalAddPlaceComponent(_PlaceService, activeModal, formBuilder) {
         this._PlaceService = _PlaceService;
         this.activeModal = activeModal;
         this.formBuilder = formBuilder;
-        this.currentPlace = [undefined];
+        this.currentPlace = {
+            name: '',
+            nameIsNotValid: false,
+            description: '',
+            descriptionIsEmpty: false,
+            place_type: null,
+            noPlaceTypeSelected: true,
+            narrative_url: '',
+            image_url: ''
+        };
+        this.allTypeOfPlaces = [];
+        this.lat = 19.04334;
+        this.lng = -98.20193;
     }
-    NgbdModalAddPlace.prototype.ngOnInit = function () {
+    NgbdModalAddPlaceComponent.prototype.ngOnInit = function () {
         this.getPlaces();
-        this.createForm();
         this.getPlaceType();
     };
-    NgbdModalAddPlace.prototype.showNotification = function (data, from, align) {
+    NgbdModalAddPlaceComponent.prototype.showNotification = function (data, from, align) {
         var _this = this;
         $.notify({
-            message: "Lugar agregado."
+            message: data.info
         }, {
             type: data.color,
             timer: 1000,
@@ -2116,63 +2129,75 @@ var NgbdModalAddPlace = /** @class */ (function () {
                 from: from,
                 align: align
             },
-            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n                <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n                <span data-notify=\"icon\"></span>\n                <span data-notify=\"message\">{2}</span>\n                <div class=\"progress\" data-notify=\"progressbar\">\n                <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n                </div>\n                </div>",
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n            <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n            <span data-notify=\"icon\"></span>\n            <span data-notify=\"message\">{2}</span>\n            <div class=\"progress\" data-notify=\"progressbar\">\n            <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n            </div>\n            </div>",
             onShow: function () {
-                _this.closeModal();
-            },
-            onClose: function () {
-                // window.location.reload();
+                _this.activeModal.close('Modal Closed');
             }
         });
     };
-    NgbdModalAddPlace.prototype.closeModal = function () {
-        this.activeModal.close('Modal Closed');
+    NgbdModalAddPlaceComponent.prototype.changeMarkerOnMap = function ($event) {
+        this.lat = $event.coords.lat;
+        this.lng = $event.coords.lng;
     };
-    NgbdModalAddPlace.prototype.addPlace = function (newPlace) {
+    NgbdModalAddPlaceComponent.prototype.addPlace = function () {
         var _this = this;
-        console.log(newPlace);
-        this._PlaceService.addPlace(newPlace[0], newPlace[1], newPlace[2], newPlace[3], newPlace[4], newPlace[5])
-            .subscribe(function (res) {
-            _this.showNotification(res, 'top', 'right');
-        });
+        if (this.fieldsAreGoodToGo()) {
+            this._PlaceService.addPlace(this.currentPlace.name, this.currentPlace.description, this.lat, this.lng, this.currentPlace.narrative_url, this.currentPlace.image_url, this.currentPlace.place_type).subscribe(function (res) {
+                _this.showNotification({
+                    info: 'Lugar agregado correctamente',
+                    color: 'success'
+                }, 'top', 'right');
+            }, function (err) {
+                _this.showNotification({
+                    info: 'Ha habido un error',
+                    color: 'danger'
+                }, 'top', 'right');
+            });
+        }
     };
-    NgbdModalAddPlace.prototype.getPlaces = function () {
+    NgbdModalAddPlaceComponent.prototype.fieldsAreGoodToGo = function () {
+        if (this.currentPlace.name.length > 5) {
+            this.currentPlace.nameIsNotValid = false;
+        }
+        else {
+            this.currentPlace.nameIsNotValid = true;
+            return false;
+        }
+        if (this.currentPlace.description.length > 10) {
+            this.currentPlace.descriptionIsEmpty = false;
+        }
+        else {
+            this.currentPlace.descriptionIsEmpty = true;
+            return false;
+        }
+        if (this.currentPlace.place_type != null) {
+            this.currentPlace.noPlaceTypeSelected = false;
+        }
+        else {
+            this.currentPlace.place_type = true;
+            return false;
+        }
+        return true;
+    };
+    NgbdModalAddPlaceComponent.prototype.getPlaces = function () {
         var _this = this;
-        this._PlaceService.getPlaces().subscribe(function (res) { _this.allPlaces = res; });
+        this._PlaceService.getPlaces()
+            .subscribe(function (res) { _this.allPlaces = res; });
     };
-    NgbdModalAddPlace.prototype.getPlaceType = function () {
+    NgbdModalAddPlaceComponent.prototype.getPlaceType = function () {
         var _this = this;
-        this._PlaceService.getPlaceType().subscribe(function (res) { _this.allTypeOfPlaces = res; console.log(res); });
+        this._PlaceService.getPlaceType()
+            .subscribe(function (res) { _this.allTypeOfPlaces = res; });
     };
-    NgbdModalAddPlace.prototype.createForm = function () {
-        this.placeForm = this.formBuilder.group({
-            name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
-                ])],
-            description: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-            latitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-            longitude: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-            narrative_url: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([])],
-            place_type_id: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])],
-        });
-    };
-    NgbdModalAddPlace = __decorate([
+    NgbdModalAddPlaceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             template: __webpack_require__(/*! ./PlaceAddModal.component.html */ "./src/app/controllers/place/modals/PlaceAddModal.component.html"),
         }),
         __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
-    ], NgbdModalAddPlace);
-    return NgbdModalAddPlace;
+    ], NgbdModalAddPlaceComponent);
+    return NgbdModalAddPlaceComponent;
 }());
 
 
@@ -2577,7 +2602,7 @@ var NgbdModalEditPrice = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> {{  purchase.user_id.name | titlecase}} </h3>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.email }} </h6>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.phone_number }} </h6>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-italic\"> {{ purchase.createdAt | date: 'fullDate' }} </p>\n                <p class=\"font-weight-bold\">Boletos</p>\n                <ul class=\"list-group\">\n                  <li class=\"list-group-item\">Niño ({{ kidTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"adultTickets.length>0\">Adulto ({{ adultTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"oldTickets.length>0\">Anciano ({{ oldTickets.length }})</li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left\">Subtotal</p>\n            <div class=\"float-right \">\n                ${{ purchase.sub_total }}\n            </div>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left font-weight-bold\">Total</p>\n            <p class=\"float-right text-danger\">\n                ${{ purchase.total }}\n            </p>\n          </div>\n        </div>\n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
+module.exports = "<div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close button\" aria-describedby=\"modal-title\" (click)=\"activeModal.close('Close click')\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h3 class=\"text-center\"> {{  purchase.user_id.name | titlecase}} </h3>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.email }} </h6>\n                <h6 class=\"text-center text-lowercase\"> {{  purchase.user_id.phone_number }} </h6>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <p class=\"font-italic\"> {{ purchase.createdAt | date: 'fullDate' }} </p>\n                <p class=\"font-weight-bold\">Boletos</p>\n                <ul class=\"list-group\">\n                  <li class=\"list-group-item\" *ngIf=\"kidTickets.length>0\">Niño ({{ kidTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"adultTickets.length>0\">Adulto ({{ adultTickets.length }})</li>\n                  <li class=\"list-group-item\" *ngIf=\"oldTickets.length>0\">Anciano ({{ oldTickets.length }})</li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left\">Subtotal</p>\n            <div class=\"float-right \">\n                ${{ purchase.sub_total }}\n            </div>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <p class=\"float-left font-weight-bold\">Total</p>\n            <p class=\"float-right text-danger\">\n                ${{ purchase.total }}\n            </p>\n          </div>\n        </div>\n    </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" ngbAutofocus class=\"btn btn-danger\" (click)=\"activeModal.close('Ok click')\">Ok</button>\n</div>"
 
 /***/ }),
 
@@ -4112,14 +4137,15 @@ var PlaceService = /** @class */ (function () {
     PlaceService.prototype.getPlaceType = function () {
         return this.http.get(API_URL + '/placetype', AUTH);
     };
-    PlaceService.prototype.addPlace = function (name, description, longitude, latitude, narrative_url, place_type_id) {
+    PlaceService.prototype.addPlace = function (name, description, latitude, longitude, narrative_url, image_url, place_type_id) {
         var obj = {
             name: name,
             description: description,
             longitude: longitude,
             latitude: latitude,
             place_type_id: place_type_id,
-            narrative_url: narrative_url
+            narrative_url: narrative_url,
+            image_url: image_url
         };
         return this.http.post(API_URL + '/place/add', obj, AUTH);
     };
