@@ -21626,538 +21626,6 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js ***!
-  \*******************************************************************************/
-/*! exports provided: NGX_MAT_FILE_INPUT_CONFIG, MaterialFileInputModule, ByteFormatPipe, FileValidator, FileInput, ɵb, ɵa */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NGX_MAT_FILE_INPUT_CONFIG", function() { return NGX_MAT_FILE_INPUT_CONFIG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialFileInputModule", function() { return MaterialFileInputModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ByteFormatPipe", function() { return ByteFormatPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileValidator", function() { return FileValidator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileInput", function() { return FileInput; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return FileInputComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return FileInputConfig; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/a11y */ "./node_modules/@angular/cdk/esm5/a11y.es5.js");
-/* harmony import */ var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/coercion */ "./node_modules/@angular/cdk/esm5/coercion.es5.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-
-
-
-
-
-
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Optional token to provide custom configuration to the module
- */
-var /** @type {?} */ NGX_MAT_FILE_INPUT_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('ngx-mat-file-input.config');
-/**
- * Provide additional configuration to dynamically customize the module injection
- */
-var  /**
- * Provide additional configuration to dynamically customize the module injection
- */
-FileInputConfig = /** @class */ (function () {
-    function FileInputConfig() {
-    }
-    return FileInputConfig;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * The files to be uploaded
- */
-var  /**
- * The files to be uploaded
- */
-FileInput = /** @class */ (function () {
-    function FileInput(_files, delimiter) {
-        if (delimiter === void 0) { delimiter = ', '; }
-        this._files = _files;
-        this.delimiter = delimiter;
-        this._fileNames = (this._files || []).map(function (f) { return f.name; }).join(delimiter);
-    }
-    Object.defineProperty(FileInput.prototype, "files", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this._files || [];
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInput.prototype, "fileNames", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this._fileNames;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return FileInput;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var FileInputComponent = /** @class */ (function () {
-    /**
-     * @see https://angular.io/api/forms/ControlValueAccessor
-     */
-    function FileInputComponent(ngControl, fm, _elementRef, _renderer) {
-        var _this = this;
-        this.ngControl = ngControl;
-        this.fm = fm;
-        this._elementRef = _elementRef;
-        this._renderer = _renderer;
-        this.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
-        this.focused = false;
-        this.controlType = 'file-input';
-        this.autofilled = false;
-        this._required = false;
-        this.accept = null;
-        this.id = "ngx-mat-file-input-" + FileInputComponent.nextId++;
-        this.describedBy = '';
-        this._onChange = function (_) { };
-        this._onTouched = function () { };
-        if (this.ngControl != null) {
-            this.ngControl.valueAccessor = this;
-        }
-        fm.monitor(_elementRef.nativeElement, true).subscribe(function (origin) {
-            _this.focused = !!origin;
-            _this.stateChanges.next();
-        });
-    }
-    /**
-     * @param {?} ids
-     * @return {?}
-     */
-    FileInputComponent.prototype.setDescribedByIds = /**
-     * @param {?} ids
-     * @return {?}
-     */
-    function (ids) {
-        this.describedBy = ids.join(' ');
-    };
-    Object.defineProperty(FileInputComponent.prototype, "value", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.empty ? null : new FileInput(this._elementRef.nativeElement.value || []);
-        },
-        set: /**
-         * @param {?} fileInput
-         * @return {?}
-         */
-        function (fileInput) {
-            if (fileInput) {
-                this.writeValue(fileInput.files);
-                this.stateChanges.next();
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "placeholder", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this._placeholder;
-        },
-        set: /**
-         * @param {?} plh
-         * @return {?}
-         */
-        function (plh) {
-            this._placeholder = plh;
-            this.stateChanges.next();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "empty", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return !this._elementRef.nativeElement.value || this._elementRef.nativeElement.value.length === 0;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "shouldLabelFloat", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.focused || !this.empty || this.valuePlaceholder !== undefined;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "required", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this._required;
-        },
-        set: /**
-         * @param {?} req
-         * @return {?}
-         */
-        function (req) {
-            this._required = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(req);
-            this.stateChanges.next();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "isDisabled", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.disabled;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "disabled", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this._elementRef.nativeElement.disabled;
-        },
-        set: /**
-         * @param {?} dis
-         * @return {?}
-         */
-        function (dis) {
-            this.setDisabledState(Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(dis));
-            this.stateChanges.next();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(FileInputComponent.prototype, "errorState", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.ngControl.errors !== null && this.ngControl.touched;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    FileInputComponent.prototype.onContainerClick = /**
-     * @param {?} event
-     * @return {?}
-     */
-    function (event) {
-        if ((/** @type {?} */ (event.target)).tagName.toLowerCase() !== 'input' && !this.disabled) {
-            this._elementRef.nativeElement.querySelector('input').focus();
-            this.focused = true;
-            this.open();
-        }
-    };
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    FileInputComponent.prototype.writeValue = /**
-     * @param {?} obj
-     * @return {?}
-     */
-    function (obj) {
-        this._renderer.setProperty(this._elementRef.nativeElement, 'value', obj);
-    };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    FileInputComponent.prototype.registerOnChange = /**
-     * @param {?} fn
-     * @return {?}
-     */
-    function (fn) {
-        this._onChange = fn;
-    };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    FileInputComponent.prototype.registerOnTouched = /**
-     * @param {?} fn
-     * @return {?}
-     */
-    function (fn) {
-        this._onTouched = fn;
-    };
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    FileInputComponent.prototype.change = /**
-     * @param {?} event
-     * @return {?}
-     */
-    function (event) {
-        var /** @type {?} */ fileList = event.target.files;
-        var /** @type {?} */ fileArray = [];
-        if (fileList) {
-            for (var /** @type {?} */ i = 0; i < fileList.length; i++) {
-                fileArray.push(fileList[i]);
-            }
-        }
-        this.value = new FileInput(fileArray);
-        this._onChange(this.value);
-    };
-    /**
-     * @return {?}
-     */
-    FileInputComponent.prototype.blur = /**
-     * @return {?}
-     */
-    function () {
-        this.focused = false;
-        this._onTouched();
-    };
-    /**
-     * @param {?} isDisabled
-     * @return {?}
-     */
-    FileInputComponent.prototype.setDisabledState = /**
-     * @param {?} isDisabled
-     * @return {?}
-     */
-    function (isDisabled) {
-        this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
-    };
-    /**
-     * @return {?}
-     */
-    FileInputComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () {
-        this.multiple = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(this.multiple);
-    };
-    /**
-     * @return {?}
-     */
-    FileInputComponent.prototype.open = /**
-     * @return {?}
-     */
-    function () {
-        if (!this.disabled) {
-            this._elementRef.nativeElement.querySelector('input').click();
-        }
-    };
-    Object.defineProperty(FileInputComponent.prototype, "fileNames", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.value ? this.value.fileNames : this.valuePlaceholder;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @return {?}
-     */
-    FileInputComponent.prototype.ngOnDestroy = /**
-     * @return {?}
-     */
-    function () {
-        this.stateChanges.complete();
-        this.fm.stopMonitoring(this._elementRef.nativeElement);
-    };
-    FileInputComponent.nextId = 0;
-    FileInputComponent.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
-                    // tslint:disable-next-line:component-selector
-                    selector: 'ngx-mat-file-input',
-                    template: "<input #input type=\"file\" [attr.multiple]=\"multiple? '' : null\" [attr.accept]=\"accept\">\n<span class=\"filename\">{{ fileNames }}</span>\n",
-                    styles: [":host{display:inline-block}:host:not(.file-input-disabled){cursor:pointer}input{width:0;height:0;opacity:0;overflow:hidden;position:absolute;z-index:-1}.filename{display:inline-block}"],
-                    providers: [{ provide: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldControl"], useExisting: FileInputComponent }]
-                },] },
-    ];
-    /** @nocollapse */
-    FileInputComponent.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControl"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Self"] }] },
-        { type: _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__["FocusMonitor"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }
-    ]; };
-    FileInputComponent.propDecorators = {
-        autofilled: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        valuePlaceholder: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        multiple: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        accept: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        id: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"] }],
-        describedBy: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['attr.aria-describedby',] }],
-        value: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        placeholder: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        shouldLabelFloat: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['class.mat-form-field-should-float',] }],
-        required: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        isDisabled: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['class.file-input-disabled',] }],
-        disabled: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        errorState: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        change: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['change', ['$event'],] }],
-        blur: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['focusout',] }]
-    };
-    return FileInputComponent;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var ByteFormatPipe = /** @class */ (function () {
-    function ByteFormatPipe(config) {
-        this.config = config;
-        this.unit = config ? config.sizeUnit : 'Byte';
-    }
-    /**
-     * @param {?} value
-     * @param {?=} args
-     * @return {?}
-     */
-    ByteFormatPipe.prototype.transform = /**
-     * @param {?} value
-     * @param {?=} args
-     * @return {?}
-     */
-    function (value, args) {
-        if (parseInt(value, 10) >= 0) {
-            value = this.formatBytes(+value, +args);
-        }
-        return value;
-    };
-    /**
-     * @param {?} bytes
-     * @param {?=} decimals
-     * @return {?}
-     */
-    ByteFormatPipe.prototype.formatBytes = /**
-     * @param {?} bytes
-     * @param {?=} decimals
-     * @return {?}
-     */
-    function (bytes, decimals) {
-        if (bytes === 0) {
-            return '0 ' + this.unit;
-        }
-        var /** @type {?} */ B = this.unit.charAt(0);
-        var /** @type {?} */ k = 1024;
-        var /** @type {?} */ dm = decimals || 2;
-        var /** @type {?} */ sizes = [this.unit, 'K' + B, 'M' + B, 'G' + B, 'T' + B, 'P' + B, 'E' + B, 'Z' + B, 'Y' + B];
-        var /** @type {?} */ i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
-    };
-    ByteFormatPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{
-                    name: 'byteFormat'
-                },] },
-    ];
-    /** @nocollapse */
-    ByteFormatPipe.ctorParameters = function () { return [
-        { type: FileInputConfig, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [NGX_MAT_FILE_INPUT_CONFIG,] }] }
-    ]; };
-    return ByteFormatPipe;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var MaterialFileInputModule = /** @class */ (function () {
-    function MaterialFileInputModule() {
-    }
-    MaterialFileInputModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
-                    declarations: [FileInputComponent, ByteFormatPipe],
-                    providers: [_angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__["FocusMonitor"]],
-                    exports: [FileInputComponent, ByteFormatPipe]
-                },] },
-    ];
-    return MaterialFileInputModule;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var FileValidator;
-(function (FileValidator) {
-    /**
-     * Function to control content of files
-     *
-     * @param {?} bytes max number of bytes allowed
-     *
-     * @return {?}
-     */
-    function maxContentSize(bytes) {
-        return function (control) {
-            var /** @type {?} */ size = control && control.value ? (/** @type {?} */ (control.value)).files.map(function (f) { return f.size; }).reduce(function (acc, i) { return acc + i; }, 0) : 0;
-            var /** @type {?} */ condition = bytes >= size;
-            return condition
-                ? null
-                : {
-                    maxContentSize: {
-                        actualSize: size,
-                        maxSize: bytes
-                    }
-                };
-        };
-    }
-    FileValidator.maxContentSize = maxContentSize;
-})(FileValidator || (FileValidator = {}));
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-
-
-
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LW1hdGVyaWFsLWZpbGUtaW5wdXQuanMubWFwIiwic291cmNlcyI6WyJuZzovL25neC1tYXRlcmlhbC1maWxlLWlucHV0L2xpYi9tb2RlbC9maWxlLWlucHV0LWNvbmZpZy5tb2RlbC50cyIsIm5nOi8vbmd4LW1hdGVyaWFsLWZpbGUtaW5wdXQvbGliL21vZGVsL2ZpbGUtaW5wdXQubW9kZWwudHMiLCJuZzovL25neC1tYXRlcmlhbC1maWxlLWlucHV0L2xpYi9maWxlLWlucHV0L2ZpbGUtaW5wdXQuY29tcG9uZW50LnRzIiwibmc6Ly9uZ3gtbWF0ZXJpYWwtZmlsZS1pbnB1dC9saWIvcGlwZS9ieXRlLWZvcm1hdC5waXBlLnRzIiwibmc6Ly9uZ3gtbWF0ZXJpYWwtZmlsZS1pbnB1dC9saWIvbWF0ZXJpYWwtZmlsZS1pbnB1dC5tb2R1bGUudHMiLCJuZzovL25neC1tYXRlcmlhbC1maWxlLWlucHV0L2xpYi92YWxpZGF0b3IvZmlsZS12YWxpZGF0b3IudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSW5qZWN0aW9uVG9rZW4gfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBPcHRpb25hbCB0b2tlbiB0byBwcm92aWRlIGN1c3RvbSBjb25maWd1cmF0aW9uIHRvIHRoZSBtb2R1bGVcbiAqL1xuZXhwb3J0IGNvbnN0IE5HWF9NQVRfRklMRV9JTlBVVF9DT05GSUcgPSBuZXcgSW5qZWN0aW9uVG9rZW48RmlsZUlucHV0Q29uZmlnPihcbiAgJ25neC1tYXQtZmlsZS1pbnB1dC5jb25maWcnXG4pO1xuXG4vKipcbiAqIFByb3ZpZGUgYWRkaXRpb25hbCBjb25maWd1cmF0aW9uIHRvIGR5bmFtaWNhbGx5IGN1c3RvbWl6ZSB0aGUgbW9kdWxlIGluamVjdGlvblxuICovXG5leHBvcnQgY2xhc3MgRmlsZUlucHV0Q29uZmlnIHtcbiAgLyoqXG4gICAqIFVuaXQgdXNlZCB3aXRoIHRoZSBCeXRlRm9ybWF0UGlwZSwgZGVmYXVsdCB2YWx1ZSBpcyAqQnl0ZSouXG4gICAqIFRoZSBmaXJzdCBsZXR0ZXIgaXMgdXNlZCBmb3IgdGhlIHNob3J0IG5vdGF0aW9uLlxuICAgKi9cbiAgc2l6ZVVuaXQ6IHN0cmluZztcbn1cbiIsIi8qKlxuICogVGhlIGZpbGVzIHRvIGJlIHVwbG9hZGVkXG4gKi9cbmV4cG9ydCBjbGFzcyBGaWxlSW5wdXQge1xuICBwcml2YXRlIF9maWxlTmFtZXM6IHN0cmluZztcblxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIF9maWxlczogRmlsZVtdLCBwcml2YXRlIGRlbGltaXRlcjogc3RyaW5nID0gJywgJykge1xuICAgIHRoaXMuX2ZpbGVOYW1lcyA9ICh0aGlzLl9maWxlcyB8fCBbXSkubWFwKChmOiBGaWxlKSA9PiBmLm5hbWUpLmpvaW4oZGVsaW1pdGVyKTtcbiAgfVxuXG4gIGdldCBmaWxlcygpIHtcbiAgICByZXR1cm4gdGhpcy5fZmlsZXMgfHwgW107XG4gIH1cblxuICBnZXQgZmlsZU5hbWVzKCk6IHN0cmluZyB7XG4gICAgcmV0dXJuIHRoaXMuX2ZpbGVOYW1lcztcbiAgfVxufVxuIiwiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQsIElucHV0LCBFbGVtZW50UmVmLCBPbkRlc3Ryb3ksIEhvc3RCaW5kaW5nLCBSZW5kZXJlcjIsIEhvc3RMaXN0ZW5lciwgT3B0aW9uYWwsIFNlbGYgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENvbnRyb2xWYWx1ZUFjY2Vzc29yLCBOZ0NvbnRyb2wgfSBmcm9tICdAYW5ndWxhci9mb3Jtcyc7XG5pbXBvcnQgeyBNYXRGb3JtRmllbGRDb250cm9sIH0gZnJvbSAnQGFuZ3VsYXIvbWF0ZXJpYWwnO1xuaW1wb3J0IHsgRm9jdXNNb25pdG9yIH0gZnJvbSAnQGFuZ3VsYXIvY2RrL2ExMXknO1xuaW1wb3J0IHsgY29lcmNlQm9vbGVhblByb3BlcnR5IH0gZnJvbSAnQGFuZ3VsYXIvY2RrL2NvZXJjaW9uJztcbmltcG9ydCB7IFN1YmplY3QgfSBmcm9tICdyeGpzJztcblxuaW1wb3J0IHsgRmlsZUlucHV0IH0gZnJvbSAnLi4vbW9kZWwvZmlsZS1pbnB1dC5tb2RlbCc7XG5cbkBDb21wb25lbnQoe1xuICAvLyB0c2xpbnQ6ZGlzYWJsZS1uZXh0LWxpbmU6Y29tcG9uZW50LXNlbGVjdG9yXG4gIHNlbGVjdG9yOiAnbmd4LW1hdC1maWxlLWlucHV0JyxcbiAgdGVtcGxhdGU6IGA8aW5wdXQgI2lucHV0IHR5cGU9XCJmaWxlXCIgW2F0dHIubXVsdGlwbGVdPVwibXVsdGlwbGU/ICcnIDogbnVsbFwiIFthdHRyLmFjY2VwdF09XCJhY2NlcHRcIj5cbjxzcGFuIGNsYXNzPVwiZmlsZW5hbWVcIj57eyBmaWxlTmFtZXMgfX08L3NwYW4+XG5gLFxuICBzdHlsZXM6IFtgOmhvc3R7ZGlzcGxheTppbmxpbmUtYmxvY2t9Omhvc3Q6bm90KC5maWxlLWlucHV0LWRpc2FibGVkKXtjdXJzb3I6cG9pbnRlcn1pbnB1dHt3aWR0aDowO2hlaWdodDowO29wYWNpdHk6MDtvdmVyZmxvdzpoaWRkZW47cG9zaXRpb246YWJzb2x1dGU7ei1pbmRleDotMX0uZmlsZW5hbWV7ZGlzcGxheTppbmxpbmUtYmxvY2t9YF0sXG4gIHByb3ZpZGVyczogW3sgcHJvdmlkZTogTWF0Rm9ybUZpZWxkQ29udHJvbCwgdXNlRXhpc3Rpbmc6IEZpbGVJbnB1dENvbXBvbmVudCB9XVxufSlcbmV4cG9ydCBjbGFzcyBGaWxlSW5wdXRDb21wb25lbnQgaW1wbGVtZW50cyBNYXRGb3JtRmllbGRDb250cm9sPEZpbGVJbnB1dD4sIENvbnRyb2xWYWx1ZUFjY2Vzc29yLCBPbkluaXQsIE9uRGVzdHJveSB7XG4gIHN0YXRpYyBuZXh0SWQgPSAwO1xuXG4gIHN0YXRlQ2hhbmdlcyA9IG5ldyBTdWJqZWN0PHZvaWQ+KCk7XG4gIGZvY3VzZWQgPSBmYWxzZTtcbiAgY29udHJvbFR5cGUgPSAnZmlsZS1pbnB1dCc7XG5cbiAgQElucHV0KCkgYXV0b2ZpbGxlZCA9IGZhbHNlO1xuXG4gIHByaXZhdGUgX3BsYWNlaG9sZGVyOiBzdHJpbmc7XG4gIHByaXZhdGUgX3JlcXVpcmVkID0gZmFsc2U7XG5cbiAgQElucHV0KCkgdmFsdWVQbGFjZWhvbGRlcjogc3RyaW5nO1xuICBASW5wdXQoKSBtdWx0aXBsZTogYm9vbGVhbjtcbiAgQElucHV0KCkgYWNjZXB0OiBzdHJpbmcgfCBudWxsID0gbnVsbDtcblxuICBASG9zdEJpbmRpbmcoKSBpZCA9IGBuZ3gtbWF0LWZpbGUtaW5wdXQtJHtGaWxlSW5wdXRDb21wb25lbnQubmV4dElkKyt9YDtcbiAgQEhvc3RCaW5kaW5nKCdhdHRyLmFyaWEtZGVzY3JpYmVkYnknKSBkZXNjcmliZWRCeSA9ICcnO1xuXG4gIHNldERlc2NyaWJlZEJ5SWRzKGlkczogc3RyaW5nW10pIHtcbiAgICB0aGlzLmRlc2NyaWJlZEJ5ID0gaWRzLmpvaW4oJyAnKTtcbiAgfVxuXG4gIEBJbnB1dCgpXG4gIGdldCB2YWx1ZSgpOiBGaWxlSW5wdXQgfCBudWxsIHtcbiAgICByZXR1cm4gdGhpcy5lbXB0eSA/IG51bGwgOiBuZXcgRmlsZUlucHV0KHRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudC52YWx1ZSB8fCBbXSk7XG4gIH1cbiAgc2V0IHZhbHVlKGZpbGVJbnB1dDogRmlsZUlucHV0IHwgbnVsbCkge1xuICAgIGlmIChmaWxlSW5wdXQpIHtcbiAgICAgIHRoaXMud3JpdGVWYWx1ZShmaWxlSW5wdXQuZmlsZXMpO1xuICAgICAgdGhpcy5zdGF0ZUNoYW5nZXMubmV4dCgpO1xuICAgIH1cbiAgfVxuXG4gIEBJbnB1dCgpXG4gIGdldCBwbGFjZWhvbGRlcigpIHtcbiAgICByZXR1cm4gdGhpcy5fcGxhY2Vob2xkZXI7XG4gIH1cbiAgc2V0IHBsYWNlaG9sZGVyKHBsaCkge1xuICAgIHRoaXMuX3BsYWNlaG9sZGVyID0gcGxoO1xuICAgIHRoaXMuc3RhdGVDaGFuZ2VzLm5leHQoKTtcbiAgfVxuXG4gIGdldCBlbXB0eSgpIHtcbiAgICByZXR1cm4gIXRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudC52YWx1ZSB8fCB0aGlzLl9lbGVtZW50UmVmLm5hdGl2ZUVsZW1lbnQudmFsdWUubGVuZ3RoID09PSAwO1xuICB9XG5cbiAgQEhvc3RCaW5kaW5nKCdjbGFzcy5tYXQtZm9ybS1maWVsZC1zaG91bGQtZmxvYXQnKVxuICBnZXQgc2hvdWxkTGFiZWxGbG9hdCgpIHtcbiAgICByZXR1cm4gdGhpcy5mb2N1c2VkIHx8ICF0aGlzLmVtcHR5IHx8IHRoaXMudmFsdWVQbGFjZWhvbGRlciAhPT0gdW5kZWZpbmVkO1xuICB9XG5cbiAgQElucHV0KClcbiAgZ2V0IHJlcXVpcmVkKCkge1xuICAgIHJldHVybiB0aGlzLl9yZXF1aXJlZDtcbiAgfVxuICBzZXQgcmVxdWlyZWQocmVxOiBib29sZWFuKSB7XG4gICAgdGhpcy5fcmVxdWlyZWQgPSBjb2VyY2VCb29sZWFuUHJvcGVydHkocmVxKTtcbiAgICB0aGlzLnN0YXRlQ2hhbmdlcy5uZXh0KCk7XG4gIH1cblxuICBASG9zdEJpbmRpbmcoJ2NsYXNzLmZpbGUtaW5wdXQtZGlzYWJsZWQnKVxuICBnZXQgaXNEaXNhYmxlZCgpIHtcbiAgICByZXR1cm4gdGhpcy5kaXNhYmxlZDtcbiAgfVxuICBASW5wdXQoKVxuICBnZXQgZGlzYWJsZWQoKSB7XG4gICAgcmV0dXJuIHRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudC5kaXNhYmxlZDtcbiAgfVxuICBzZXQgZGlzYWJsZWQoZGlzOiBib29sZWFuKSB7XG4gICAgdGhpcy5zZXREaXNhYmxlZFN0YXRlKGNvZXJjZUJvb2xlYW5Qcm9wZXJ0eShkaXMpKTtcbiAgICB0aGlzLnN0YXRlQ2hhbmdlcy5uZXh0KCk7XG4gIH1cblxuICBASW5wdXQoKVxuICBnZXQgZXJyb3JTdGF0ZSgpIHtcbiAgICByZXR1cm4gdGhpcy5uZ0NvbnRyb2wuZXJyb3JzICE9PSBudWxsICYmIHRoaXMubmdDb250cm9sLnRvdWNoZWQ7XG4gIH1cblxuICBvbkNvbnRhaW5lckNsaWNrKGV2ZW50OiBNb3VzZUV2ZW50KSB7XG4gICAgaWYgKChldmVudC50YXJnZXQgYXMgRWxlbWVudCkudGFnTmFtZS50b0xvd2VyQ2FzZSgpICE9PSAnaW5wdXQnICYmICF0aGlzLmRpc2FibGVkKSB7XG4gICAgICB0aGlzLl9lbGVtZW50UmVmLm5hdGl2ZUVsZW1lbnQucXVlcnlTZWxlY3RvcignaW5wdXQnKS5mb2N1cygpO1xuICAgICAgdGhpcy5mb2N1c2VkID0gdHJ1ZTtcbiAgICAgIHRoaXMub3BlbigpO1xuICAgIH1cbiAgfVxuXG4gIC8qKlxuICAgKiBAc2VlIGh0dHBzOi8vYW5ndWxhci5pby9hcGkvZm9ybXMvQ29udHJvbFZhbHVlQWNjZXNzb3JcbiAgICovXG4gIGNvbnN0cnVjdG9yKFxuICAgIEBPcHRpb25hbCgpXG4gICAgQFNlbGYoKVxuICAgIHB1YmxpYyBuZ0NvbnRyb2w6IE5nQ29udHJvbCxcbiAgICBwcml2YXRlIGZtOiBGb2N1c01vbml0b3IsXG4gICAgcHJpdmF0ZSBfZWxlbWVudFJlZjogRWxlbWVudFJlZixcbiAgICBwcml2YXRlIF9yZW5kZXJlcjogUmVuZGVyZXIyXG4gICkge1xuICAgIGlmICh0aGlzLm5nQ29udHJvbCAhPSBudWxsKSB7XG4gICAgICB0aGlzLm5nQ29udHJvbC52YWx1ZUFjY2Vzc29yID0gdGhpcztcbiAgICB9XG4gICAgZm0ubW9uaXRvcihfZWxlbWVudFJlZi5uYXRpdmVFbGVtZW50LCB0cnVlKS5zdWJzY3JpYmUob3JpZ2luID0+IHtcbiAgICAgIHRoaXMuZm9jdXNlZCA9ICEhb3JpZ2luO1xuICAgICAgdGhpcy5zdGF0ZUNoYW5nZXMubmV4dCgpO1xuICAgIH0pO1xuICB9XG5cbiAgcHJpdmF0ZSBfb25DaGFuZ2UgPSAoXzogYW55KSA9PiB7fTtcbiAgcHJpdmF0ZSBfb25Ub3VjaGVkID0gKCkgPT4ge307XG5cbiAgd3JpdGVWYWx1ZShvYmo6IGFueSk6IHZvaWQge1xuICAgIHRoaXMuX3JlbmRlcmVyLnNldFByb3BlcnR5KHRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudCwgJ3ZhbHVlJywgb2JqKTtcbiAgfVxuXG4gIHJlZ2lzdGVyT25DaGFuZ2UoZm46IChfOiBhbnkpID0+IHZvaWQpOiB2b2lkIHtcbiAgICB0aGlzLl9vbkNoYW5nZSA9IGZuO1xuICB9XG5cbiAgcmVnaXN0ZXJPblRvdWNoZWQoZm46IGFueSk6IHZvaWQge1xuICAgIHRoaXMuX29uVG91Y2hlZCA9IGZuO1xuICB9XG5cbiAgQEhvc3RMaXN0ZW5lcignY2hhbmdlJywgWyckZXZlbnQnXSlcbiAgY2hhbmdlKGV2ZW50OiBhbnkpIHtcbiAgICBjb25zdCBmaWxlTGlzdCA9IGV2ZW50LnRhcmdldC5maWxlcztcbiAgICBjb25zdCBmaWxlQXJyYXkgPSBbXTtcbiAgICBpZiAoZmlsZUxpc3QpIHtcbiAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgZmlsZUxpc3QubGVuZ3RoOyBpKyspIHtcbiAgICAgICAgZmlsZUFycmF5LnB1c2goZmlsZUxpc3RbaV0pO1xuICAgICAgfVxuICAgIH1cbiAgICB0aGlzLnZhbHVlID0gbmV3IEZpbGVJbnB1dChmaWxlQXJyYXkpO1xuICAgIHRoaXMuX29uQ2hhbmdlKHRoaXMudmFsdWUpO1xuICB9XG5cbiAgQEhvc3RMaXN0ZW5lcignZm9jdXNvdXQnKVxuICBibHVyKCkge1xuICAgIHRoaXMuZm9jdXNlZCA9IGZhbHNlO1xuICAgIHRoaXMuX29uVG91Y2hlZCgpO1xuICB9XG5cbiAgc2V0RGlzYWJsZWRTdGF0ZT8oaXNEaXNhYmxlZDogYm9vbGVhbik6IHZvaWQge1xuICAgIHRoaXMuX3JlbmRlcmVyLnNldFByb3BlcnR5KHRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudCwgJ2Rpc2FibGVkJywgaXNEaXNhYmxlZCk7XG4gIH1cblxuICBuZ09uSW5pdCgpIHtcbiAgICB0aGlzLm11bHRpcGxlID0gY29lcmNlQm9vbGVhblByb3BlcnR5KHRoaXMubXVsdGlwbGUpO1xuICB9XG5cbiAgb3BlbigpIHtcbiAgICBpZiAoIXRoaXMuZGlzYWJsZWQpIHtcbiAgICAgIHRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudC5xdWVyeVNlbGVjdG9yKCdpbnB1dCcpLmNsaWNrKCk7XG4gICAgfVxuICB9XG5cbiAgZ2V0IGZpbGVOYW1lcygpIHtcbiAgICByZXR1cm4gdGhpcy52YWx1ZSA/IHRoaXMudmFsdWUuZmlsZU5hbWVzIDogdGhpcy52YWx1ZVBsYWNlaG9sZGVyO1xuICB9XG5cbiAgbmdPbkRlc3Ryb3koKSB7XG4gICAgdGhpcy5zdGF0ZUNoYW5nZXMuY29tcGxldGUoKTtcbiAgICB0aGlzLmZtLnN0b3BNb25pdG9yaW5nKHRoaXMuX2VsZW1lbnRSZWYubmF0aXZlRWxlbWVudCk7XG4gIH1cbn1cbiIsImltcG9ydCB7IFBpcGUsIFBpcGVUcmFuc2Zvcm0sIE9wdGlvbmFsLCBJbmplY3QgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEZpbGVJbnB1dENvbmZpZywgTkdYX01BVF9GSUxFX0lOUFVUX0NPTkZJRyB9IGZyb20gJy4uL21vZGVsL2ZpbGUtaW5wdXQtY29uZmlnLm1vZGVsJztcblxuQFBpcGUoe1xuICBuYW1lOiAnYnl0ZUZvcm1hdCdcbn0pXG5leHBvcnQgY2xhc3MgQnl0ZUZvcm1hdFBpcGUgaW1wbGVtZW50cyBQaXBlVHJhbnNmb3JtIHtcbiAgcHJpdmF0ZSB1bml0OiBzdHJpbmc7XG5cbiAgY29uc3RydWN0b3IoXG4gICAgQE9wdGlvbmFsKClcbiAgICBASW5qZWN0KE5HWF9NQVRfRklMRV9JTlBVVF9DT05GSUcpXG4gICAgcHJpdmF0ZSBjb25maWc6IEZpbGVJbnB1dENvbmZpZ1xuICApIHtcbiAgICB0aGlzLnVuaXQgPSBjb25maWcgPyBjb25maWcuc2l6ZVVuaXQgOiAnQnl0ZSc7XG4gIH1cblxuICB0cmFuc2Zvcm0odmFsdWU6IGFueSwgYXJncz86IGFueSk6IGFueSB7XG4gICAgaWYgKHBhcnNlSW50KHZhbHVlLCAxMCkgPj0gMCkge1xuICAgICAgdmFsdWUgPSB0aGlzLmZvcm1hdEJ5dGVzKCt2YWx1ZSwgK2FyZ3MpO1xuICAgIH1cbiAgICByZXR1cm4gdmFsdWU7XG4gIH1cblxuICBwcml2YXRlIGZvcm1hdEJ5dGVzKGJ5dGVzOiBudW1iZXIsIGRlY2ltYWxzPzogbnVtYmVyKSB7XG4gICAgaWYgKGJ5dGVzID09PSAwKSB7XG4gICAgICByZXR1cm4gJzAgJyArIHRoaXMudW5pdDtcbiAgICB9XG4gICAgY29uc3QgQiA9IHRoaXMudW5pdC5jaGFyQXQoMCk7XG4gICAgY29uc3QgayA9IDEwMjQ7XG4gICAgY29uc3QgZG0gPSBkZWNpbWFscyB8fCAyO1xuICAgIGNvbnN0IHNpemVzID0gW3RoaXMudW5pdCwgJ0snICsgQiwgJ00nICsgQiwgJ0cnICsgQiwgJ1QnICsgQiwgJ1AnICsgQiwgJ0UnICsgQiwgJ1onICsgQiwgJ1knICsgQl07XG4gICAgY29uc3QgaSA9IE1hdGguZmxvb3IoTWF0aC5sb2coYnl0ZXMpIC8gTWF0aC5sb2coaykpO1xuICAgIHJldHVybiBwYXJzZUZsb2F0KChieXRlcyAvIE1hdGgucG93KGssIGkpKS50b0ZpeGVkKGRtKSkgKyAnICcgKyBzaXplc1tpXTtcbiAgfVxufVxuIiwiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5pbXBvcnQgeyBGb2N1c01vbml0b3IgfSBmcm9tICdAYW5ndWxhci9jZGsvYTExeSc7XG5pbXBvcnQgeyBGaWxlSW5wdXRDb21wb25lbnQgfSBmcm9tICcuL2ZpbGUtaW5wdXQvZmlsZS1pbnB1dC5jb21wb25lbnQnO1xuaW1wb3J0IHsgQnl0ZUZvcm1hdFBpcGUgfSBmcm9tICcuL3BpcGUvYnl0ZS1mb3JtYXQucGlwZSc7XG5pbXBvcnQgeyBGaWxlSW5wdXRDb25maWcgfSBmcm9tICcuL21vZGVsL2ZpbGUtaW5wdXQtY29uZmlnLm1vZGVsJztcblxuQE5nTW9kdWxlKHtcbiAgZGVjbGFyYXRpb25zOiBbRmlsZUlucHV0Q29tcG9uZW50LCBCeXRlRm9ybWF0UGlwZV0sXG4gIHByb3ZpZGVyczogW0ZvY3VzTW9uaXRvcl0sXG4gIGV4cG9ydHM6IFtGaWxlSW5wdXRDb21wb25lbnQsIEJ5dGVGb3JtYXRQaXBlXVxufSlcbmV4cG9ydCBjbGFzcyBNYXRlcmlhbEZpbGVJbnB1dE1vZHVsZSB7fVxuIiwiaW1wb3J0IHsgVmFsaWRhdG9yRm4sIEFic3RyYWN0Q29udHJvbCB9IGZyb20gJ0Bhbmd1bGFyL2Zvcm1zJztcbmltcG9ydCB7IEZpbGVJbnB1dCB9IGZyb20gJy4uL21vZGVsL2ZpbGUtaW5wdXQubW9kZWwnO1xuXG5leHBvcnQgbmFtZXNwYWNlIEZpbGVWYWxpZGF0b3Ige1xuICAvKipcbiAgICogRnVuY3Rpb24gdG8gY29udHJvbCBjb250ZW50IG9mIGZpbGVzXG4gICAqXG4gICAqIEBwYXJhbSBieXRlcyBtYXggbnVtYmVyIG9mIGJ5dGVzIGFsbG93ZWRcbiAgICpcbiAgICogQHJldHVybnNcbiAgICovXG4gIGV4cG9ydCBmdW5jdGlvbiBtYXhDb250ZW50U2l6ZShieXRlczogbnVtYmVyKTogVmFsaWRhdG9yRm4ge1xuICAgIHJldHVybiAoY29udHJvbDogQWJzdHJhY3RDb250cm9sKTogeyBba2V5OiBzdHJpbmddOiBhbnkgfSA9PiB7XG4gICAgICBjb25zdCBzaXplID0gY29udHJvbCAmJiBjb250cm9sLnZhbHVlID8gKGNvbnRyb2wudmFsdWUgYXMgRmlsZUlucHV0KS5maWxlcy5tYXAoZiA9PiBmLnNpemUpLnJlZHVjZSgoYWNjLCBpKSA9PiBhY2MgKyBpLCAwKSA6IDA7XG4gICAgICBjb25zdCBjb25kaXRpb24gPSBieXRlcyA+PSBzaXplO1xuICAgICAgcmV0dXJuIGNvbmRpdGlvblxuICAgICAgICA/IG51bGxcbiAgICAgICAgOiB7XG4gICAgICAgICAgICBtYXhDb250ZW50U2l6ZToge1xuICAgICAgICAgICAgICBhY3R1YWxTaXplOiBzaXplLFxuICAgICAgICAgICAgICBtYXhTaXplOiBieXRlc1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH07XG4gICAgfTtcbiAgfVxufVxuIl0sIm5hbWVzIjpbXSwi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
-
-/***/ }),
-
 /***/ "./node_modules/ngx-material-timepicker/esm5/ngx-material-timepicker.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/ngx-material-timepicker/esm5/ngx-material-timepicker.js ***!
@@ -23466,7 +22934,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-danger\">\n                      <h4 class=\"card-title\">Administradores ({{arrayOfAdmins.length}})</h4>\n                      <button class=\"btn btn-success\" (click)=\"openFormModal()\">Agregar</button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table table-hover\">\n                              <thead class=\"\">\n                                <th>\n                                    Nombre\n                                </th>\n                                <th>\n                                    Correo\n                                </th>\n                                <th>\n                                    Última Conexión\n                                </th>\n                                <th>\n\n                                </th>\n                              </thead>\n                              <tbody>\n                                <tr *ngFor=\"let admin of arrayOfAdmins\" class=\"list-group-item-action\">\n                                    <td> {{ admin.username | titlecase }} </td>\n                                    <td> {{ admin.email }} </td>\n                                    <td> {{ admin.connection_time?(admin.connection_time):\"N/A\"}} </td>\n                                    <td>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteAdmin(admin.id)\">\n                                                <i class=\"fa fa-trash text-white\"></i>\n                                            </button>\n                                        </div>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(admin.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>  \n      </div>\n  </div>\n  </div>"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-danger\">\n                      <h4 class=\"card-title\">Administradores ({{arrayOfAdmins.length}})</h4>\n                      <button class=\"btn btn-success\" (click)=\"openFormModal()\">Agregar</button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table table-hover\">\n                              <thead class=\"\">\n                                <th>\n                                    Nombre\n                                </th>\n                                <th>\n                                    Correo\n                                </th>\n                                <th>\n                                    Última Conexión\n                                </th>\n                                <th>\n\n                                </th>\n                              </thead>\n                              <tbody>\n                                <tr *ngFor=\"let admin of arrayOfAdmins\" class=\"list-group-item-action\">\n                                    <td> {{ admin.username | titlecase }} </td>\n                                    <td> {{ admin.email }} </td>\n                                    <td> {{ admin.connection_time?(admin.connection_time):\"N/A\"}} </td>\n                                    <td>\n                                        <div class=\"btn-group\"\n                                            *ngIf=\"admin.id!=currentAdminId\">\n                                            <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteAdmin(admin.id)\">\n                                                <i class=\"fa fa-trash text-white\"></i>\n                                            </button>\n                                        </div>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(admin.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>  \n      </div>\n  </div>\n  </div>"
 
 /***/ }),
 
@@ -23477,7 +22945,7 @@ module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-flu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  cursor: pointer;\n  color: purple; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXFdFQlxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcYWRtaW5cXGFkbWluLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWU7RUFDZixjQUFhLEVBRWhCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vYWRtaW4uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpe1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBjb2xvcjogcHVycGxlO1xuICAgIFxufSJdfQ== */"
+module.exports = "i {\n  cursor: pointer;\n  color: purple; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvYWRtaW4vQzpcXFVzZXJzXFxCZWdvIE1vbnRlc1xcRG9jdW1lbnRzXFxTZW1lc3RyZUlcXGZyb250Mi9zcmNcXGFwcFxcY29udHJvbGxlcnNcXGFkbWluXFxhZG1pbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsY0FBYSxFQUVoQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2FkbWluL2FkbWluLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgY29sb3I6IHB1cnBsZTtcbiAgICBcbn0iXX0= */"
 
 /***/ }),
 
@@ -23519,6 +22987,7 @@ var AdminComponent = /** @class */ (function () {
         this._modalService = _modalService;
         this.router = router;
         this.arrayOfAdmins = [];
+        this.currentAdminId = localStorage.getItem('ID');
         this.navigationSubscription = this.router.events
             .subscribe(function (e) {
             if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationEnd"]) {
@@ -23650,7 +23119,7 @@ var BraceletComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Autobuses ({{arrayOfBuses.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" (click)=\"openFormModal()\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Numero de autobús\n                                  </th>\n                                  <th>\n                                      Disponibilidad\n                                  </th>\n                                  <th>\n                                      Tour asociado\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let bus of arrayOfBuses\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{bus.numBus}}</td>\n                                      <td>{{bus.availability == true?\"Disponible\":\"No Disponible\"}}</td>\n                                      <td>{{bus.tour_id?(bus.tour_id.name):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteBus(bus.id)\">\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(bus.id)\">\n                                                 <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
+module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Autobuses ({{arrayOfBuses.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" (click)=\"openFormModal()\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Numero de autobús\n                                  </th>\n                                  <th>\n                                      Disponibilidad\n                                  </th>\n                                  <th>\n                                      Tour asociado\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let bus of arrayOfBuses\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{bus.numBus}}</td>\n                                      <td>\n                                          <span class=\"text-success\" *ngIf=\"bus.availability\">Disponible</span>\n                                          <span class=\"text-danger\" *ngIf=\"!bus.availability\">No disponible</span>\n                                      </td>\n                                      <td>{{bus.tour_id?(bus.tour_id.name):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteBus(bus.id)\">\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(bus.id)\">\n                                                 <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
 
 /***/ }),
 
@@ -23701,18 +23170,21 @@ var BusComponent = /** @class */ (function () {
         this.arrayOfBuses = [];
     }
     BusComponent.prototype.openFormModal = function () {
+        var _this = this;
         var modalRef = this._modalService.open(_modals_BusAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddBus"]);
         modalRef.result.then(function (result) {
+            _this.getBuses();
             console.log(result);
         }).catch(function (error) {
             console.log(error);
         });
     };
     BusComponent.prototype.openFormModalEdit = function (id) {
+        var _this = this;
         var modalRef = this._modalService.open(_modals_BusEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditBus"]);
         modalRef.componentInstance.id = id;
         modalRef.result.then(function (result) {
-            console.log(result);
+            _this.getBuses();
         }).catch(function (error) {
             console.log(error);
         });
@@ -23813,17 +23285,21 @@ var CompanyComponent = /** @class */ (function () {
         this.arrayOfCompanies = [];
     }
     CompanyComponent.prototype.openFormModal = function () {
+        var _this = this;
         var modalRef = this._modalService.open(_modals_CompanyAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddCompany"]);
         modalRef.result.then(function (result) {
+            _this.getCompanies();
             console.log(result);
         }).catch(function (error) {
             console.log(error);
         });
     };
     CompanyComponent.prototype.openFormModalEdit = function (id) {
+        var _this = this;
         var modalRef = this._modalService.open(_modals_CompanyEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditCompany"]);
         modalRef.componentInstance.id = id;
         modalRef.result.then(function (result) {
+            _this.getCompanies();
             console.log(result);
         }).catch(function (error) {
             console.log(error);
@@ -23842,7 +23318,7 @@ var CompanyComponent = /** @class */ (function () {
             _this.arrayOfCompanies = res;
         });
     };
-    CompanyComponent.prototype.deleteAdmin = function (id) {
+    CompanyComponent.prototype.deleteCompany = function (id) {
         var _this = this;
         this._companyService.deleteCompany(id)
             .subscribe(function (res) {
@@ -23872,7 +23348,7 @@ var CompanyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"main-content\">\n      <div class=\"container-fluid\">\n          <div class=\"row\">\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 1 de 3. Agregar una nueva fecha</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      \n                      <div class=\"card-body\">\n                          <form [formGroup]=\"angForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                          <input matInput [matDatepicker]=\"picker\" placeholder=\"Elige una fecha de inicio\" formControlName=\"start_date\" #start_date>\n                                          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                                          <mat-datepicker #picker></mat-datepicker>\n                                          \n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"angForm.controls['start_date'].hasError('required')\">\n                                        La fecha de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                          <mat-form-field>\n                                              <input matInput [matDatepicker]=\"picker2\" placeholder=\"Elige una fecha de final\" formControlName=\"end_date\" #end_date>\n                                              <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n                                              <mat-datepicker #picker2></mat-datepicker>\n                                          </mat-form-field>\n                                          <label class=\"text-danger\" *ngIf=\"angForm.controls['end_date'].hasError('required')\">\n                                            La fecha de final es requerida\n                                           </label>\n                                           <br>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                       <div class=\"col-md-12\">\n                                            <mat-radio-group formControlName=\"servicio\" >\n                                                    <mat-radio-button [value]=\"true\" #servicio>Servicio</mat-radio-button>\n                                                    <mat-radio-button [value]=\"false\" >No hay servicio</mat-radio-button>\n                                            </mat-radio-group>\n                                        <!-- <mat-checkbox class=\"example-margin\" value=\"true\" formControlName=\"servicio\" #servicio>Servicio</mat-checkbox> -->\n                                        <div class=\"row\">\n                                            <div class=\"col-md-12\">\n                                                <label class=\"text-danger\" *ngIf=\"angForm.controls['servicio'].hasError('required')\">\n                                                    Es necesario añadir si el servicio está disponible \n                                                </label>\n                                            </div>\n                                        </div>\n                                       </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\" [disabled]=\"angForm.pristine || angForm.invalid\"   class=\"btn btn-danger pull-left\" (click)=\"addDate(start_date.value, end_date.value,servicio.value) \" >Agregar nueva fecha</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n          <!-- formulario de horario -->\n          <div class=\"row\" *ngIf=show>\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 2 de 3. Agregar un nuevo horario</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      <div class=\"card-body\">\n                          <form [formGroup]=\"myForm\" novalidate >\n                              <div class=\"row\">\n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                            <input matInput placeholder=\"Escribe la hora inicial\" formControlName=start_time #start_time>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"myForm.controls['start_time'].hasError('required')\">\n                                        La hora de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                                <mat-form-field>\n                                                        <input matInput placeholder=\"Escribe la hora final\" formControlName=end_time #end_time>\n                                                </mat-form-field>\n                                                <label class=\"text-danger\" *ngIf=\"myForm.controls['end_time'].hasError('required')\">\n                                                    La hora final es requerida\n                                                </label>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                     <div class=\"col-md-12\">\n                                        <mat-form-field>\n                                            <input matInput  placeholder=\"Anota una perido de frecuencia\" formControlName=frequency #frequency>\n                                         </mat-form-field>\n                                         <label class=\"text-danger\" *ngIf=\"myForm.controls['frequency'].hasError('required')\">\n                                            La frecuencia es requerida\n                                        </label>\n                                     </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-left\" (click)=\"addHour(start_time.value, end_time.value,frequency.value)\" >Agregar nuevo horario</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n\n\n            \n      </div>\n    </div>\n  \n\n  \n"
+module.exports = "  <div class=\"main-content\">\n      <div class=\"container-fluid\">\n          <div class=\"row\">\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 1 de 3. Agregar una nueva fecha</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      \n                      <div class=\"card-body\">\n                          <form [formGroup]=\"angForm\" novalidate >\n                              <div class=\"row\">\n                                  \n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                          <input matInput [matDatepicker]=\"startDate\" placeholder=\"Elige una fecha de inicio\" formControlName=\"fecha\" #fecha (dateInput)=\"addStartDate($event)\" (dateChange)=\"addStartDate($event)\"   >\n                                          <mat-datepicker-toggle matSuffix [for]=\"startDate\"></mat-datepicker-toggle>\n                                          <mat-datepicker #startDate></mat-datepicker>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"angForm.controls['fecha'].hasError('required')\">\n                                        La fecha de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                          <mat-form-field>\n                                              <input matInput [matDatepicker]=\"endDate\" placeholder=\"Elige una fecha de final\" formControlName=\"end_date\" #end_date (dateInput)=\"addEndDate($event)\">\n                                              <mat-datepicker-toggle matSuffix [for]=\"endDate\"></mat-datepicker-toggle>\n                                              <mat-datepicker #endDate></mat-datepicker>\n                                          </mat-form-field>\n                                          <label class=\"text-danger\" *ngIf=\"angForm.controls['end_date'].hasError('required')\">\n                                            La fecha de final es requerida\n                                           </label>\n                                           <br>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                       <div class=\"col-md-12\">\n                                            <mat-radio-group formControlName=\"servicio\" >\n                                                    <mat-radio-button [value]=\"true\" #servicio>Servicio</mat-radio-button>\n                                                    <mat-radio-button [value]=\"false\" >No hay servicio</mat-radio-button>\n                                            </mat-radio-group>\n                                        <!-- <mat-checkbox class=\"example-margin\" value=\"true\" formControlName=\"servicio\" #servicio>Servicio</mat-checkbox> -->\n                                        <div class=\"row\">\n                                            <div class=\"col-md-12\">\n                                                <label class=\"text-danger\" *ngIf=\"angForm.controls['servicio'].hasError('required')\">\n                                                    Es necesario añadir si el servicio está disponible \n                                                </label>\n                                            </div>\n                                        </div>\n                                       </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\" [disabled]=\"angForm.pristine || angForm.invalid\"   class=\"btn btn-danger pull-left\" (click)=\"addDate(fecha.value, end_date.value,servicio.value) \" >Agregar nueva fecha</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n          <!-- formulario de horario -->\n          <div class=\"row\" *ngIf=show>\n              <div class=\"col-md-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header card-header-danger\">\n                          <h4 class=\"card-title\">Paso 2 de 3. Agregar un nuevo horario</h4>\n                          <p class=\"card-category\">Completa todos los campos</p>\n                      </div>\n                      <div class=\"card-body\">\n                          <form [formGroup]=\"myForm\" novalidate >\n                              <div class=\"row\">\n                                  <div class=\"col-md-12\">\n                                      <mat-form-field>\n                                            <input matInput placeholder=\"Escribe la hora inicial\" formControlName=start_time #start_time>\n                                      </mat-form-field>\n                                      <label class=\"text-danger\" *ngIf=\"myForm.controls['start_time'].hasError('required')\">\n                                        La hora de inicio es requerida\n                                       </label>\n                                  </div>\n                              </div>\n                                  <div class=\"row\">\n                                      <div class=\"col-md-12\">\n                                                <mat-form-field>\n                                                        <input matInput placeholder=\"Escribe la hora final\" formControlName=end_time #end_time>\n                                                </mat-form-field>\n                                                <label class=\"text-danger\" *ngIf=\"myForm.controls['end_time'].hasError('required')\">\n                                                    La hora final es requerida\n                                                </label>\n                                      </div>\n                                   </div>\n                                   <div class=\"row\">\n                                     <div class=\"col-md-12\">\n                                        <mat-form-field>\n                                            <input matInput  placeholder=\"Anota una perido de frecuencia\" formControlName=frequency #frequency>\n                                         </mat-form-field>\n                                         <label class=\"text-danger\" *ngIf=\"myForm.controls['frequency'].hasError('required')\">\n                                            La frecuencia es requerida\n                                        </label>\n                                     </div>\n                                   </div>\n                                   <button mat-raised-button  type=\"submit\"  [disabled]=\"myForm.pristine || myForm.invalid\"  class=\"btn btn-danger pull-left\" (click)=\"addHour(start_time.value, end_time.value,frequency.value)\" >Agregar nuevo horario</button>\n                              <div class=\"clearfix\"></div>\n                          </form>\n                      </div>\n                  </div>\n              </div>  \n          </div>\n\n\n\n            \n      </div>\n    </div>\n  \n\n  \n"
 
 /***/ }),
 
@@ -23883,7 +23359,7 @@ module.exports = "  <div class=\"main-content\">\n      <div class=\"container-f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-radio-button {\n  margin-right: 2%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcV0VCXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFxkYXRlaW5mb3JtYXRpb25cXGNyZWF0ZVxcY3JlYXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9jcmVhdGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtcmFkaW8tYnV0dG9ue1xuICAgIG1hcmdpbi1yaWdodDogMiU7XG59Il19 */"
+module.exports = "mat-radio-button {\n  margin-right: 2%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvZGF0ZWluZm9ybWF0aW9uL2NyZWF0ZS9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcZGF0ZWluZm9ybWF0aW9uXFxjcmVhdGVcXGNyZWF0ZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL2RhdGVpbmZvcm1hdGlvbi9jcmVhdGUvY3JlYXRlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXJhZGlvLWJ1dHRvbntcbiAgICBtYXJnaW4tcmlnaHQ6IDIlO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -23974,7 +23450,7 @@ var CreateComponent = /** @class */ (function () {
     };
     CreateComponent.prototype.createForm = function () {
         this.angForm = this.fb.group({
-            start_date: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            fecha: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             end_date: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             servicio: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
@@ -23986,10 +23462,25 @@ var CreateComponent = /** @class */ (function () {
             frequency: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     };
-    CreateComponent.prototype.addDate = function (start_date, end_date, service) {
+    CreateComponent.prototype.addDate = function (fecha, end_date, service) {
         var _this = this;
-        this.service.addDate(start_date, end_date, service).subscribe(function (data) { return _this.dates = data; });
+        console.log(fecha);
+        console.log(end_date);
+        this.service.addDate(this.dates.fecha, this.dates.end_date, service).subscribe(function (data) {
+            _this.dates = data;
+            console.log(data);
+        });
         this.show = true;
+    };
+    CreateComponent.prototype.addStartDate = function (event) {
+        this.start_date = new Date(event.value);
+        this.dates.fecha = this.start_date.getTime() / 1000.0;
+        console.log(this.dates.fecha);
+    };
+    CreateComponent.prototype.addEndDate = function (event) {
+        this.end_date = new Date(event.value);
+        this.dates.end_date = this.end_date.getTime() / 1000.0;
+        console.log(this.dates.end_date);
     };
     CreateComponent.prototype.addHour = function (start_time, end_time, frequency) {
         var _this = this;
@@ -24026,7 +23517,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Horarios ({{dates.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/create']\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Fecha de inicio\n                                  </th>\n                                  <th>\n                                      Fecha final\n                                  </th>\n                                  <th>\n                                      Servicio\n                                  </th>\n                                  <th>\n                                      Horario inicial\n                                  </th>\n                                  <th>\n                                      Horario final\n                                  </th>\n                                  <th>\n                                      Frecuencia\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let date of dates\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{date.date_id?(date.date_id.start_date | date:'shortDate'):\"N/A\" }}</td>\n                                      <td>{{date.date_id?(date.date_id.end_date | date:'shortDate'):\"N/A\"}}</td>\n                                      <td>\n                                          <h4 class=\"float-left\">\n                                            <i class=\"fa fa-check text-success\"\n                                            *ngIf=\"date.date_id.service\"\n                                            ></i>\n                                            <i class=\"fa fa-times text-danger\"\n                                            *ngIf=\"!date.date_id.service\"\n                                            ></i>\n                                          </h4>\n                                      </td>\n                                      <td>{{date.hour_id?(date.hour_id.start_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.end_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.frequency):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteDate(date.id)\"  >\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(date.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
+module.exports = "\n\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\">\n                        <h4 class=\"card-title text-white\">Horarios ({{dates.length}})</h4>\n                        <button type=\"button\" class=\"btn btn-success\" (click)=\"openEditModal('add')\">\n                          Agregar\n                        </button>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"table-responsive\">\n                            <table class=\"table\">\n                                <thead class=\"text-primary\">\n                                  <th>\n                                      Fecha de inicio\n                                  </th>\n                                  <th>\n                                      Fecha final\n                                  </th>\n                                  <th>\n                                      Servicio\n                                  </th>\n                                  <th>\n                                      Horario inicial\n                                  </th>\n                                  <th>\n                                      Horario final\n                                  </th>\n                                  <th>\n                                      Frecuencia\n                                  </th>\n                                  <th>\n                                  </th>\n                                <tbody>\n                                  <tr *ngFor=\"let date of dates\"\n                                  class=\"list-group-item-action\">\n                                      <td>{{date.date_id?(date.date_id.start_date):\"N/A\" }}</td>\n                                      <td>{{date.date_id?(date.date_id.end_date):\"N/A\"}}</td>\n                                      <td>\n                                          <h4 class=\"float-left\">\n                                            <i class=\"fa fa-check text-success\"\n                                            *ngIf=\"date.date_id.service\"\n                                            ></i>\n                                            <i class=\"fa fa-times text-danger\"\n                                            *ngIf=\"!date.date_id.service\"\n                                            ></i>\n                                          </h4>\n                                      </td>\n                                      <td>{{date.hour_id?(date.hour_id.start_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.end_time):\"N/A\"}}</td>\n                                      <td>{{date.hour_id?(date.hour_id.frequency):\"N/A\"}}</td>\n                                      <td>\n                                          <div class=\"btn-group\">\n                                              <button class=\"btn btn-danger\" type =\"button\" (click)=\"deleteDate(date.id)\"  >\n                                                  <i class=\"text-white fa fa-trash\"></i>\n                                              </button>\n                                          </div>\n                                          <div class=\"btn-group\">\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(date.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                          </div>\n                                      </td>\n                                  </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n    </div>\n    \n"
 
 /***/ }),
 
@@ -24053,10 +23544,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateinformationComponent", function() { return DateinformationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit/DateInfoEditModal.component */ "./src/app/controllers/dateinformation/edit/DateInfoEditModal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24070,51 +23559,70 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var DateinformationComponent = /** @class */ (function () {
-    function DateinformationComponent(_dateInfoService, route, router, fb, _modalService) {
+    function DateinformationComponent(_dateInfoService, _modalService) {
         this._dateInfoService = _dateInfoService;
-        this.route = route;
-        this.router = router;
-        this.fb = fb;
         this._modalService = _modalService;
         this.dates = [];
-        // public hours = [];
-        this.dateInformation = [];
     }
     DateinformationComponent.prototype.ngOnInit = function () {
+        this.getDateInfo();
+    };
+    DateinformationComponent.prototype.getDateInfo = function () {
         var _this = this;
         this._dateInfoService.getInformation()
             .subscribe(function (data) {
             _this.dates = data;
+            console.log('Datesss');
+            _this.convertToDates(_this.dates);
+            _this.convertToHours(_this.dates);
+            console.log(_this.dates);
         });
     };
-    DateinformationComponent.prototype.ngOnChanges = function () {
-        var _this = this;
-        this._dateInfoService.getInformation()
-            .subscribe(function (data) { return _this.dates = data; });
+    DateinformationComponent.prototype.convertToDates = function (arrayOfDates) {
+        var temp_start, temp_end;
+        for (var i = 0; i < arrayOfDates.length; i++) {
+            temp_start = new Date(this.dates[i].date_id.start_date * 1000.0);
+            this.dates[i].date_id.start_date = temp_start.toLocaleDateString('es-MX', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+            temp_end = new Date(this.dates[i].date_id.end_date * 1000.0);
+            this.dates[i].date_id.end_date = temp_end.toLocaleDateString('es-MX', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+    };
+    DateinformationComponent.prototype.convertToHours = function (arrayOfDates) {
+        var temp_start, temp_end;
+        for (var i = 0; i < arrayOfDates.length; i++) {
+            temp_start = new Date(this.dates[i].hour_id.start_time * 1000.0);
+            this.dates[i].hour_id.start_time = temp_start.toLocaleTimeString();
+            temp_end = new Date(this.dates[i].hour_id.end_time * 1000.0);
+            this.dates[i].hour_id.end_time = temp_end.toLocaleTimeString();
+        }
     };
     DateinformationComponent.prototype.openEditModal = function (id) {
-        var modalRef = this._modalService.open(_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_5__["DateInfoEditModalComponent"], { size: 'lg' });
+        var _this = this;
+        var modalRef = this._modalService.open(_edit_DateInfoEditModal_component__WEBPACK_IMPORTED_MODULE_3__["DateInfoEditModalComponent"], { size: 'lg' });
         modalRef.componentInstance.id = id;
+        modalRef.result.then(function (res) {
+            _this.getDateInfo();
+        }, function (err) {
+            _this.getDateInfo();
+        });
     };
     DateinformationComponent.prototype.deleteDate = function (id) {
         var _this = this;
         if (confirm('Desea eliminar el horario?')) {
-            this._dateInfoService.deleteDate(id).subscribe(function (data) {
-                _this.ngOnChanges();
+            this._dateInfoService.deleteDateInfo(id)
+                .subscribe(function (data) {
+                _this.ngOnInit();
             });
         }
-    };
-    DateinformationComponent.prototype.getByIDDate = function () {
-        var _this = this;
-        this.route.params.subscribe(function (params) {
-            _this.date = _this._dateInfoService.getDateById(params['id'])
-                .subscribe(function (res) {
-                _this.date = res;
-            });
-        });
     };
     DateinformationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -24123,10 +23631,7 @@ var DateinformationComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./dateinformation.component.scss */ "./src/app/controllers/dateinformation/dateinformation.component.scss")]
         }),
         __metadata("design:paramtypes", [_services_dateinformation_service__WEBPACK_IMPORTED_MODULE_1__["DateinformationService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
     ], DateinformationComponent);
     return DateinformationComponent;
 }());
@@ -24354,7 +23859,7 @@ var CreatePlaceComponent = /** @class */ (function () {
     };
     CreatePlaceComponent.prototype.addPlace = function (name, description, longitude, latitude, place_type_id, narrative) {
         var _this = this;
-        this.service.addPlace(name, description, longitude, latitude, place_type_id, narrative).subscribe(function (data) {
+        this.service.addPlace(name, description, longitude, latitude, place_type_id, narrative, 1).subscribe(function (data) {
             _this.places = data;
             console.log(data);
             _this.showNotification(data, "top", "left");
@@ -24402,7 +23907,7 @@ var CreatePlaceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-warning\">\n                      <h4 class=\"card-title text-dark\">Lugares ({{places.length}})</h4>\n\n                      <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/createplace']\" >\n                        Agregar\n                      </button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table\">\n                              <thead class=\"text-primary\">\n                                <th>\n                                    Lugar\n                                </th>\n                                <th>\n                                    Descripción\n                                </th>\n                                <th>\n                                    Tipo de lugar\n                                </th>\n                                <th>\n                                    Mapa\n                                </th>\n                                <th>\n                                    Tour asociado\n                                </th>\n                                <th>\n\n                                </th>\n                              <tbody>\n                                <tr *ngFor=\"let place of places\"\n                                class=\"list-group-item-action\">\n                                    <td>{{place.name}}</td>\n                                    <td>{{place.description}}</td>\n                                    <td>{{place.place_type_id.name | titlecase}}</td>\n                                    <td><a [routerLink]=\"['/maps']\">Mapa</a></td>\n                                    <td> </td>\n                                    <td>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-danger\" type =\"button\" (click)=\"deletePlace(place.id)\"  >\n                                                <i class=\"text-white fa fa-trash\"></i>\n                                            </button>\n                                            <button class=\"btn btn-info\" type=\"button\" >\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>    \n      </div>\n  </div>\n  </div>\n  \n"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-warning\">\n                      <h4 class=\"card-title text-dark\">Lugares ({{places.length}})</h4>\n\n                      <button type=\"button\" class=\"btn btn-success\" (click)=\"openAddModal()\" >\n                        Agregar\n                      </button>\n                    </div>\n                  <div class=\"card-body\">\n                      <div class=\"table-responsive\">\n                          <table class=\"table\">\n                              <thead class=\"text-primary\">\n                                <th>\n                                    Lugar\n                                </th>\n                                <th>\n                                    Descripción\n                                </th>\n                                <th>\n                                    Tipo de lugar\n                                </th>\n                                <th>\n                                    Mapa\n                                </th>\n                                <th>\n                                    Tours Asociado\n                                </th>\n                                <th>\n\n                                </th>\n                              <tbody>\n                                <tr *ngFor=\"let place of places\"\n                                class=\"list-group-item-action\">\n                                    <td>{{place.name}}</td>\n                                    <td>{{place.description}}</td>\n                                    <td>{{place.place_type_id.name | titlecase}}</td>\n                                    <td>\n                                        <a class=\"text-primary text-center\"\n                                        (click)=\"openMapModal({\n                                                    name: place.name,\n                                                    lat: place.latitude,\n                                                    lng: place.longitude,\n                                                    type: place.place_type_id.name\n                                                    }, place.tours\n                                                )\">\n                                            Mapa\n                                        </a>\n                                    </td>\n                                    <td> \n                                        <ul *ngFor=\"let tour of place.tours\" >\n                                            <li>\n                                                {{tour.name | titlecase}}\n                                            </li>\n                                        </ul>\n                                    </td>\n                                    <td>\n                                        <div class=\"btn-group\">\n                                            <button class=\"btn btn-danger\" type =\"button\" (click)=\"deletePlace(place.id)\"  >\n                                                <i class=\"text-white fa fa-trash\"></i>\n                                            </button>\n                                            <button class=\"btn btn-info\" type=\"button\" (click)=\"openEditModal(place.id)\">\n                                                <i class=\"fa fa-pencil text-white\"></i>\n                                            </button>\n                                        </div>\n                                    </td>\n                                </tr>\n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>    \n      </div>\n  </div>\n  </div>\n  \n"
 
 /***/ }),
 
@@ -24429,6 +23934,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlaceComponent", function() { return PlaceComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/place.service */ "./src/app/services/place.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modals/PlaceAddModal.component */ "./src/app/controllers/place/modals/PlaceAddModal.component.ts");
+/* harmony import */ var _modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modals/PlaceEditModal.component */ "./src/app/controllers/place/modals/PlaceEditModal.component.ts");
+/* harmony import */ var _modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modals/GetMapModalComponent.component */ "./src/app/controllers/place/modals/GetMapModalComponent.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24440,9 +23949,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
+
+
 var PlaceComponent = /** @class */ (function () {
-    function PlaceComponent(service) {
+    function PlaceComponent(service, _modalService) {
         this.service = service;
+        this._modalService = _modalService;
         this.places = [];
     }
     PlaceComponent.prototype.ngOnInit = function () {
@@ -24450,19 +23964,67 @@ var PlaceComponent = /** @class */ (function () {
         this.service.getPlaces()
             .subscribe(function (data) { return _this.places = data; });
     };
-    PlaceComponent.prototype.ngOnChanges = function () {
+    PlaceComponent.prototype.getPlaces = function () {
         var _this = this;
         this.service.getPlaces()
-            .subscribe(function (data) { return _this.places = data; });
-        // this.selectedUsuario = "";
+            .subscribe(function (res) {
+            _this.places = res;
+        });
+    };
+    PlaceComponent.prototype.openMapModal = function (info, toursFromPlace) {
+        this.modalRef = this._modalService.open(_modals_GetMapModalComponent_component__WEBPACK_IMPORTED_MODULE_5__["GetMapModalComponent"], { size: 'lg' });
+        this.modalRef.componentInstance.placeInfo = info;
+        this.modalRef.componentInstance.toursFromPlace = toursFromPlace;
+    };
+    PlaceComponent.prototype.openAddModal = function () {
+        var _this = this;
+        this.modalRef = this._modalService.open(_modals_PlaceAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddPlaceComponent"], { size: 'lg' });
+        this.modalRef.result.then(function (result) {
+            _this.getPlaces();
+        }).catch(function (error) {
+            _this.getPlaces();
+        });
+    };
+    PlaceComponent.prototype.openEditModal = function (id) {
+        var _this = this;
+        this.modalRef = this._modalService.open(_modals_PlaceEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditPlace"], { size: 'lg' });
+        this.modalRef.componentInstance.id = id;
+        this.modalRef.result.then(function (result) {
+            _this.getPlaces();
+        }).catch(function (error) {
+            _this.getPlaces();
+        });
     };
     PlaceComponent.prototype.deletePlace = function (id) {
         var _this = this;
-        if (confirm("Desea eliminar el lugar?")) {
+        if (confirm('Desea eliminar el lugar?')) {
             this.service.deletePlace(id).subscribe(function (data) {
-                _this.ngOnChanges();
+                _this.showNotification({
+                    info: 'Eliminado correctamente',
+                    color: 'success'
+                }, 'top', 'right');
+                _this.getPlaces();
+            }, function (err) {
+                _this.showNotification({
+                    info: 'Ha habido un error',
+                    color: 'danger'
+                }, 'top', 'right');
             });
+            this.getPlaces();
         }
+    };
+    PlaceComponent.prototype.showNotification = function (data, from, align) {
+        $.notify({
+            message: data.info
+        }, {
+            type: data.color,
+            timer: 1000,
+            placement: {
+                from: from,
+                align: align
+            },
+            template: "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">\n        <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">\u00D7</button>\n        <span data-notify=\"icon\"></span>\n        <span data-notify=\"message\">{2}</span>\n        <div class=\"progress\" data-notify=\"progressbar\">\n        <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>\n        </div>\n        </div>"
+        });
     };
     PlaceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -24470,7 +24032,8 @@ var PlaceComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./place.component.html */ "./src/app/controllers/place/place.component.html"),
             styles: [__webpack_require__(/*! ./place.component.scss */ "./src/app/controllers/place/place.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"]])
+        __metadata("design:paramtypes", [_services_place_service__WEBPACK_IMPORTED_MODULE_1__["PlaceService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
     ], PlaceComponent);
     return PlaceComponent;
 }());
@@ -24537,17 +24100,21 @@ var PriceComponent = /** @class */ (function () {
         this.arrayOfPrices = [];
     }
     PriceComponent.prototype.openFormModal = function () {
+        var _this = this;
         var modalRef = this._modalService.open(_modals_PriceAddModal_component__WEBPACK_IMPORTED_MODULE_3__["NgbdModalAddPrice"]);
         modalRef.result.then(function (result) {
+            _this, _this.getPrices();
             console.log(result);
         }).catch(function (error) {
             console.log(error);
         });
     };
     PriceComponent.prototype.openFormModalEdit = function (id) {
+        var _this = this;
         var modalRef = this._modalService.open(_modals_PriceEditModal_component__WEBPACK_IMPORTED_MODULE_4__["NgbdModalEditPrice"]);
         modalRef.componentInstance.id = id;
         modalRef.result.then(function (result) {
+            _this.getPrices();
             console.log(result);
         }).catch(function (error) {
             console.log(error);
@@ -24672,7 +24239,7 @@ var TicketComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          <div class=\"card-header card-header-primary\">\n            <h4 class=\"card-title\">Tours ({{arrayOfTours.length}})</h4>\n          </div>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n              <table class=\"table table-hover\">\n                <thead class=\"\">\n                  <th>\n                    Nombre del Tour\n                  </th>\n                  <th>\n                    Información del Tour\n                  </th>\n                  <th>\n                    Camiones Asignados\n                  </th>\n                  <th>\n                    Tiempos Asignados\n                  </th>\n                  <th>\n                    Lugares Asignados\n                  </th>\n                </thead>\n                <tbody>\n                  <tr *ngFor=\"let tour of arrayOfTours\" class=\"list-group-item-action\">\n                    <td> {{ (tour.name) | titlecase }} </td>\n                    <td>\n                      <a class=\"text-primary\" (click)=\"displayTourInfo(tour.id)\">\n                        Ver información\n                      </a>\n                    </td>\n                    \n                    <td>\n                      <a class=\"text-primary\" (click)=\"displayBusInfo(tour.buses)\">\n                        Ver Camiones asignados\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary\" (click)=\"displayTimeInfo(tour.id)\">\n                        Ver Horarios asignadas.\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary\" (click)=\"displayPlaceInfo(tour.places)\">\n                        Ver Lugares asignados.\n                      </a>\n                    </td>\n                    \n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>  \n    </div>\n  </div>\n</div>"
+module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          <div class=\"card-header card-header-primary\">\n            <h4 class=\"card-title\">Tours ({{arrayOfTours.length}})</h4>\n            <button class=\"btn btn-success\" (click)=\"openFormModalAdd()\">Agregar</button>\n          </div>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n              <table class=\"table table-hover\">\n                <thead class=\"\">\n                  <th>\n                    Nombre\n                  </th>\n                  <th>\n                    Información\n                  </th>\n                  <th>\n                    Camiones\n                  </th>\n                  <th>\n                    Horarios\n                  </th>\n                  <th>\n                    Lugares\n                  </th>\n                </thead>\n                <tbody>\n                  <tr *ngFor=\"let tour of arrayOfTours\" class=\"list-group-item-action\">\n                    <td> {{ (tour.name) | titlecase }} </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTourInfo(tour.id)\">\n                        ver información\n                      </a>\n                    </td>\n                    \n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayBusInfo(tour)\">\n                        ver autobuses\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayTimeInfo(tour)\">\n                        ver horarios\n                      </a>\n                    </td>\n                    <td>\n                      <a class=\"text-primary text-center\" (click)=\"displayPlaceInfo(tour)\">\n                        ver lugares\n                      </a>\n                    </td>\n\n                    <td>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteTour(tour.id)\">\n                              <i class=\"fa fa-trash text-white\"></i>\n                          </button>\n                      </div>\n                      <div class=\"btn-group\">\n                          <button class=\"btn btn-info\" type=\"button\" (click)=\"openFormModalEdit(tour.id)\">\n                              <i class=\"fa fa-pencil text-white\"></i>\n                          </button>\n                      </div>\n                  </td>\n                    \n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>  \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -24683,7 +24250,7 @@ module.exports = "\n\n<div class=\"main-content\">\n  <div class=\"container-flu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdG91ci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcV0VCXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFx0b3VyXFx0b3VyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkJBQTBCLEVBQzdCOztBQUNEO0VBQ0ksZ0JBQWUsRUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb250cm9sbGVycy90b3VyL3RvdXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhe1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuYTpob3ZlcntcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */"
+module.exports = "a {\n  text-decoration: underline; }\n\na:hover {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdG91ci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcdG91clxcdG91ci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJCQUEwQixFQUM3Qjs7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvdG91ci90b3VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cbmE6aG92ZXJ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -24699,11 +24266,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TourComponent", function() { return TourComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/tour.service */ "./src/app/services/tour.service.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
-/* harmony import */ var _showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
-/* harmony import */ var _showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
-/* harmony import */ var _showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
+/* harmony import */ var _services_bus_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/bus.service */ "./src/app/services/bus.service.ts");
+/* harmony import */ var _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/dateinformation.service */ "./src/app/services/dateinformation.service.ts");
+/* harmony import */ var _services_place_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/place.service */ "./src/app/services/place.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./showModals/tourInfo.component */ "./src/app/controllers/tour/showModals/tourInfo.component.ts");
+/* harmony import */ var _showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./showModals/busInfo.component */ "./src/app/controllers/tour/showModals/busInfo.component.ts");
+/* harmony import */ var _showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./showModals/timeInfo.component */ "./src/app/controllers/tour/showModals/timeInfo.component.ts");
+/* harmony import */ var _showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./showModals/placeInfo.component */ "./src/app/controllers/tour/showModals/placeInfo.component.ts");
+/* harmony import */ var _modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modals/TourAddModal.component */ "./src/app/controllers/tour/modals/TourAddModal.component.ts");
+/* harmony import */ var _modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modals/TourEditModal.component */ "./src/app/controllers/tour/modals/TourEditModal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24720,37 +24292,129 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
 var TourComponent = /** @class */ (function () {
-    function TourComponent(_TourService, _modalService) {
-        this._TourService = _TourService;
+    function TourComponent(_tourService, _busService, _placeSerice, _dateInfoService, _modalService) {
+        this._tourService = _tourService;
+        this._busService = _busService;
+        this._placeSerice = _placeSerice;
+        this._dateInfoService = _dateInfoService;
         this._modalService = _modalService;
         this.arrayOfTours = [];
+        this.arrayOfBuses = [];
+        this.arrayOfDateInfos = [];
+        this.arrayOfPlaces = [];
     }
     TourComponent.prototype.ngOnInit = function () {
+        this.fetchAll();
+    };
+    TourComponent.prototype.fetchAll = function () {
         this.getTours();
+        this.getBuses();
+        this.getDateInfos();
+        this.getPlaces();
+    };
+    TourComponent.prototype.getPlaces = function () {
+        var _this = this;
+        this._placeSerice.getPlaces()
+            .subscribe(function (res) {
+            _this.arrayOfPlaces = res;
+            console.log('PLACES');
+            console.log(_this.arrayOfPlaces);
+        });
     };
     TourComponent.prototype.getTours = function () {
         var _this = this;
-        this._TourService.getTours()
+        this._tourService.getTours()
             .subscribe(function (res) {
             _this.arrayOfTours = res;
+            console.log('TOURS');
+            console.log(_this.arrayOfTours);
+        });
+    };
+    TourComponent.prototype.getBuses = function () {
+        var _this = this;
+        this._busService.getBuses()
+            .subscribe(function (res) {
+            _this.arrayOfBuses = res;
+            console.log('BUSES');
+            console.log(_this.arrayOfBuses);
+        });
+    };
+    TourComponent.prototype.getDateInfos = function () {
+        var _this = this;
+        this._dateInfoService.getInformation()
+            .subscribe(function (res) {
+            _this.arrayOfDateInfos = res;
+            console.log('DATES');
+            console.log(_this.arrayOfDateInfos);
+        }, function (err) {
+            // console.log('Error getting DateInfos');
+        });
+    };
+    TourComponent.prototype.deleteTour = function (id) {
+        var _this = this;
+        this._tourService.deleteTour(id)
+            .subscribe(function (res) {
+            _this.getTours();
         });
     };
     TourComponent.prototype.displayTourInfo = function (id) {
-        var modalRef = this._modalService.open(_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_3__["TourInfoComponent"]);
-        modalRef.componentInstance.tourId = id;
+        this.modalRef = this._modalService.open(_showModals_tourInfo_component__WEBPACK_IMPORTED_MODULE_6__["TourInfoComponent"]);
+        this.modalRef.componentInstance.tourId = id;
     };
-    TourComponent.prototype.displayBusInfo = function (arrayOfBuses) {
-        var modalRef = this._modalService.open(_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_4__["BusInfoComponent"]);
-        modalRef.componentInstance.arrayOfBuses = arrayOfBuses;
+    TourComponent.prototype.displayBusInfo = function (actualTour) {
+        var _this = this;
+        this.modalRef = this._modalService.open(_showModals_busInfo_component__WEBPACK_IMPORTED_MODULE_7__["BusInfoComponent"]);
+        this.modalRef.componentInstance.buses = this.arrayOfBuses;
+        this.modalRef.componentInstance.actualTour = actualTour;
+        this.modalRef.result.then(function (res) {
+            _this.getTours();
+        }, function (err) {
+        });
     };
-    TourComponent.prototype.displayTimeInfo = function (idTour) {
-        var modalRef = this._modalService.open(_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_5__["TimeInfoComponent"]);
-        modalRef.componentInstance.idTour = idTour;
+    TourComponent.prototype.displayTimeInfo = function (actualTour) {
+        var _this = this;
+        this.modalRef = this._modalService.open(_showModals_timeInfo_component__WEBPACK_IMPORTED_MODULE_8__["TimeInfoComponent"]);
+        this.modalRef.componentInstance.actualTour = actualTour;
+        this.modalRef.componentInstance.dateInfo = this.arrayOfDateInfos;
+        this.modalRef.result.then(function (res) {
+            _this.getTours();
+        }, function (err) {
+        });
     };
-    TourComponent.prototype.displayPlaceInfo = function (arrayOfPlaces) {
-        var modalRef = this._modalService.open(_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_6__["PlaceInfoComponent"]);
-        modalRef.componentInstance.arrayOfPlaces = arrayOfPlaces;
+    TourComponent.prototype.displayPlaceInfo = function (actualTour) {
+        var _this = this;
+        this.modalRef = this._modalService.open(_showModals_placeInfo_component__WEBPACK_IMPORTED_MODULE_9__["PlaceInfoComponent"]);
+        this.modalRef.componentInstance.actualTour = actualTour;
+        this.modalRef.componentInstance.places = this.arrayOfPlaces;
+        this.modalRef.result.then(function (res) {
+            _this.getTours();
+        }, function (error) {
+        });
+    };
+    TourComponent.prototype.openFormModalEdit = function (id) {
+        var _this = this;
+        this.modalRef = this._modalService.open(_modals_TourEditModal_component__WEBPACK_IMPORTED_MODULE_11__["NgbdModalEditTour"]);
+        this.modalRef.componentInstance.id = id;
+        this.modalRef.result.then(function (result) {
+            _this.fetchAll();
+        }).catch(function (error) {
+            console.log('Error on edit' + error);
+        });
+    };
+    TourComponent.prototype.openFormModalAdd = function () {
+        var _this = this;
+        this.modalRef = this._modalService.open(_modals_TourAddModal_component__WEBPACK_IMPORTED_MODULE_10__["NgbdModalAddTour"]);
+        this.modalRef.result.then(function (result) {
+            _this.fetchAll();
+        }).catch(function (error) {
+            console.log(error);
+        });
     };
     TourComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -24759,7 +24423,10 @@ var TourComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./tour.component.scss */ "./src/app/controllers/tour/tour.component.scss")]
         }),
         __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
+            _services_bus_service__WEBPACK_IMPORTED_MODULE_2__["BusService"],
+            _services_place_service__WEBPACK_IMPORTED_MODULE_4__["PlaceService"],
+            _services_dateinformation_service__WEBPACK_IMPORTED_MODULE_3__["DateinformationService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]])
     ], TourComponent);
     return TourComponent;
 }());
@@ -24786,7 +24453,7 @@ module.exports = "\n<div class=\"main-content\">\n  <div class=\"container-fluid
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  cursor: pointer;\n  color: purple;\n  margin-right: 10%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdXNlci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcV0VCXFxmcm9udDIvc3JjXFxhcHBcXGNvbnRyb2xsZXJzXFx1c2VyXFx1c2VyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWU7RUFDZixjQUFhO0VBQ2Isa0JBQWdCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29udHJvbGxlcnMvdXNlci91c2VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgY29sb3I6IHB1cnBsZTtcbiAgICBtYXJnaW4tcmlnaHQ6MTAlO1xufSJdfQ== */"
+module.exports = "i {\n  cursor: pointer;\n  color: purple;\n  margin-right: 10%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udHJvbGxlcnMvdXNlci9DOlxcVXNlcnNcXEJlZ28gTW9udGVzXFxEb2N1bWVudHNcXFNlbWVzdHJlSVxcZnJvbnQyL3NyY1xcYXBwXFxjb250cm9sbGVyc1xcdXNlclxcdXNlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsY0FBYTtFQUNiLGtCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRyb2xsZXJzL3VzZXIvdXNlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIml7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGNvbG9yOiBwdXJwbGU7XG4gICAgbWFyZ2luLXJpZ2h0OjEwJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -24884,7 +24551,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-warning card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"material-icons\">content_copy</i>\n                      </div>\n                      <p class=\"card-category\">Used Space</p>\n                      <h3 class=\"card-title\">49/50\n                          <small>GB</small>\n                      </h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons text-danger\">warning</i>\n                          <a href=\"#pablo\">Get More Space...</a>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-success card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"material-icons\">store</i>\n                      </div>\n                      <p class=\"card-category\">Revenue</p>\n                      <h3 class=\"card-title\">$34,245</h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">date_range</i> Last 24 Hours\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-danger card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"material-icons\">info_outline</i>\n                      </div>\n                      <p class=\"card-category\">Fixed Issues</p>\n                      <h3 class=\"card-title\">75</h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">local_offer</i> Tracked from Github\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-info card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"fa fa-twitter\"></i>\n                      </div>\n                      <p class=\"card-category\">Followers</p>\n                      <h3 class=\"card-title\">+245</h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">update</i> Just Updated\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n      <div class=\"row\">\n          <div class=\"col-md-4\">\n              <div class=\"card card-chart\">\n                  <div class=\"card-header card-header-success\">\n                      <div class=\"ct-chart\" id=\"dailySalesChart\"></div>\n                  </div>\n                  <div class=\"card-body\">\n                      <h4 class=\"card-title\">Daily Sales</h4>\n                      <p class=\"card-category\">\n                          <span class=\"text-success\"><i class=\"fa fa-long-arrow-up\"></i> 55% </span> increase in today sales.</p>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">access_time</i> updated 4 minutes ago\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-md-4\">\n              <div class=\"card card-chart\">\n                  <div class=\"card-header card-header-warning\">\n                      <div class=\"ct-chart\" id=\"websiteViewsChart\"></div>\n                  </div>\n                  <div class=\"card-body\">\n                      <h4 class=\"card-title\">Email Subscriptions</h4>\n                      <p class=\"card-category\">Last Campaign Performance</p>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">access_time</i> campaign sent 2 days ago\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-md-4\">\n              <div class=\"card card-chart\">\n                  <div class=\"card-header card-header-danger\">\n                      <div class=\"ct-chart\" id=\"completedTasksChart\"></div>\n                  </div>\n                  <div class=\"card-body\">\n                      <h4 class=\"card-title\">Completed Tasks</h4>\n                      <p class=\"card-category\">Last Campaign Performance</p>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">access_time</i> campaign sent 2 days ago\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n      <div class=\"row\">\n          <div class=\"col-lg-6 col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-tabs card-header-primary\">\n                      <div class=\"nav-tabs-navigation\">\n                          <div class=\"nav-tabs-wrapper\">\n                              <span class=\"nav-tabs-title\">Tasks:</span>\n                              <ul class=\"nav nav-tabs\" data-tabs=\"tabs\">\n                                  <li class=\"nav-item\">\n                                      <a mat-button class=\"nav-link active\" href=\"#profile\" data-toggle=\"tab\">\n                                          <i class=\"material-icons\">bug_report</i> Bugs\n                                          <div class=\"ripple-container\"></div>\n                                      </a>\n                                  </li>\n                                  <li class=\"nav-item\">\n                                      <a mat-button class=\"nav-link\" href=\"#messages\" data-toggle=\"tab\">\n                                          <i class=\"material-icons\">code</i> Website\n                                          <div class=\"ripple-container\"></div>\n                                      </a>\n                                  </li>\n                                  <li class=\"nav-item\">\n                                      <a mat-button class=\"nav-link\" href=\"#settings\" data-toggle=\"tab\">\n                                          <i class=\"material-icons\">cloud</i> Server\n                                          <div class=\"ripple-container\"></div>\n                                      </a>\n                                  </li>\n                              </ul>\n                          </div>\n                      </div>\n                  </div>\n                  <div class=\"card-body\">\n                      <div class=\"tab-content\">\n                          <div class=\"tab-pane active\" id=\"profile\">\n                              <table class=\"table\">\n                                  <tbody>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Sign contract for \"What are conference organizers afraid of?\"</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit\n                                          </td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Create 4 Invisible User Experiences you Never Knew About</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                  </tbody>\n                              </table>\n                          </div>\n                          <div class=\"tab-pane\" id=\"messages\">\n                              <table class=\"table\">\n                                  <tbody>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit\n                                          </td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Sign contract for \"What are conference organizers afraid of?\"</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                  </tbody>\n                              </table>\n                          </div>\n                          <div class=\"tab-pane\" id=\"settings\">\n                              <table class=\"table\">\n                                  <tbody>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit\n                                          </td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Sign contract for \"What are conference organizers afraid of?\"</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                  </tbody>\n                              </table>\n                          </div>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-6 col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-warning\">\n                      <h4 class=\"card-title\">Employees Stats</h4>\n                      <p class=\"card-category\">New employees on 15th September, 2016</p>\n                  </div>\n                  <div class=\"card-body table-responsive\">\n                      <table class=\"table table-hover\">\n                          <thead class=\"text-warning\">\n                              <th>ID</th>\n                              <th>Name</th>\n                              <th>Salary</th>\n                              <th>Country</th>\n                          </thead>\n                          <tbody>\n                              <tr>\n                                  <td>1</td>\n                                  <td>Dakota Rice</td>\n                                  <td>$36,738</td>\n                                  <td>Niger</td>\n                              </tr>\n                              <tr>\n                                  <td>2</td>\n                                  <td>Minerva Hooper</td>\n                                  <td>$23,789</td>\n                                  <td>Curaçao</td>\n                              </tr>\n                              <tr>\n                                  <td>3</td>\n                                  <td>Sage Rodriguez</td>\n                                  <td>$56,142</td>\n                                  <td>Netherlands</td>\n                              </tr>\n                              <tr>\n                                  <td>4</td>\n                                  <td>Philip Chaney</td>\n                                  <td>$38,735</td>\n                                  <td>Korea, South</td>\n                              </tr>\n                          </tbody>\n                      </table>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-warning card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"material-icons\">content_copy</i>\n                      </div>\n                      <p class=\"card-category\">Espacio de la Base de Datos</p>\n                      <h3 class=\"card-title\">490/500\n                          <small>GB</small>\n                      </h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons text-danger\">warning</i>\n                          <a href=\"#pablo\">Checar base de datos...</a>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-success card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"material-icons\">store</i>\n                      </div>\n                      <p class=\"card-category\">Ingresos</p>\n                      <h3 class=\"card-title\">$34,245</h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">date_range</i> De las últimas 24h\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-danger card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"material-icons\">info_outline</i>\n                      </div>\n                      <p class=\"card-category\">Nuevos clientes</p>\n                      <h3 class=\"card-title\">+14</h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">local_offer</i> Obtenido de la base de datos\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-3 col-md-6 col-sm-6\">\n              <div class=\"card card-stats\">\n                  <div class=\"card-header card-header-info card-header-icon\">\n                      <div class=\"card-icon\">\n                          <i class=\"fa fa-twitter\"></i>\n                      </div>\n                      <p class=\"card-category\">Seguidores en @ERCityTourister</p>\n                      <h3 class=\"card-title\">+523</h3>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">update</i> Actualizado hace 1 min\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n      <div class=\"row\">\n          <div class=\"col-md-4\">\n              <div class=\"card card-chart\">\n                  <div class=\"card-header card-header-success\">\n                      <div class=\"ct-chart\" id=\"dailySalesChart\"></div>\n                  </div>\n                  <div class=\"card-body\">\n                      <h4 class=\"card-title\">Ventas Diarias</h4>\n                      <p class=\"card-category\">\n                          <span class=\"text-success\"><i class=\"fa fa-long-arrow-up\"></i> 55% </span> aumento en las cventas.</p>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">access_time</i> actualizado hace 4 minutos\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-md-4\">\n              <div class=\"card card-chart\">\n                  <div class=\"card-header card-header-warning\">\n                      <div class=\"ct-chart\" id=\"websiteViewsChart\"></div>\n                  </div>\n                  <div class=\"card-body\">\n                      <h4 class=\"card-title\">Estadisticas de los Clientes</h4>\n                      <p class=\"card-category\">Periodo Anual 2018</p>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">access_time</i> actualizado hace 2 días\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-md-4\">\n              <div class=\"card card-chart\">\n                  <div class=\"card-header card-header-danger\">\n                      <div class=\"ct-chart\" id=\"completedTasksChart\"></div>\n                  </div>\n                  <div class=\"card-body\">\n                      <h4 class=\"card-title\">Tours Exitosos</h4>\n                      <p class=\"card-category\">Periodo Semestral 2018</p>\n                  </div>\n                  <div class=\"card-footer\">\n                      <div class=\"stats\">\n                          <i class=\"material-icons\">access_time</i> actualizado hace 4 días\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n      <div class=\"row\">\n          <div class=\"col-lg-6 col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-tabs card-header-primary\">\n                      <div class=\"nav-tabs-navigation\">\n                          <div class=\"nav-tabs-wrapper\">\n                              <span class=\"nav-tabs-title\">Pendientes:</span>\n                              <ul class=\"nav nav-tabs\" data-tabs=\"tabs\">\n                                <li class=\"nav-item\">\n                                    <a mat-button class=\"nav-link active\" href=\"#profile\" data-toggle=\"tab\">\n                                        <i class=\"material-icons\">bug_report</i> ER CityTourister\n                                        <div class=\"ripple-container\"></div>\n                                    </a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <a mat-button class=\"nav-link\" href=\"#messages\" data-toggle=\"tab\">\n                                        <i class=\"material-icons\">code</i> ER AEROPUERTO\n                                        <div class=\"ripple-container\"></div>\n                                    </a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <a mat-button class=\"nav-link\" href=\"#settings\" data-toggle=\"tab\">\n                                        <i class=\"material-icons\">cloud</i> ER PAQUER\n                                        <div class=\"ripple-container\"></div>\n                                    </a>\n                                </li>\n                              </ul>\n                          </div>\n                      </div>\n                  </div>\n                  <div class=\"card-body\">\n                      <div class=\"tab-content\">\n                          <div class=\"tab-pane active\" id=\"profile\">\n                              <table class=\"table\">\n                                  <tbody>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Estrenar la maravillosa nueva aplicación que hicieron los estudiantes del Tec de Monterrey</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Empezar a hacer uso de la base de datos</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Empezar a desarrollar la idea de \"brazalete\"\n                                          </td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                        <td>\n                                            <div class=\"form-check\">\n                                                <label class=\"form-check-label\">\n                                                    <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                    <span class=\"form-check-sign\">\n                                                        <span class=\"check\"></span>\n                                                    </span>\n                                                </label>\n                                            </div>\n                                        </td>\n                                        <td>Firmar el acta del proyecto</td>\n                                        <td class=\"td-actions text-right\">\n                                            <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                <i class=\"material-icons\">edit</i>\n                                            </button>\n                                            <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                <i class=\"material-icons\">close</i>\n                                            </button>\n                                        </td>\n                                    </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Implementar la Fase dos del proyecto CityTourister: contratar a los que hicieron este panel</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                  </tbody>\n                              </table>\n                          </div>\n                          <div class=\"tab-pane\" id=\"messages\">\n                              <table class=\"table\">\n                                  <tbody>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Implemenstar más proyectos en este panel\n                                          </td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Conectar las bases de datos</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                  </tbody>\n                              </table>\n                          </div>\n                          <div class=\"tab-pane\" id=\"settings\">\n                              <table class=\"table\">\n                                  <tbody>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\">\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Unificar todo Estrella Roja en una sola aplicación</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Volverse la red de camiones número 1 en México\n                                          </td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                      <tr>\n                                          <td>\n                                              <div class=\"form-check\">\n                                                  <label class=\"form-check-label\">\n                                                      <input class=\"form-check-input\" type=\"checkbox\" value=\"\" checked>\n                                                      <span class=\"form-check-sign\">\n                                                          <span class=\"check\"></span>\n                                                      </span>\n                                                  </label>\n                                              </div>\n                                          </td>\n                                          <td>Aumentar el salario de los jovenes contratados del Tec de Monterrey</td>\n                                          <td class=\"td-actions text-right\">\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Edit Task\" [matTooltipPosition]=\"'above'\" class=\"btn btn-primary btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">edit</i>\n                                              </button>\n                                              <button mat-raised-button type=\"button\" matTooltip=\"Remove\" [matTooltipPosition]=\"'above'\" class=\"btn btn-danger btn-link btn-sm btn-just-icon\">\n                                                  <i class=\"material-icons\">close</i>\n                                              </button>\n                                          </td>\n                                      </tr>\n                                  </tbody>\n                              </table>\n                          </div>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class=\"col-lg-6 col-md-12\">\n              <div class=\"card\">\n                  <div class=\"card-header card-header-warning\">\n                      <h4 class=\"card-title\">Creadores del Panel</h4>\n                      <p class=\"card-category\">Proyecto realizado en el segundo semestre del 2018</p>\n                  </div>\n                  <div class=\"card-body table-responsive\">\n                      <table class=\"table table-hover\">\n                          <thead class=\"text-warning\">\n                              <th>ID</th>\n                              <th>Nombre</th>\n                              <th>Número Celular</th>\n                              <th>Universidad</th>\n                          </thead>\n                          <tbody>\n                              <tr>\n                                  <td>1</td>\n                                  <td>JC Velazco</td>\n                                  <td>222 341 9779</td>\n                                  <td>Tec de Monterrey</td>\n                              </tr>\n                              <tr>\n                                  <td>2</td>\n                                  <td>Jesus Librado</td>\n                                  <td>228 169 6781</td>\n                                  <td>Tec de Monterrey</td>\n                              </tr>\n                              <tr>\n                                  <td>3</td>\n                                  <td>Begoña Montes</td>\n                                  <td>951 228 7161</td>\n                                  <td>Tec de Monterrey</td>\n                              </tr>\n                              <tr>\n                                  <td>4</td>\n                                  <td>Daniel Carramiñana</td>\n                                  <td>222 361 2091</td>\n                                  <td>Tec de Monterrey</td>\n                              </tr>\n                              <tr>\n                                <td>5</td>\n                                <td>Antonio Sánchez</td>\n                                <td>222 505 5462</td>\n                                <td>Tec de Monterrey</td>\n                            </tr>\n                            <tr>\n                                <td>6</td>\n                                <td>Carlos Parrodi</td>\n                                <td>777 369 9789</td>\n                                <td>Tec de Monterrey</td>\n                            </tr>\n                          </tbody>\n                      </table>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -25092,6 +24759,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var ngx_material_file_input__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ngx-material-file-input */ "./node_modules/ngx-material-file-input/fesm5/ngx-material-file-input.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25134,6 +24802,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AdminLayoutModule = /** @class */ (function () {
     function AdminLayoutModule() {
     }
@@ -25156,6 +24825,9 @@ var AdminLayoutModule = /** @class */ (function () {
                 _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__["MatRadioModule"],
                 ngx_material_file_input__WEBPACK_IMPORTED_MODULE_31__["MaterialFileInputModule"],
                 ngx_material_timepicker__WEBPACK_IMPORTED_MODULE_28__["NgxMaterialTimepickerModule"].forRoot(),
+                _agm_core__WEBPACK_IMPORTED_MODULE_32__["AgmCoreModule"].forRoot({
+                    apiKey: 'AIzaSyD9xXq1L6UtsTBi8miLM0FJU2erOkwW_0I'
+                }),
             ],
             declarations: [
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"],
@@ -25315,7 +24987,7 @@ var AdminLayoutRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hcHMvbWFwcy5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\nagm-map {\n    height: 600px;\n}\n\nimg {\n    width: 120px;\n    height: 120px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksY0FBYztDQUNqQjs7QUFFRDtJQUNJLGFBQWE7SUFDYixjQUFjO0NBQ2pCIiwiZmlsZSI6InNyYy9hcHAvbWFwcy9tYXBzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbmFnbS1tYXAge1xuICAgIGhlaWdodDogNjAwcHg7XG59XG5cbmltZyB7XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogMTIwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -25326,7 +24998,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"map\"></div>\n"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header card-header-primary\">\n                        <h4 class=\"card-title text-white\">Rutas</h4>\n                      </div>\n                    <div class=\"card-body\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <mat-form-field>\n                                    <mat-select \n                                        [(ngModel)]=\"currentTour.id\">\n                                        <mat-option \n                                            *ngFor=\"let tour of arrayOfTours\" \n                                            [value]=\"tour.id\"\n                                            (click)=\"updateCurrentTour(tour.id)\">\n                                            {{ tour.name }}\n                                        </mat-option>\n                                    </mat-select>\n                                </mat-form-field>\n                            </div>\n                        </div>\n                        <agm-map \n                            [latitude]=\"center.lat\" \n                            [longitude]=\"center.lng\" \n                            [zoom]=\"14\">\n                            <agm-polygon\n                                [geodesic]=\"true\"\n                                [strokeColor]=\"\"\n                                [strokeOpacity]=\"0.3\"\n                                [fillOpacity]=\"0.0\"\n                                [strokeWeight]=\"3\"\n                                [paths]=\"markersOnMap\">\n                                    <agm-marker\n                                        *ngFor=\"let marker of markersOnMap\"\n                                        [latitude]=\"marker.lat\" \n                                        [longitude]=\"marker.lng\">\n                                        <agm-info-window\n                                            [maxWidth]=\"150\">\n                                            <div class=\"container\">\n                                                <p class=\"font-weight-bold\">\n                                                    {{marker.name}}\n                                                </p>\n                                                <img \n                                                    src=\"{{marker.image_url}}\" \n                                                    class=\"img-thumbnail\"\n                                                    *ngIf=\"marker.image_url.length > 5\">\n                                            </div>\n                                        </agm-info-window>\n                                    </agm-marker>\n                            </agm-polygon>\n                        </agm-map>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n </div>"
 
 /***/ }),
 
@@ -25341,6 +25013,7 @@ module.exports = "<div id=\"map\"></div>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapsComponent", function() { return MapsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_tour_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/tour.service */ "./src/app/services/tour.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25351,108 +25024,59 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+var Marker = /** @class */ (function () {
+    function Marker(lat, lng, name, image_url) {
+        this.lat = lat;
+        this.lng = lng;
+        this.name = name;
+        this.image_url = image_url;
+    }
+    return Marker;
+}());
 var MapsComponent = /** @class */ (function () {
-    function MapsComponent() {
+    function MapsComponent(_tourService) {
+        this._tourService = _tourService;
+        this.center = {
+            lat: 19.04334,
+            lng: -98.20193
+        };
+        this.arrayOfTours = [];
+        this.currentTour = {
+            id: 0,
+            places: []
+        };
+        this.markersOnMap = [];
     }
     MapsComponent.prototype.ngOnInit = function () {
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 13,
-            center: myLatlng,
-            scrollwheel: false,
-            styles: [{
-                    "featureType": "water",
-                    "stylers": [{
-                            "saturation": 43
-                        }, {
-                            "lightness": -11
-                        }, {
-                            "hue": "#0088ff"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "hue": "#ff0000"
-                        }, {
-                            "saturation": -100
-                        }, {
-                            "lightness": 99
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                            "color": "#808080"
-                        }, {
-                            "lightness": 54
-                        }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "color": "#ece2d9"
-                        }]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "color": "#ccdca1"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                            "color": "#767676"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                            "visibility": "off"
-                        }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "visibility": "on"
-                        }, {
-                            "color": "#b8cb93"
-                        }]
-                }, {
-                    "featureType": "poi.park",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.sports_complex",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.medical",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.business",
-                    "stylers": [{
-                            "visibility": "simplified"
-                        }]
-                }]
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title: "Hello World!"
+        this.getTours();
+    };
+    MapsComponent.prototype.getTours = function () {
+        var _this = this;
+        this._tourService.getTours()
+            .subscribe(function (res) {
+            _this.arrayOfTours = res;
+            _this.currentTour.id = _this.arrayOfTours[0].id;
+            _this.currentTour.places = _this.arrayOfTours[0].places;
+            _this.drawMarkersOnMap(_this.currentTour.places);
         });
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
+    };
+    MapsComponent.prototype.drawMarkersOnMap = function (arrayOfPlaces) {
+        var _this = this;
+        this.markersOnMap = [];
+        arrayOfPlaces.forEach(function (place) {
+            _this.markersOnMap.push(new Marker(Number.parseFloat(place.latitude), Number.parseFloat(place.longitude), place.name, place.image_url));
+        });
+    };
+    MapsComponent.prototype.updateCurrentTour = function (id) {
+        for (var _i = 0, _a = this.arrayOfTours; _i < _a.length; _i++) {
+            var tour = _a[_i];
+            if (tour.id === id) {
+                this.currentTour.places = tour.places;
+                this.currentTour.id = tour.id;
+            }
+        }
+        this.drawMarkersOnMap(this.currentTour.places);
     };
     MapsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -25460,7 +25084,7 @@ var MapsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./maps.component.html */ "./src/app/maps/maps.component.html"),
             styles: [__webpack_require__(/*! ./maps.component.css */ "./src/app/maps/maps.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_tour_service__WEBPACK_IMPORTED_MODULE_1__["TourService"]])
     ], MapsComponent);
     return MapsComponent;
 }());
